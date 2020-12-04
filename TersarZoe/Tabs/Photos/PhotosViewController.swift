@@ -8,8 +8,8 @@
 import UIKit
 
 class PhotosViewController: UIViewController {
-
     @IBOutlet weak var collectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor.orange
