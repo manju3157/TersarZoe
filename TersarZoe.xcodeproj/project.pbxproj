@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FFB322572299D000E3C4F /* SettingsViewController.swift */; };
+		F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */; };
+		F98DB8212579234100526D16 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */; };
+		F98DB9FF257A2C9200526D16 /* AudioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DB9FD257A2C9200526D16 /* AudioCollectionViewCell.swift */; };
+		F98DBA00257A2C9200526D16 /* AudioCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98DB9FE257A2C9200526D16 /* AudioCollectionViewCell.xib */; };
+		F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC62D2561345700676565 /* AppDelegate.swift */; };
+		F9ABC6322561345700676565 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6312561345700676565 /* HomeViewController.swift */; };
+		F9ABC6352561345700676565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9ABC6332561345700676565 /* Main.storyboard */; };
+		F9ABC6382561345700676565 /* TersarZoe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6362561345700676565 /* TersarZoe.xcdatamodeld */; };
+		F9ABC63A2561345F00676565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9ABC6392561345F00676565 /* Assets.xcassets */; };
+		F9ABC63D2561345F00676565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9ABC63B2561345F00676565 /* LaunchScreen.storyboard */; };
+		F9ABC6482561345F00676565 /* TersarZoeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6472561345F00676565 /* TersarZoeTests.swift */; };
+		F9ABC6532561345F00676565 /* TersarZoeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6522561345F00676565 /* TersarZoeUITests.swift */; };
+		F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */; };
+		F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */; };
+		F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE53D2565443500A72446 /* CircularImageView.swift */; };
+		F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE5C0256AD19F00A72446 /* AudioViewController.swift */; };
+		F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE5C5256AD1B000A72446 /* PhotosViewController.swift */; };
+		F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE5CA256AD1C300A72446 /* VideosViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9ABC6442561345F00676565 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9ABC6222561345700676565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9ABC6292561345700676565;
+			remoteInfo = TersarZoe;
+		};
+		F9ABC64F2561345F00676565 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9ABC6222561345700676565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9ABC6292561345700676565;
+			remoteInfo = TersarZoe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F94FFB322572299D000E3C4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		F98DB9FD257A2C9200526D16 /* AudioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCollectionViewCell.swift; sourceTree = "<group>"; };
+		F98DB9FE257A2C9200526D16 /* AudioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioCollectionViewCell.xib; sourceTree = "<group>"; };
+		F9ABC62A2561345700676565 /* TersarZoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TersarZoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9ABC62D2561345700676565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9ABC6312561345700676565 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F9ABC6342561345700676565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9ABC6372561345700676565 /* TersarZoe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TersarZoe.xcdatamodel; sourceTree = "<group>"; };
+		F9ABC6392561345F00676565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9ABC63C2561345F00676565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9ABC63E2561345F00676565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9ABC6432561345F00676565 /* TersarZoeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TersarZoeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9ABC6472561345F00676565 /* TersarZoeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TersarZoeTests.swift; sourceTree = "<group>"; };
+		F9ABC6492561345F00676565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9ABC64E2561345F00676565 /* TersarZoeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TersarZoeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9ABC6522561345F00676565 /* TersarZoeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TersarZoeUITests.swift; sourceTree = "<group>"; };
+		F9ABC6542561345F00676565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		F9FCE53D2565443500A72446 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		F9FCE5C0256AD19F00A72446 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		F9FCE5C5256AD1B000A72446 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		F9FCE5CA256AD1C300A72446 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9ABC6272561345700676565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9ABC6402561345F00676565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9ABC64B2561345F00676565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F94FFB3125722977000E3C4F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F94FFB322572299D000E3C4F /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F9ABC6212561345700676565 = {
+			isa = PBXGroup;
+			children = (
+				F9ABC62C2561345700676565 /* TersarZoe */,
+				F9ABC6462561345F00676565 /* TersarZoeTests */,
+				F9ABC6512561345F00676565 /* TersarZoeUITests */,
+				F9ABC62B2561345700676565 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9ABC62B2561345700676565 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC62A2561345700676565 /* TersarZoe.app */,
+				F9ABC6432561345F00676565 /* TersarZoeTests.xctest */,
+				F9ABC64E2561345F00676565 /* TersarZoeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9ABC62C2561345700676565 /* TersarZoe */ = {
+			isa = PBXGroup;
+			children = (
+				F94FFB3125722977000E3C4F /* Settings */,
+				F9FCE53C2565442000A72446 /* CustomViews */,
+				F9FCE4F42562944400A72446 /* AppDelegate */,
+				F9FCE4EF256293BF00A72446 /* Tabs */,
+				F9FCE4F62562947500A72446 /* Assets */,
+				F9FCE4F52562945600A72446 /* Storyboard */,
+				F9ABC63E2561345F00676565 /* Info.plist */,
+				F9ABC6362561345700676565 /* TersarZoe.xcdatamodeld */,
+			);
+			path = TersarZoe;
+			sourceTree = "<group>";
+		};
+		F9ABC6462561345F00676565 /* TersarZoeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC6472561345F00676565 /* TersarZoeTests.swift */,
+				F9ABC6492561345F00676565 /* Info.plist */,
+			);
+			path = TersarZoeTests;
+			sourceTree = "<group>";
+		};
+		F9ABC6512561345F00676565 /* TersarZoeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC6522561345F00676565 /* TersarZoeUITests.swift */,
+				F9ABC6542561345F00676565 /* Info.plist */,
+			);
+			path = TersarZoeUITests;
+			sourceTree = "<group>";
+		};
+		F9FCE4EF256293BF00A72446 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				F9FCE4F0256293C500A72446 /* Home */,
+				F9FCE4F1256293D400A72446 /* Audio */,
+				F9FCE4F3256293E700A72446 /* Photos */,
+				F9FCE4F2256293E000A72446 /* Videos */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		F9FCE4F0256293C500A72446 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC6312561345700676565 /* HomeViewController.swift */,
+				F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */,
+				F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F9FCE4F1256293D400A72446 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				F9FCE5C0256AD19F00A72446 /* AudioViewController.swift */,
+				F98DB9FD257A2C9200526D16 /* AudioCollectionViewCell.swift */,
+				F98DB9FE257A2C9200526D16 /* AudioCollectionViewCell.xib */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		F9FCE4F2256293E000A72446 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				F9FCE5CA256AD1C300A72446 /* VideosViewController.swift */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		F9FCE4F3256293E700A72446 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F9FCE5C5256AD1B000A72446 /* PhotosViewController.swift */,
+				F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */,
+				F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		F9FCE4F42562944400A72446 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC62D2561345700676565 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F9FCE4F52562945600A72446 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC63B2561345F00676565 /* LaunchScreen.storyboard */,
+				F9ABC6332561345700676565 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F9FCE4F62562947500A72446 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC6392561345F00676565 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F9FCE53C2565442000A72446 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F9FCE53D2565443500A72446 /* CircularImageView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9ABC6292561345700676565 /* TersarZoe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9ABC6572561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoe" */;
+			buildPhases = (
+				F9ABC6262561345700676565 /* Sources */,
+				F9ABC6272561345700676565 /* Frameworks */,
+				F9ABC6282561345700676565 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TersarZoe;
+			productName = TersarZoe;
+			productReference = F9ABC62A2561345700676565 /* TersarZoe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9ABC6422561345F00676565 /* TersarZoeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9ABC65A2561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoeTests" */;
+			buildPhases = (
+				F9ABC63F2561345F00676565 /* Sources */,
+				F9ABC6402561345F00676565 /* Frameworks */,
+				F9ABC6412561345F00676565 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9ABC6452561345F00676565 /* PBXTargetDependency */,
+			);
+			name = TersarZoeTests;
+			productName = TersarZoeTests;
+			productReference = F9ABC6432561345F00676565 /* TersarZoeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9ABC64D2561345F00676565 /* TersarZoeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9ABC65D2561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoeUITests" */;
+			buildPhases = (
+				F9ABC64A2561345F00676565 /* Sources */,
+				F9ABC64B2561345F00676565 /* Frameworks */,
+				F9ABC64C2561345F00676565 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9ABC6502561345F00676565 /* PBXTargetDependency */,
+			);
+			name = TersarZoeUITests;
+			productName = TersarZoeUITests;
+			productReference = F9ABC64E2561345F00676565 /* TersarZoeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9ABC6222561345700676565 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					F9ABC6292561345700676565 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					F9ABC6422561345F00676565 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = F9ABC6292561345700676565;
+					};
+					F9ABC64D2561345F00676565 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = F9ABC6292561345700676565;
+					};
+				};
+			};
+			buildConfigurationList = F9ABC6252561345700676565 /* Build configuration list for PBXProject "TersarZoe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9ABC6212561345700676565;
+			productRefGroup = F9ABC62B2561345700676565 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9ABC6292561345700676565 /* TersarZoe */,
+				F9ABC6422561345F00676565 /* TersarZoeTests */,
+				F9ABC64D2561345F00676565 /* TersarZoeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9ABC6282561345700676565 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9ABC63D2561345F00676565 /* LaunchScreen.storyboard in Resources */,
+				F98DBA00257A2C9200526D16 /* AudioCollectionViewCell.xib in Resources */,
+				F98DB8212579234100526D16 /* PhotosCollectionViewCell.xib in Resources */,
+				F9ABC63A2561345F00676565 /* Assets.xcassets in Resources */,
+				F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */,
+				F9ABC6352561345700676565 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9ABC6412561345F00676565 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9ABC64C2561345F00676565 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9ABC6262561345700676565 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */,
+				F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */,
+				F9ABC6322561345700676565 /* HomeViewController.swift in Sources */,
+				F9ABC6382561345700676565 /* TersarZoe.xcdatamodeld in Sources */,
+				F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */,
+				F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */,
+				F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */,
+				F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */,
+				F98DB9FF257A2C9200526D16 /* AudioCollectionViewCell.swift in Sources */,
+				F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */,
+				F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9ABC63F2561345F00676565 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9ABC6482561345F00676565 /* TersarZoeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9ABC64A2561345F00676565 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9ABC6532561345F00676565 /* TersarZoeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9ABC6452561345F00676565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9ABC6292561345700676565 /* TersarZoe */;
+			targetProxy = F9ABC6442561345F00676565 /* PBXContainerItemProxy */;
+		};
+		F9ABC6502561345F00676565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9ABC6292561345700676565 /* TersarZoe */;
+			targetProxy = F9ABC64F2561345F00676565 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9ABC6332561345700676565 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9ABC6342561345700676565 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9ABC63B2561345F00676565 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9ABC63C2561345F00676565 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9ABC6552561345F00676565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9ABC6562561345F00676565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9ABC6582561345F00676565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2D9NCYTTK;
+				INFOPLIST_FILE = TersarZoe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9ABC6592561345F00676565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2D9NCYTTK;
+				INFOPLIST_FILE = TersarZoe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9ABC65B2561345F00676565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2D9NCYTTK;
+				INFOPLIST_FILE = TersarZoeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TersarZoe.app/TersarZoe";
+			};
+			name = Debug;
+		};
+		F9ABC65C2561345F00676565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2D9NCYTTK;
+				INFOPLIST_FILE = TersarZoeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TersarZoe.app/TersarZoe";
+			};
+			name = Release;
+		};
+		F9ABC65E2561345F00676565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2D9NCYTTK;
+				INFOPLIST_FILE = TersarZoeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TersarZoe;
+			};
+			name = Debug;
+		};
+		F9ABC65F2561345F00676565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2D9NCYTTK;
+				INFOPLIST_FILE = TersarZoeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TersarZoe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9ABC6252561345700676565 /* Build configuration list for PBXProject "TersarZoe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9ABC6552561345F00676565 /* Debug */,
+				F9ABC6562561345F00676565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9ABC6572561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9ABC6582561345F00676565 /* Debug */,
+				F9ABC6592561345F00676565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9ABC65A2561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9ABC65B2561345F00676565 /* Debug */,
+				F9ABC65C2561345F00676565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9ABC65D2561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9ABC65E2561345F00676565 /* Debug */,
+				F9ABC65F2561345F00676565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9ABC6362561345700676565 /* TersarZoe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9ABC6372561345700676565 /* TersarZoe.xcdatamodel */,
+			);
+			currentVersion = F9ABC6372561345700676565 /* TersarZoe.xcdatamodel */;
+			path = TersarZoe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F9ABC6222561345700676565 /* Project object */;
+}
