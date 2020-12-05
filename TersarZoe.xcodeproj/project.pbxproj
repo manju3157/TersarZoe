@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FFB322572299D000E3C4F /* SettingsViewController.swift */; };
 		F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */; };
 		F98DB8212579234100526D16 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F94FFB322572299D000E3C4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		F9FCE4F62562947500A72446 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F9156872257B880C006568AE /* Splash.jpeg */,
 				F9ABC6392561345F00676565 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -346,6 +349,7 @@
 			files = (
 				F9ABC63D2561345F00676565 /* LaunchScreen.storyboard in Resources */,
 				F98DBA00257A2C9200526D16 /* AudioCollectionViewCell.xib in Resources */,
+				F9156873257B880C006568AE /* Splash.jpeg in Resources */,
 				F98DB8212579234100526D16 /* PhotosCollectionViewCell.xib in Resources */,
 				F9ABC63A2561345F00676565 /* Assets.xcassets in Resources */,
 				F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */,
