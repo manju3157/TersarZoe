@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
+		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
+		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
 		F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FFB322572299D000E3C4F /* SettingsViewController.swift */; };
 		F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */; };
 		F98DB8212579234100526D16 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
+		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
+		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
 		F94FFB322572299D000E3C4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				F9FCE5CA256AD1C300A72446 /* VideosViewController.swift */,
+				F9156881257BE9BF006568AE /* VideosTableViewCell.swift */,
+				F9156882257BE9BF006568AE /* VideosTableViewCell.xib */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				F9156873257B880C006568AE /* Splash.jpeg in Resources */,
 				F98DB8212579234100526D16 /* PhotosCollectionViewCell.xib in Resources */,
 				F9ABC63A2561345F00676565 /* Assets.xcassets in Resources */,
+				F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */,
 				F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */,
 				F9ABC6352561345700676565 /* Main.storyboard in Resources */,
 			);
@@ -379,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */,
+				F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */,
 				F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */,
 				F9ABC6322561345700676565 /* HomeViewController.swift in Sources */,
 				F9ABC6382561345700676565 /* TersarZoe.xcdatamodeld in Sources */,

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideosCell" rowHeight="234" id="KGk-i7-Jjw" customClass="VideosTableViewCell" customModule="TersarZoe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="234"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="234"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYh-Js-NP9">
+                        <rect key="frame" x="10" y="5" width="318" height="224"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cYh-Js-NP9" secondAttribute="bottom" constant="5" id="IBp-Tj-8HS"/>
+                    <constraint firstItem="cYh-Js-NP9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="KCA-fz-sDm"/>
+                    <constraint firstAttribute="trailing" secondItem="cYh-Js-NP9" secondAttribute="trailing" constant="10" id="T2x-pu-U0k"/>
+                    <constraint firstItem="cYh-Js-NP9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jwb-ko-KBH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="tintColor" systemColor="systemYellowColor"/>
+            <connections>
+                <outlet property="testView" destination="cYh-Js-NP9" id="k6L-bu-FPI"/>
+            </connections>
+            <point key="canvasLocation" x="69.565217391304358" y="22.767857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
