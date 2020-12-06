@@ -1,0 +1,6 @@
+framework module Pods_TersarZoe {
+  umbrella header "Pods-TersarZoe-umbrella.h"
+
+  export *
+  module * { export * }
+}
