@@ -2,17 +2,21 @@ PODS:
   - SDWebImage (5.9.4):
     - SDWebImage/Core (= 5.9.4)
   - SDWebImage/Core (5.9.4)
+  - YoutubePlayerView (1.2.1)
 
 DEPENDENCIES:
   - SDWebImage (~> 5.0)
+  - YoutubePlayerView
 
 SPEC REPOS:
   trunk:
     - SDWebImage
+    - YoutubePlayerView
 
 SPEC CHECKSUMS:
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
+  YoutubePlayerView: 3870fc10f2db3f54156697757f44d304203bdc7e
 
-PODFILE CHECKSUM: 8aad264bd3bfcba148d2e3204c5ab15ed4273dd1
+PODFILE CHECKSUM: 664ddb62e00100281b2f806eb836b51a582e690c
 
 COCOAPODS: 1.10.0

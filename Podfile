@@ -6,6 +6,7 @@ target 'TersarZoe' do
   use_frameworks!
 
     pod 'SDWebImage', '~> 5.0'
+    pod 'YoutubePlayerView'
 
   target 'TersarZoeTests' do
     inherit! :search_paths
