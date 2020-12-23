@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import YoutubePlayerView
 
 class VideosTableViewCell: UITableViewCell {
-    @IBOutlet weak var testView: UIView!
+    @IBOutlet weak var testView: YoutubePlayerView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        testView.layer.cornerRadius = 12.0
+        testView.layer.cornerRadius = 16.0
         // Initialization code
+        testView.loadWithVideoId("2otxSV4rm7s")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

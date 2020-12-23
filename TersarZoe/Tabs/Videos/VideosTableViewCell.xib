@@ -17,9 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="338" height="234"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYh-Js-NP9">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYh-Js-NP9" customClass="YoutubePlayerView" customModule="YoutubePlayerView">
                         <rect key="frame" x="10" y="5" width="318" height="224"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                 </subviews>
                 <constraints>
@@ -37,9 +36,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
