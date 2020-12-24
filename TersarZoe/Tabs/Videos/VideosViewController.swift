@@ -23,10 +23,6 @@ class VideosViewController: UIViewController {
             self.videoIDArray = ["IjtWtakwsjw", "tilBs32zN7I", "5yZ8a_zAEl0", "xlBEEuYIWwY", "eYKdEnEqfQQ", "Lxq-RiLb-6M", "IjtWtakwsjw", "8AeSsJGUGDA"]
             self.tableView.reloadData()
         }
-
-        if hasNetworkConnection() {
-
-        }
     }
 
     @objc
