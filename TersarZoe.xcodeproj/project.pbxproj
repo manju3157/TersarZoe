@@ -12,6 +12,7 @@
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
+		F9225C982594AC8700E8A9F7 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9225C972594AC8700E8A9F7 /* Global.swift */; };
 		F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FFB322572299D000E3C4F /* SettingsViewController.swift */; };
 		F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */; };
 		F98DB8212579234100526D16 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */; };
@@ -25,6 +26,9 @@
 		F9ABC63D2561345F00676565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9ABC63B2561345F00676565 /* LaunchScreen.storyboard */; };
 		F9ABC6482561345F00676565 /* TersarZoeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6472561345F00676565 /* TersarZoeTests.swift */; };
 		F9ABC6532561345F00676565 /* TersarZoeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6522561345F00676565 /* TersarZoeUITests.swift */; };
+		F9D91B9F2594B200002D3AAC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D91B9E2594B200002D3AAC /* NetworkManager.swift */; };
+		F9D91BA82594B31B002D3AAC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D91BA72594B31B002D3AAC /* UIViewController+Extension.swift */; };
+		F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D91BB22594B3AF002D3AAC /* Reachability.m */; };
 		F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */; };
 		F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */; };
 		F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE53D2565443500A72446 /* CircularImageView.swift */; };
@@ -64,6 +68,7 @@
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
+		F9225C972594AC8700E8A9F7 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F94FFB322572299D000E3C4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -83,6 +88,11 @@
 		F9ABC64E2561345F00676565 /* TersarZoeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TersarZoeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ABC6522561345F00676565 /* TersarZoeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TersarZoeUITests.swift; sourceTree = "<group>"; };
 		F9ABC6542561345F00676565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D91B9E2594B200002D3AAC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F9D91BA72594B31B002D3AAC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		F9D91BB02594B3AE002D3AAC /* TersarZoe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TersarZoe-Bridging-Header.h"; sourceTree = "<group>"; };
+		F9D91BB12594B3AF002D3AAC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F9D91BB22594B3AF002D3AAC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		F9FCE53D2565443500A72446 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
@@ -142,6 +152,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F9225C962594AC6D00E8A9F7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F9D91BAF2594B384002D3AAC /* Reachability */,
+				F9225C972594AC8700E8A9F7 /* Global.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F94FFB3125722977000E3C4F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +194,9 @@
 		F9ABC62C2561345700676565 /* TersarZoe */ = {
 			isa = PBXGroup;
 			children = (
+				F9D91BA62594B304002D3AAC /* Extensions */,
+				F9D91B9D2594B1E6002D3AAC /* Network */,
+				F9225C962594AC6D00E8A9F7 /* Common */,
 				F94FFB3125722977000E3C4F /* Settings */,
 				F9FCE53C2565442000A72446 /* CustomViews */,
 				F9FCE4F42562944400A72446 /* AppDelegate */,
@@ -203,6 +225,32 @@
 				F9ABC6542561345F00676565 /* Info.plist */,
 			);
 			path = TersarZoeUITests;
+			sourceTree = "<group>";
+		};
+		F9D91B9D2594B1E6002D3AAC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F9D91B9E2594B200002D3AAC /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F9D91BA62594B304002D3AAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9D91BA72594B31B002D3AAC /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F9D91BAF2594B384002D3AAC /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F9D91BB12594B3AF002D3AAC /* Reachability.h */,
+				F9D91BB22594B3AF002D3AAC /* Reachability.m */,
+				F9D91BB02594B3AE002D3AAC /* TersarZoe-Bridging-Header.h */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		F9FCE4EF256293BF00A72446 /* Tabs */ = {
@@ -362,6 +410,7 @@
 				TargetAttributes = {
 					F9ABC6292561345700676565 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1230;
 					};
 					F9ABC6422561345F00676565 = {
 						CreatedOnToolsVersion = 12.2;
@@ -536,12 +585,16 @@
 				F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */,
 				F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */,
 				F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */,
+				F9D91BA82594B31B002D3AAC /* UIViewController+Extension.swift in Sources */,
 				F9ABC6322561345700676565 /* HomeViewController.swift in Sources */,
 				F9ABC6382561345700676565 /* TersarZoe.xcdatamodeld in Sources */,
+				F9225C982594AC8700E8A9F7 /* Global.swift in Sources */,
 				F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */,
 				F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */,
 				F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */,
+				F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */,
 				F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */,
+				F9D91B9F2594B200002D3AAC /* NetworkManager.swift in Sources */,
 				F98DB9FF257A2C9200526D16 /* AudioCollectionViewCell.swift in Sources */,
 				F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */,
 				F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */,
@@ -721,6 +774,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G2D9NCYTTK;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
@@ -731,6 +785,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TersarZoe/Common/Reachability/TersarZoe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -742,6 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G2D9NCYTTK;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
@@ -752,6 +809,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TersarZoe.TersarZoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TersarZoe/Common/Reachability/TersarZoe-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

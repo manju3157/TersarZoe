@@ -2,21 +2,25 @@ PODS:
   - SDWebImage (5.9.4):
     - SDWebImage/Core (= 5.9.4)
   - SDWebImage/Core (5.9.4)
+  - SVProgressHUD (2.2.5)
   - YoutubePlayerView (1.2.1)
 
 DEPENDENCIES:
   - SDWebImage (~> 5.0)
+  - SVProgressHUD
   - YoutubePlayerView
 
 SPEC REPOS:
   trunk:
     - SDWebImage
+    - SVProgressHUD
     - YoutubePlayerView
 
 SPEC CHECKSUMS:
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YoutubePlayerView: 3870fc10f2db3f54156697757f44d304203bdc7e
 
-PODFILE CHECKSUM: 664ddb62e00100281b2f806eb836b51a582e690c
+PODFILE CHECKSUM: e3a46decc10e466a4c67bdf88a30b97757f2e2a7
 
 COCOAPODS: 1.10.0
