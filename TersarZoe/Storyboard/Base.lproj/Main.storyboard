@@ -128,11 +128,43 @@
                     <connections>
                         <outlet property="tableView" destination="ccO-4q-XV2" id="psb-uw-Poq"/>
                         <segue destination="dGu-H0-mjR" kind="presentation" identifier="HomeSettings" id="Wzl-V1-HWt"/>
+                        <segue destination="AUA-cS-S6m" kind="show" identifier="showPDF" id="HQy-hE-FJd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnn-wY-ZX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2807.2463768115945" y="-472.09821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n6O-aV-BZh">
+            <objects>
+                <viewController id="AUA-cS-S6m" customClass="PDFViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QZ1-NJ-9ED">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-5P-Fd1" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kNG-m4-aqU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WcH-5P-Fd1" firstAttribute="top" secondItem="kNG-m4-aqU" secondAttribute="top" id="2Dh-RO-zQw"/>
+                            <constraint firstItem="WcH-5P-Fd1" firstAttribute="leading" secondItem="kNG-m4-aqU" secondAttribute="leading" id="DLx-03-LJ2"/>
+                            <constraint firstItem="kNG-m4-aqU" firstAttribute="bottom" secondItem="WcH-5P-Fd1" secondAttribute="bottom" id="IV7-TM-iAm"/>
+                            <constraint firstItem="kNG-m4-aqU" firstAttribute="trailing" secondItem="WcH-5P-Fd1" secondAttribute="trailing" id="YXo-Vq-wAI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="URA-NP-TFF"/>
+                    <connections>
+                        <outlet property="pdfView" destination="WcH-5P-Fd1" id="Pvy-jy-rk1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDW-p8-VQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3757" y="-469"/>
         </scene>
         <!--Item-->
         <scene sceneID="iO4-tN-Cvw">

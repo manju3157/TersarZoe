@@ -89,6 +89,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.setName(name: dataArray[indexPath.row])
         return cell ?? UITableViewCell()
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showPDF", sender: nil)
+    }
 }
 
