@@ -90,7 +90,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showPDF", sender: nil)
+        performSegue(withIdentifier: "showPDFItems", sender: nil)
     }
 }
 

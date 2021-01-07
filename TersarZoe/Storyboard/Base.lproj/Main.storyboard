@@ -128,7 +128,7 @@
                     <connections>
                         <outlet property="tableView" destination="ccO-4q-XV2" id="psb-uw-Poq"/>
                         <segue destination="dGu-H0-mjR" kind="presentation" identifier="HomeSettings" id="Wzl-V1-HWt"/>
-                        <segue destination="AUA-cS-S6m" kind="show" identifier="showPDF" id="HQy-hE-FJd"/>
+                        <segue destination="9Yr-aY-7P3" kind="push" identifier="showPDFItems" id="dqW-N0-TxE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnn-wY-ZX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDW-p8-VQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3757" y="-469"/>
+            <point key="canvasLocation" x="2806" y="-1141"/>
         </scene>
         <!--Item-->
         <scene sceneID="iO4-tN-Cvw">
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoE-fd-oVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252.17391304347828" y="-394.41964285714283"/>
+            <point key="canvasLocation" x="264" y="-469"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i0d-RX-vmv">
@@ -285,6 +285,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLh-LB-iJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041" y="-472"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="TMU-VE-pjw">
+            <objects>
+                <viewController id="9Yr-aY-7P3" customClass="PDFCollectionViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jof-0c-QP8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-8D-h0T">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PpM-h5-Tud">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="A81-xc-ZFd">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oEX-Ac-iZ4">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Yr-aY-7P3" id="GOa-vV-nTX"/>
+                                    <outlet property="delegate" destination="9Yr-aY-7P3" id="ubx-Zy-CAO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rcr-sD-Pnh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rcr-sD-Pnh" firstAttribute="trailing" secondItem="gL9-8D-h0T" secondAttribute="trailing" id="4PE-j8-KO5"/>
+                            <constraint firstItem="gL9-8D-h0T" firstAttribute="top" secondItem="Rcr-sD-Pnh" secondAttribute="top" id="L5B-df-jh9"/>
+                            <constraint firstItem="Rcr-sD-Pnh" firstAttribute="bottom" secondItem="gL9-8D-h0T" secondAttribute="bottom" id="ULG-K0-go7"/>
+                            <constraint firstItem="gL9-8D-h0T" firstAttribute="leading" secondItem="Rcr-sD-Pnh" secondAttribute="leading" id="hu6-4g-MHa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RsV-SA-DU8"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gL9-8D-h0T" id="Wc3-Z3-qkp"/>
+                        <segue destination="AUA-cS-S6m" kind="push" identifier="showPDF" id="2pi-mK-onT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwP-K9-vnq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="-1141"/>
         </scene>
         <!--Home-->
         <scene sceneID="3GC-jk-Pjm">
@@ -360,11 +412,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVd-B5-FMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-657.97101449275362" y="-394.41964285714283"/>
+            <point key="canvasLocation" x="-646" y="-472"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wzl-V1-HWt"/>
+        <segue reference="YQE-MR-q2U"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="folder" catalog="system" width="128" height="97"/>
