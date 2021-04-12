@@ -14,6 +14,7 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         ovalView.layer.cornerRadius = 8//28
+        ovalView.backgroundColor = .lightGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
