@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B524F562C9DB7B70CBAD5E10 /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */; };
 		EDD2E2FEAE89DA708DE06537 /* Pods_TersarZoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */; };
+		F9056648264676D1005B796F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056647264676D1005B796F /* Category.swift */; };
+		F90566502646770A005B796F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905664F2646770A005B796F /* Photo.swift */; };
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
@@ -72,6 +74,8 @@
 		DC2385A551D21F5BE546FB9B /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F197689CCBAB44596314B37F /* Pods-TersarZoe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe.release.xcconfig"; path = "Target Support Files/Pods-TersarZoe/Pods-TersarZoe.release.xcconfig"; sourceTree = "<group>"; };
 		F81ABB82F8FC21556E2FF5F5 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9056647264676D1005B796F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F905664F2646770A005B796F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
@@ -166,6 +170,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F9056646264676B6005B796F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9056647264676D1005B796F /* Category.swift */,
+				F905664F2646770A005B796F /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F9225C962594AC6D00E8A9F7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 		F9ABC62C2561345700676565 /* TersarZoe */ = {
 			isa = PBXGroup;
 			children = (
+				F9056646264676B6005B796F /* Models */,
 				F9DDF6262599EE1800DCBB4D /* PDF */,
 				F9DDF6202599EDCB00DCBB4D /* Temp */,
 				F9FCE4F42562944400A72446 /* AppDelegate */,
@@ -623,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90566502646770A005B796F /* Photo.swift in Sources */,
 				F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */,
 				F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */,
 				F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */,
@@ -634,6 +649,7 @@
 				F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */,
 				F9DDF6282599EE3F00DCBB4D /* PDFViewController.swift in Sources */,
 				F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */,
+				F9056648264676D1005B796F /* Category.swift in Sources */,
 				F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */,
 				F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */,
 				F9D91B9F2594B200002D3AAC /* NetworkManager.swift in Sources */,
