@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class PhotosViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    var photoArray:[Photo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +18,18 @@ class PhotosViewController: UIViewController {
         navigationItem.title = "TersarZoe"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
         collectionView.register(UINib(nibName: "PhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
+
+        SVProgressHUD.showInfo(withStatus: "Fetching...")
+        let photos = NetworkManager.shared.getPhotos(categoryID: 1) {[weak self] (status, photos) in
+            SVProgressHUD.dismiss()
+            if status && !photos.isEmpty {
+                print("Number of Photos: \(photos.count)")
+                DispatchQueue.main.async {
+                    self?.photoArray = photos
+                    self?.collectionView.reloadData()
+                }
+            }
+        }
     }
 
     @objc
@@ -27,15 +41,14 @@ class PhotosViewController: UIViewController {
 
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return photoArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCell", for: indexPath) as! PhotosCollectionViewCell
+        cell.populateCell(photo: photoArray[indexPath.row])
         return cell
     }
-
-
 }
 
 extension PhotosViewController: UICollectionViewDelegateFlowLayout {

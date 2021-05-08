@@ -8,5 +8,5 @@
 import Foundation
 
 struct AppConstants {
-    static let categoryPath = "http://13.233.200.105/tersarzoe/api/categories"
+    static let categoryBasePath = "http://13.233.200.105/tersarzoe/api/categories/"
 }
