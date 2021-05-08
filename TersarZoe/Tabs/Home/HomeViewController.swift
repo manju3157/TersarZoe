@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HomeViewController: UIViewController {
     private var gradientLayer = CAGradientLayer()
     let topColor = UIColor(red: 192.0/255.0, green: 38.0/255.0, blue: 42.0/255.0, alpha: 1.0)
     let bottomColor = UIColor(red: 35.0/255.0, green: 2.0/255.0, blue: 2.0/255.0, alpha: 1.0)
-    let dataArray = ["Sungbum", "Wangtsak", "Mandala", "Tor-pe", "Spiritual Books", "Announcements","About Us"]
+    var categories: [Category] = []
 
     private var finishedLoadingInitialTableCells = false
 
@@ -22,14 +23,19 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = topColor
         navigationItem.title = "TersarZoe"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
-        let categories = NetworkManager.shared.getCategories {(status, categories) in
+        SVProgressHUD.show()
+        let categories = NetworkManager.shared.getCategories {[weak self](status, categories) in
             if status {
                 print(categories.count)
+                SVProgressHUD.dismiss()
+                self?.categories = categories
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
             }
         }
     }
     override func viewDidLayoutSubviews() {
-
         setTableViewBackgroundGradient(topColor: topColor, bottomColor: bottomColor)
     }
     @objc
@@ -60,7 +66,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
         var lastInitialDisplayableCell = false
             //change flag as soon as last displayable cell is being loaded (which will mean table has initially loaded)
-            if dataArray.count > 0 && !finishedLoadingInitialTableCells {
+            if categories.count > 0 && !finishedLoadingInitialTableCells {
                 if let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows,
                     let lastIndexPath = indexPathsForVisibleRows.last, lastIndexPath.row == indexPath.row {
                     lastInitialDisplayableCell = true
@@ -83,7 +89,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
+        return categories.count
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,7 +97,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuTableViewCell
-        cell?.setName(name: dataArray[indexPath.row])
+        cell?.populateCell(category: categories[indexPath.row])
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

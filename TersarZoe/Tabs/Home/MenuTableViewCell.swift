@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
@@ -22,7 +23,11 @@ class MenuTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setName(name: String) {
-        nameLbl.text = name
+
+    func populateCell(category: Category) {
+        nameLbl.text = category.name
+        if let url = URL(string: category.banner_image_url) {
+            imgView.sd_setImage(with: url, completed: nil)
+        }
     }
 }
