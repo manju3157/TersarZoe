@@ -22,6 +22,11 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = topColor
         navigationItem.title = "TersarZoe"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
+        let categories = NetworkManager.shared.getCategories {(status, categories) in
+            if status {
+                print(categories.count)
+            }
+        }
     }
     override func viewDidLayoutSubviews() {
 

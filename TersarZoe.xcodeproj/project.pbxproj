@@ -11,6 +11,7 @@
 		EDD2E2FEAE89DA708DE06537 /* Pods_TersarZoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */; };
 		F9056648264676D1005B796F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056647264676D1005B796F /* Category.swift */; };
 		F90566502646770A005B796F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905664F2646770A005B796F /* Photo.swift */; };
+		F9056655264677B2005B796F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056654264677B2005B796F /* AppConstants.swift */; };
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
@@ -76,6 +77,7 @@
 		F81ABB82F8FC21556E2FF5F5 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9056647264676D1005B796F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F905664F2646770A005B796F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F9056654264677B2005B796F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				F9D91B9E2594B200002D3AAC /* NetworkManager.swift */,
+				F9056654264677B2005B796F /* AppConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				F90566502646770A005B796F /* Photo.swift in Sources */,
 				F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */,
 				F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */,
+				F9056655264677B2005B796F /* AppConstants.swift in Sources */,
 				F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */,
 				F9D91BA82594B31B002D3AAC /* UIViewController+Extension.swift in Sources */,
 				F9ABC6322561345700676565 /* HomeViewController.swift in Sources */,
