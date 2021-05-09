@@ -25,11 +25,12 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
         SVProgressHUD.show()
         let categories = NetworkManager.shared.getCategories {[weak self](status, categories) in
-            if status {
+            if status && !categories.isEmpty {
                 print(categories.count)
                 SVProgressHUD.dismiss()
-                self?.categories = categories
                 DispatchQueue.main.async {
+                    CoreDataManger.shared.saveCategories(categoryArray: categories)
+                    self?.categories = CoreDataManger.shared.fetchCategories()
                     self?.tableView.reloadData()
                 }
             }

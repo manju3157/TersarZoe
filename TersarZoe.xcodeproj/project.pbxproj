@@ -12,6 +12,7 @@
 		F9056648264676D1005B796F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056647264676D1005B796F /* Category.swift */; };
 		F90566502646770A005B796F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905664F2646770A005B796F /* Photo.swift */; };
 		F9056655264677B2005B796F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056654264677B2005B796F /* AppConstants.swift */; };
+		F90566762647C2E7005B796F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90566752647C2E7005B796F /* CoreDataManager.swift */; };
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
@@ -78,6 +79,7 @@
 		F9056647264676D1005B796F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F905664F2646770A005B796F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F9056654264677B2005B796F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F90566752647C2E7005B796F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
@@ -181,6 +183,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F90566742647C2D4005B796F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F90566752647C2E7005B796F /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		F9225C962594AC6D00E8A9F7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		F9ABC62C2561345700676565 /* TersarZoe */ = {
 			isa = PBXGroup;
 			children = (
+				F90566742647C2D4005B796F /* CoreData */,
 				F9056646264676B6005B796F /* Models */,
 				F9DDF6262599EE1800DCBB4D /* PDF */,
 				F9DDF6202599EDCB00DCBB4D /* Temp */,
@@ -648,6 +659,7 @@
 				F9D91BA82594B31B002D3AAC /* UIViewController+Extension.swift in Sources */,
 				F9ABC6322561345700676565 /* HomeViewController.swift in Sources */,
 				F9ABC6382561345700676565 /* TersarZoe.xcdatamodeld in Sources */,
+				F90566762647C2E7005B796F /* CoreDataManager.swift in Sources */,
 				F9225C982594AC8700E8A9F7 /* Global.swift in Sources */,
 				F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */,
 				F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */,
