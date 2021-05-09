@@ -13,6 +13,8 @@
 		F90566502646770A005B796F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905664F2646770A005B796F /* Photo.swift */; };
 		F9056655264677B2005B796F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056654264677B2005B796F /* AppConstants.swift */; };
 		F90566762647C2E7005B796F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90566752647C2E7005B796F /* CoreDataManager.swift */; };
+		F905668426484584005B796F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905668326484584005B796F /* Video.swift */; };
+		F905668926484997005B796F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905668826484997005B796F /* BaseViewController.swift */; };
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
@@ -80,6 +82,8 @@
 		F905664F2646770A005B796F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F9056654264677B2005B796F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F90566752647C2E7005B796F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F905668326484584005B796F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		F905668826484997005B796F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 			children = (
 				F9056647264676D1005B796F /* Category.swift */,
 				F905664F2646770A005B796F /* Photo.swift */,
+				F905668326484584005B796F /* Video.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				F9FCE4F1256293D400A72446 /* Audio */,
 				F9FCE4F3256293E700A72446 /* Photos */,
 				F9FCE4F2256293E000A72446 /* Videos */,
+				F905668826484997005B796F /* BaseViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -664,12 +670,14 @@
 				F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */,
 				F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */,
 				F9DDF6282599EE3F00DCBB4D /* PDFViewController.swift in Sources */,
+				F905668426484584005B796F /* Video.swift in Sources */,
 				F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */,
 				F9056648264676D1005B796F /* Category.swift in Sources */,
 				F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */,
 				F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */,
 				F9D91B9F2594B200002D3AAC /* NetworkManager.swift in Sources */,
 				F98DB9FF257A2C9200526D16 /* AudioCollectionViewCell.swift in Sources */,
+				F905668926484997005B796F /* BaseViewController.swift in Sources */,
 				F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */,
 				F9DDF643259B401700DCBB4D /* PDFCollectionViewCell.swift in Sources */,
 				F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */,

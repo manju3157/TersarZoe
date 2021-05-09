@@ -8,7 +8,7 @@
 import UIKit
 import SVProgressHUD
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     private var gradientLayer = CAGradientLayer()
     let topColor = UIColor(red: 192.0/255.0, green: 38.0/255.0, blue: 42.0/255.0, alpha: 1.0)
     let bottomColor = UIColor(red: 35.0/255.0, green: 2.0/255.0, blue: 2.0/255.0, alpha: 1.0)
@@ -23,8 +23,26 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = topColor
         navigationItem.title = "TersarZoe"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
+        if hasNetworkConnection() {
+            fetchCategories()
+        } else if CoreDataManger.shared.fetchCategories().isEmpty {
+            super.showNoInternetConnectionAlert()
+        } else {
+            categories = CoreDataManger.shared.fetchCategories()
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        // When network is restored and tabs are switched
+        if categories.isEmpty && hasNetworkConnection() {
+            fetchCategories()
+        }
+    }
+    override func viewDidLayoutSubviews() {
+        setTableViewBackgroundGradient(topColor: topColor, bottomColor: bottomColor)
+    }
+    private func fetchCategories() {
         SVProgressHUD.show()
-        let categories = NetworkManager.shared.getCategories {[weak self](status, categories) in
+        NetworkManager.shared.getCategories {[weak self](status, categories) in
             if status && !categories.isEmpty {
                 print(categories.count)
                 SVProgressHUD.dismiss()
@@ -35,9 +53,6 @@ class HomeViewController: UIViewController {
                 }
             }
         }
-    }
-    override func viewDidLayoutSubviews() {
-        setTableViewBackgroundGradient(topColor: topColor, bottomColor: bottomColor)
     }
     @objc
     func addTapped() {

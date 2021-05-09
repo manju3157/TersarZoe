@@ -8,7 +8,7 @@
 import UIKit
 import SVProgressHUD
 
-class PhotosViewController: UIViewController {
+class PhotosViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var photoArray:[Photo] = []
 
@@ -18,7 +18,25 @@ class PhotosViewController: UIViewController {
         navigationItem.title = "TersarZoe"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
         collectionView.register(UINib(nibName: "PhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
+        if hasNetworkConnection() {
+            fetchPhotos()
+        } else {
+            super.showNoInternetConnectionAlert()
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        // When network is restored and tabs are switched
+        if photoArray.isEmpty && hasNetworkConnection() {
+            fetchPhotos()
+        }
+    }
 
+    @objc
+    func addTapped() {
+        print("Right Bar button")
+        self.performSegue(withIdentifier: "PhotoSettings", sender: self)
+    }
+    private func fetchPhotos() {
         SVProgressHUD.showInfo(withStatus: "Fetching...")
         NetworkManager.shared.getPhotos(categoryID: 1) {[weak self] (status, photos) in
             SVProgressHUD.dismiss()
@@ -31,12 +49,6 @@ class PhotosViewController: UIViewController {
                 }
             }
         }
-    }
-
-    @objc
-    func addTapped() {
-        print("Right Bar button")
-        self.performSegue(withIdentifier: "PhotoSettings", sender: self)
     }
 }
 

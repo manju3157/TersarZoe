@@ -8,20 +8,26 @@
 import UIKit
 import SVProgressHUD
 
-class VideosViewController: UIViewController {
+class VideosViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
-    var videoIDArray: [String] = []
+    var videoArray: [Video] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "VideosTableViewCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
         navigationController?.navigationBar.barTintColor = UIColor.orange
         navigationItem.title = "TersarZoe"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
-        SVProgressHUD.show(withStatus: "Fetching...")
-        Global.delay(2.0) {
-            SVProgressHUD.dismiss()
-            self.videoIDArray = ["IjtWtakwsjw", "tilBs32zN7I", "5yZ8a_zAEl0", "xlBEEuYIWwY", "eYKdEnEqfQQ", "Lxq-RiLb-6M", "IjtWtakwsjw", "8AeSsJGUGDA"]
-            self.tableView.reloadData()
+        if hasNetworkConnection() {
+            fetchVideos()
+        } else {
+            super.showNoInternetConnectionAlert()
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        // When network is restored and tabs are switched
+        if videoArray.isEmpty && hasNetworkConnection() {
+            fetchVideos()
         }
     }
 
@@ -31,16 +37,28 @@ class VideosViewController: UIViewController {
         self.performSegue(withIdentifier: "VideoSettings", sender: self)
     }
 
+    private func fetchVideos() {
+        SVProgressHUD.show(withStatus: "Fetching...")
+        NetworkManager.shared.getVideos {[weak self] (status, videos) in
+            SVProgressHUD.dismiss()
+            if status && !videos.isEmpty {
+                self?.videoArray = videos
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension VideosViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return videoIDArray.count
+        return videoArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideosCell") as? VideosTableViewCell
-        cell?.testView.loadWithVideoId(videoIDArray[indexPath.row])
+        cell?.testView.loadWithVideoId(videoArray[indexPath.row].youtube_url)
         return cell ?? UITableViewCell()
     }
     
