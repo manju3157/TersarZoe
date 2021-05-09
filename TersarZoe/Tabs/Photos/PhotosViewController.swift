@@ -20,12 +20,13 @@ class PhotosViewController: UIViewController {
         collectionView.register(UINib(nibName: "PhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
 
         SVProgressHUD.showInfo(withStatus: "Fetching...")
-        let photos = NetworkManager.shared.getPhotos(categoryID: 1) {[weak self] (status, photos) in
+        NetworkManager.shared.getPhotos(categoryID: 1) {[weak self] (status, photos) in
             SVProgressHUD.dismiss()
             if status && !photos.isEmpty {
                 print("Number of Photos: \(photos.count)")
                 DispatchQueue.main.async {
-                    self?.photoArray = photos
+                    CoreDataManger.shared.savePhotos(photos: photos)
+                    self?.photoArray = CoreDataManger.shared.fetchPhotos()
                     self?.collectionView.reloadData()
                 }
             }
