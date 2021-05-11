@@ -5,13 +5,13 @@
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="PhotoTable" representedClassName="PhotoTable" syncable="YES" codeGenerationType="class">
+    <entity name="PhotoSubCategory" representedClassName="PhotoSubCategory" syncable="YES" codeGenerationType="class">
         <attribute name="banner_image_url" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="CategoryTable" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="PhotoTable" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="PhotoSubCategory" positionX="-54" positionY="-9" width="128" height="88"/>
     </elements>
 </model>
