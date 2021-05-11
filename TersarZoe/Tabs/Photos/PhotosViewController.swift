@@ -15,7 +15,7 @@ class PhotosViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor.orange
-        navigationItem.title = "TersarZoe"
+        navigationItem.title = "Photos"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
         collectionView.register(UINib(nibName: "PhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
         if hasNetworkConnection() {
@@ -64,6 +64,7 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(photoCategoryArray[indexPath.row].id)
+        performSegue(withIdentifier: "ShowPhotos", sender: nil)
     }
 }
 

@@ -345,8 +345,8 @@
 		F9FCE4EF256293BF00A72446 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				F9BC8806264AA884006348C8 /* CommonCollectionView */,
 				F905668826484997005B796F /* BaseViewController.swift */,
+				F9BC8806264AA884006348C8 /* CommonCollectionView */,
 				F9FCE4F0256293C500A72446 /* Home */,
 				F9FCE4F1256293D400A72446 /* Audio */,
 				F9FCE4F3256293E700A72446 /* Photos */,

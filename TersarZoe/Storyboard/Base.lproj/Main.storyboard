@@ -214,6 +214,57 @@
             </objects>
             <point key="canvasLocation" x="1041" y="321"/>
         </scene>
+        <!--Common Collection View Controller-->
+        <scene sceneID="Yal-Ab-A2O">
+            <objects>
+                <viewController id="nLE-sr-Omk" customClass="CommonCollectionViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vQB-AW-Xef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zJX-3b-Fbq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wKg-sY-Xbl">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZBh-jS-aM3">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j7E-fW-Vel">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="nLE-sr-Omk" id="U1v-Fi-ay5"/>
+                                    <outlet property="delegate" destination="nLE-sr-Omk" id="Bko-aS-Qzb"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Skx-M2-IgZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Skx-M2-IgZ" firstAttribute="bottom" secondItem="zJX-3b-Fbq" secondAttribute="bottom" id="P7F-15-gi8"/>
+                            <constraint firstItem="zJX-3b-Fbq" firstAttribute="top" secondItem="Skx-M2-IgZ" secondAttribute="top" id="fxu-kZ-WJ4"/>
+                            <constraint firstItem="Skx-M2-IgZ" firstAttribute="trailing" secondItem="zJX-3b-Fbq" secondAttribute="trailing" id="ogK-2F-EdV"/>
+                            <constraint firstItem="zJX-3b-Fbq" firstAttribute="leading" secondItem="Skx-M2-IgZ" secondAttribute="leading" id="thG-Kr-kAx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8wz-LT-DGY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zJX-3b-Fbq" id="nt3-5q-YJD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mfv-83-erm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="-1245"/>
+        </scene>
         <!--Photos View Controller-->
         <scene sceneID="4Db-RG-nrs">
             <objects>
@@ -260,11 +311,12 @@
                     <connections>
                         <outlet property="collectionView" destination="f9E-d1-X41" id="DT1-27-Nuu"/>
                         <segue destination="dGu-H0-mjR" kind="presentation" identifier="PhotoSettings" id="57g-Bm-91b"/>
+                        <segue destination="nLE-sr-Omk" kind="show" identifier="ShowPhotos" id="bgp-ym-DAL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoE-fd-oVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="-469"/>
+            <point key="canvasLocation" x="263.768115942029" y="-469.41964285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i0d-RX-vmv">
@@ -416,7 +468,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YQE-MR-q2U"/>
+        <segue reference="57g-Bm-91b"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="folder" catalog="system" width="128" height="97"/>
