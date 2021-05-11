@@ -10,7 +10,7 @@ import SVProgressHUD
 
 class PhotosViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    var photoArray:[Photo] = []
+    var photoCategoryArray:[SubCategory] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class PhotosViewController: BaseViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         // When network is restored and tabs are switched
-        if photoArray.isEmpty && hasNetworkConnection() {
+        if photoCategoryArray.isEmpty && hasNetworkConnection() {
             fetchPhotos()
         }
     }
@@ -38,13 +38,13 @@ class PhotosViewController: BaseViewController {
     }
     private func fetchPhotos() {
         SVProgressHUD.showInfo(withStatus: "Fetching...")
-        NetworkManager.shared.getPhotos(categoryID: 1) {[weak self] (status, photos) in
+        NetworkManager.shared.getPhotosCategories(categoryID: 1) {[weak self] (status, photos) in
             SVProgressHUD.dismiss()
             if status && !photos.isEmpty {
                 print("Number of Photos: \(photos.count)")
                 DispatchQueue.main.async {
-                    CoreDataManger.shared.savePhotos(photos: photos)
-                    self?.photoArray = CoreDataManger.shared.fetchPhotos()
+                    CoreDataManger.shared.savePhotos(subCategories: photos)
+                    self?.photoCategoryArray = CoreDataManger.shared.fetchPhotoSubCategories()
                     self?.collectionView.reloadData()
                 }
             }
@@ -54,13 +54,16 @@ class PhotosViewController: BaseViewController {
 
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoArray.count
+        return photoCategoryArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCell", for: indexPath) as! PhotosCollectionViewCell
-        cell.populateCell(photo: photoArray[indexPath.row])
+        cell.populateCell(sc: photoCategoryArray[indexPath.row])
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(photoCategoryArray[indexPath.row].id)
     }
 }
 

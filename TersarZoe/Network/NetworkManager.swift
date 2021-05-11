@@ -34,7 +34,7 @@ class NetworkManager {
         }.resume()
     }
 
-    func getPhotos(categoryID: Int, responseCallback: @escaping (Bool, [Photo]) -> ()) {
+    func getPhotosCategories(categoryID: Int, responseCallback: @escaping (Bool, [SubCategory]) -> ()) {
         let photosPath = AppConstants.categoryBasePath + String(categoryID)
         guard let url = URL(string: photosPath) else {
             print("Invalid URL")

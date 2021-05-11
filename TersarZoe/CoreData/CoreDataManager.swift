@@ -44,19 +44,19 @@ public class CoreDataManger: NSObject {
         }
     }
 
-    func savePhotos(photos: [Photo]) {
+    func savePhotos(subCategories: [SubCategory]) {
         let photoTable = "PhotoTable"
-        if photos.count == 0 {
+        if subCategories.count == 0 {
             return
         }
         // Delete old entries and save new ones
         delete(entityName: photoTable)
         managedContext = self.appDelegate.persistentContainer.viewContext
-        for index in 0...photos.count-1 {
+        for index in 0...subCategories.count-1 {
             let entity = NSEntityDescription.insertNewObject(forEntityName: photoTable, into: managedContext!)
-            entity.setValue(photos[index].id , forKeyPath: "id")
-            entity.setValue(photos[index].name , forKeyPath: "name")
-            entity.setValue(photos[index].banner_image_url , forKeyPath: "banner_image_url")
+            entity.setValue(subCategories[index].id , forKeyPath: "id")
+            entity.setValue(subCategories[index].name , forKeyPath: "name")
+            entity.setValue(subCategories[index].banner_image_url , forKeyPath: "banner_image_url")
         }
         managedContext?.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         do {
@@ -92,8 +92,8 @@ public class CoreDataManger: NSObject {
         }
     }
 
-    func fetchPhotos() -> [Photo] {
-        var photos: [Photo] = []
+    func fetchPhotoSubCategories() -> [SubCategory] {
+        var photoSubCatgs: [SubCategory] = []
         managedContext = self.appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoTable")
         do {
@@ -104,14 +104,16 @@ public class CoreDataManger: NSObject {
                     let name = index.value(forKey: "name") as? String ?? ""
                     let imageUrl = index.value(forKey: "banner_image_url") as? String ?? ""
 
-                    photos.append(Photo(id: id, name: name, banner_image_url: imageUrl))
+                    photoSubCatgs.append(SubCategory(id: id, name: name, banner_image_url: imageUrl))
                 }
             }
-            return photos
+            return photoSubCatgs.sorted { (item1, item2) -> Bool in
+                item1.id < item2.id
+            }
         }
         catch let error as NSError {
             print("CoreData - Could not fetch Photos. \(error), \(error.userInfo)")
-            return photos
+            return photoSubCatgs
         }
     }
 

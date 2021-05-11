@@ -32,6 +32,7 @@
 		F9ABC63D2561345F00676565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9ABC63B2561345F00676565 /* LaunchScreen.storyboard */; };
 		F9ABC6482561345F00676565 /* TersarZoeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6472561345F00676565 /* TersarZoeTests.swift */; };
 		F9ABC6532561345F00676565 /* TersarZoeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC6522561345F00676565 /* TersarZoeUITests.swift */; };
+		F9BC87F0264A9D8B006348C8 /* SubCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC87EF264A9D8B006348C8 /* SubCategory.swift */; };
 		F9D91B9F2594B200002D3AAC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D91B9E2594B200002D3AAC /* NetworkManager.swift */; };
 		F9D91BA82594B31B002D3AAC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D91BA72594B31B002D3AAC /* UIViewController+Extension.swift */; };
 		F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D91BB22594B3AF002D3AAC /* Reachability.m */; };
@@ -107,6 +108,7 @@
 		F9ABC64E2561345F00676565 /* TersarZoeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TersarZoeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ABC6522561345F00676565 /* TersarZoeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TersarZoeUITests.swift; sourceTree = "<group>"; };
 		F9ABC6542561345F00676565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9BC87EF264A9D8B006348C8 /* SubCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategory.swift; sourceTree = "<group>"; };
 		F9D91B9E2594B200002D3AAC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F9D91BA72594B31B002D3AAC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F9D91BB02594B3AE002D3AAC /* TersarZoe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TersarZoe-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				F9056647264676D1005B796F /* Category.swift */,
 				F905664F2646770A005B796F /* Photo.swift */,
 				F905668326484584005B796F /* Video.swift */,
+				F9BC87EF264A9D8B006348C8 /* SubCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,11 +329,11 @@
 		F9FCE4EF256293BF00A72446 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				F905668826484997005B796F /* BaseViewController.swift */,
 				F9FCE4F0256293C500A72446 /* Home */,
 				F9FCE4F1256293D400A72446 /* Audio */,
 				F9FCE4F3256293E700A72446 /* Photos */,
 				F9FCE4F2256293E000A72446 /* Videos */,
-				F905668826484997005B796F /* BaseViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BC87F0264A9D8B006348C8 /* SubCategory.swift in Sources */,
 				F90566502646770A005B796F /* Photo.swift in Sources */,
 				F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */,
 				F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */,
