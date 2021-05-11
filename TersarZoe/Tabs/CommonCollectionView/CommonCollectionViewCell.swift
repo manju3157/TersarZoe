@@ -23,4 +23,11 @@ class CommonCollectionViewCell: UICollectionViewCell {
             imgView.sd_setImage(with: url, completed: nil)
         }
     }
+
+    func populateCellWith(photoPost: PhotoPost) {
+        nameLbl.text = photoPost.title
+        if let url = URL(string: photoPost.thumbnail_url) {
+            imgView.sd_setImage(with: url, completed: nil)
+        }
+    }
 }

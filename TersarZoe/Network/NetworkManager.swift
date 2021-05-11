@@ -56,6 +56,28 @@ class NetworkManager {
         }.resume()
     }
 
+    func getPhotosSubCategories(subCategoryID: Int, responseCallback: @escaping (Bool, [PhotoPost]) -> ()) {
+        let photosPath = AppConstants.subCategoryBasePath + String(subCategoryID)
+        guard let url = URL(string: photosPath) else {
+            print("Invalid URL")
+            responseCallback(false, [])
+            return
+        }
+        let request = URLRequest(url: url)
+        session.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    if let decodedResponse = try? JSONDecoder().decode(PhotoSubCategory.self, from: data) {
+                        responseCallback(true, decodedResponse.sub_category.posts)
+                        return
+                    }
+                }
+            }
+            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+            responseCallback(false, [])
+        }.resume()
+    }
+
     func getVideos(responseCallback: @escaping (Bool, [Video]) -> ()) {
         guard let url = URL(string: AppConstants.videosPath) else {
             print("Invalid URL")

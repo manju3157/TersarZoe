@@ -45,7 +45,7 @@ public class CoreDataManger: NSObject {
     }
 
     func savePhotos(subCategories: [SubCategory]) {
-        let photoTable = "PhotoSubCategory"
+        let photoTable = "PhotoSubCategoryTable"
         if subCategories.count == 0 {
             return
         }
@@ -95,7 +95,7 @@ public class CoreDataManger: NSObject {
     func fetchPhotoSubCategories() -> [SubCategory] {
         var photoSubCatgs: [SubCategory] = []
         managedContext = self.appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoSubCategory")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoSubCategoryTable")
         do {
             let result = try managedContext!.fetch(fetchRequest)
             if result.count > 0 {

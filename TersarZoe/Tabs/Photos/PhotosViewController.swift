@@ -11,6 +11,7 @@ import SVProgressHUD
 class PhotosViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var photoCategoryArray:[SubCategory] = []
+    var selectedSubCatID = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,15 @@ class PhotosViewController: BaseViewController {
             }
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPhotos" {
+            if let nextViewController = segue.destination as? CommonCollectionViewController {
+                nextViewController.contentType = .photo
+                nextViewController.subCategoryId = selectedSubCatID
+            }
+        }
+    }
 }
 
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -63,7 +73,7 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(photoCategoryArray[indexPath.row].id)
+        selectedSubCatID = photoCategoryArray[indexPath.row].id
         performSegue(withIdentifier: "ShowPhotos", sender: nil)
     }
 }
