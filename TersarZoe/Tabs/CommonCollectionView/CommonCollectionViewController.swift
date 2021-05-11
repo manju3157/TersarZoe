@@ -7,15 +7,23 @@
 
 import UIKit
 
-private let reuseIdentifier = "CommonCell"
+public enum CommonContentType: String {
+    case pdf
+    case audio
+    case photo
+    case none
+}
 
 class CommonCollectionViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+
+    private let reuseIdentifier = "CommonCell"
+    var contentType: CommonContentType = .none
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "CommonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
-
 }
 
 extension CommonCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
