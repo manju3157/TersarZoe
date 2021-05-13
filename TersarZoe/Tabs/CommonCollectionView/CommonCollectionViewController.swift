@@ -21,6 +21,7 @@ class CommonCollectionViewController: BaseViewController {
     private let reuseIdentifier = "CommonCell"
     public var contentType: CommonContentType = .none
     var photoPosts: [PhotoPost] = []
+    var selectedPhotoPost: PhotoPost?
     public var subCategoryId: Int = 0
 
     override func viewDidLoad() {
@@ -55,6 +56,15 @@ class CommonCollectionViewController: BaseViewController {
             showNoInternetConnectionAlert()
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPhotoPager" {
+            if let nextViewController = segue.destination as? PhotoPagerViewController,
+               let post = selectedPhotoPost {
+                nextViewController.photos = post.files
+            }
+        }
+    }
 }
 
 extension CommonCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -77,9 +87,17 @@ extension CommonCollectionViewController: UICollectionViewDataSource, UICollecti
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //print(photoCategoryArray[indexPath.row].id)
-        // Show a ViewController with pager of imageviews
-        //performSegue(withIdentifier: "ShowPhotos", sender: nil)
+        switch contentType {
+            case .pdf:
+                print("pdf")
+            case .audio:
+                print("audio")
+            case .photo:
+                selectedPhotoPost = photoPosts[indexPath.row]
+                performSegue(withIdentifier: "ShowPhotoPager", sender: nil)
+            case .none:
+                print("none")
+        }
     }
 }
 

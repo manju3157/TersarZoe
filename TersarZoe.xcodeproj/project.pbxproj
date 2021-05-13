@@ -53,6 +53,10 @@
 		F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE5C0256AD19F00A72446 /* AudioViewController.swift */; };
 		F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE5C5256AD1B000A72446 /* PhotosViewController.swift */; };
 		F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE5CA256AD1C300A72446 /* VideosViewController.swift */; };
+		F9FEA864264CF64100E4AD49 /* PhotoPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEA863264CF64100E4AD49 /* PhotoPagerViewController.swift */; };
+		F9FEA86A264D010800E4AD49 /* PhotoPagerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEA868264D010800E4AD49 /* PhotoPagerCollectionViewCell.swift */; };
+		F9FEA86B264D010800E4AD49 /* PhotoPagerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FEA869264D010800E4AD49 /* PhotoPagerCollectionViewCell.xib */; };
+		F9FEA870264D138000E4AD49 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEA86F264D138000E4AD49 /* UIColor+Extension.swift */; };
 		FB9BEBF0EEA1A8A06C43490C /* Pods_TersarZoeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +139,10 @@
 		F9FCE5C0256AD19F00A72446 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		F9FCE5C5256AD1B000A72446 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		F9FCE5CA256AD1C300A72446 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		F9FEA863264CF64100E4AD49 /* PhotoPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPagerViewController.swift; sourceTree = "<group>"; };
+		F9FEA868264D010800E4AD49 /* PhotoPagerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPagerCollectionViewCell.swift; sourceTree = "<group>"; };
+		F9FEA869264D010800E4AD49 /* PhotoPagerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPagerCollectionViewCell.xib; sourceTree = "<group>"; };
+		F9FEA86F264D138000E4AD49 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				F9D91BA72594B31B002D3AAC /* UIViewController+Extension.swift */,
+				F9FEA86F264D138000E4AD49 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +403,9 @@
 				F9FCE5C5256AD1B000A72446 /* PhotosViewController.swift */,
 				F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */,
 				F98DB81F2579234100526D16 /* PhotosCollectionViewCell.xib */,
+				F9FEA863264CF64100E4AD49 /* PhotoPagerViewController.swift */,
+				F9FEA868264D010800E4AD49 /* PhotoPagerCollectionViewCell.swift */,
+				F9FEA869264D010800E4AD49 /* PhotoPagerCollectionViewCell.xib */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -549,6 +561,7 @@
 				F9DDF649259B543600DCBB4D /* buddha.png in Resources */,
 				F9DDF6222599EDEC00DCBB4D /* Udupi-BLR-Sugama.pdf in Resources */,
 				F9BC880F264AA8CF006348C8 /* CommonCollectionViewCell.xib in Resources */,
+				F9FEA86B264D010800E4AD49 /* PhotoPagerCollectionViewCell.xib in Resources */,
 				F9ABC63A2561345F00676565 /* Assets.xcassets in Resources */,
 				F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */,
 				F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */,
@@ -698,12 +711,15 @@
 				F905668426484584005B796F /* Video.swift in Sources */,
 				F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */,
 				F9056648264676D1005B796F /* Category.swift in Sources */,
+				F9FEA864264CF64100E4AD49 /* PhotoPagerViewController.swift in Sources */,
 				F9BC880E264AA8CF006348C8 /* CommonCollectionViewCell.swift in Sources */,
 				F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */,
 				F9BC8808264AA8BA006348C8 /* CommonCollectionViewController.swift in Sources */,
 				F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */,
 				F9D91B9F2594B200002D3AAC /* NetworkManager.swift in Sources */,
+				F9FEA870264D138000E4AD49 /* UIColor+Extension.swift in Sources */,
 				F98DB9FF257A2C9200526D16 /* AudioCollectionViewCell.swift in Sources */,
+				F9FEA86A264D010800E4AD49 /* PhotoPagerCollectionViewCell.swift in Sources */,
 				F905668926484997005B796F /* BaseViewController.swift in Sources */,
 				F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */,
 				F9DDF643259B401700DCBB4D /* PDFCollectionViewCell.swift in Sources */,
