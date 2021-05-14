@@ -12,4 +12,8 @@ struct AppConstants {
     static let subCategoryBasePath = "http://13.233.200.105/tersarzoe/api/sub-categories/"
 
     static let videosPath = "http://13.233.200.105/tersarzoe/api/sub-categories/5"
+
+
+    static let audioCategoryID = 4
+    static let photoCategoryID = 1
 }

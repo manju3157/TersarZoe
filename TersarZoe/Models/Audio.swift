@@ -1,13 +1,14 @@
 //
-//  Photo.swift
+//  Audio.swift
 //  TersarZoe
 //
-//  Created by Manjunath Ramesh on 08/05/21.
+//  Created by Manjunath Ramesh on 14/05/21.
 //
 
 import Foundation
 
-class Photo: Codable {
+
+class Audio: Codable {
     var id: Int
     var name: String
     var banner_image_url: String
@@ -18,7 +19,3 @@ class Photo: Codable {
         self.banner_image_url = banner_image_url
     }
 }
-
-
-
-

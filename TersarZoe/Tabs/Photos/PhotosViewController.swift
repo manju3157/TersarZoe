@@ -39,7 +39,7 @@ class PhotosViewController: BaseViewController {
     }
     private func fetchPhotos() {
         SVProgressHUD.showInfo(withStatus: "Fetching...")
-        NetworkManager.shared.getPhotosCategories(categoryID: 1) {[weak self] (status, photos) in
+        NetworkManager.shared.getSubCategoriesFor(categoryID: AppConstants.photoCategoryID) {[weak self] (status, photos) in
             SVProgressHUD.dismiss()
             if status && !photos.isEmpty {
                 print("Number of Photos: \(photos.count)")

@@ -42,7 +42,7 @@ class HomeViewController: BaseViewController {
     }
     private func fetchCategories() {
         SVProgressHUD.show()
-        NetworkManager.shared.getCategories {[weak self](status, categories) in
+        NetworkManager.shared.getHomeTabCategories {[weak self](status, categories) in
             if status && !categories.isEmpty {
                 print(categories.count)
                 SVProgressHUD.dismiss()

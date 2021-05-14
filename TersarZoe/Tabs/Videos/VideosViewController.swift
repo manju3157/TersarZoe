@@ -15,7 +15,7 @@ class VideosViewController: BaseViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "VideosTableViewCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
         navigationController?.navigationBar.barTintColor = UIColor.orange
-        navigationItem.title = "TersarZoe"
+        navigationItem.title = "Videos"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
         if hasNetworkConnection() {
             fetchVideos()

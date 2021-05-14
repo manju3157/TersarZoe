@@ -6,16 +6,26 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-class AudioViewController: UIViewController {
+class AudioViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+
+    var audioCategoryArray:[SubCategory] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = UIColor.orange
-        navigationItem.title = "TersarZoe"
+        navigationItem.title = "MP3 Teaching"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
 
         collectionView.register(UINib(nibName: "AudioCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AudioCell")
+
+        if hasNetworkConnection() {
+            fetchAudioCategories()
+        } else {
+            super.showNoInternetConnectionAlert()
+        }
     }
 
     @objc
@@ -24,15 +34,31 @@ class AudioViewController: UIViewController {
         self.performSegue(withIdentifier: "AudioSettings", sender: self)
 
     }
+
+    private func fetchAudioCategories() {
+        SVProgressHUD.showInfo(withStatus: "Fetching...")
+        NetworkManager.shared.getSubCategoriesFor(categoryID: AppConstants.audioCategoryID) {[weak self] (status, audioCategories) in
+            SVProgressHUD.dismiss()
+            if status && !audioCategories.isEmpty {
+                print("Number of audio Category: \(audioCategories.count)")
+                DispatchQueue.main.async {
+                    CoreDataManger.shared.savePhotos(subCategories: audioCategories)
+                    self?.audioCategoryArray = CoreDataManger.shared.fetchPhotoSubCategories()
+                    self?.collectionView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension AudioViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return audioCategoryArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AudioCell", for: indexPath) as! AudioCollectionViewCell
+        cell.populateCell(sc: audioCategoryArray[indexPath.row])
         return cell
     }
 }

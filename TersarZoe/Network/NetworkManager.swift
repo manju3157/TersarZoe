@@ -13,7 +13,7 @@ class NetworkManager {
     var dataTask: URLSessionDataTask?
 
     // MARK: - Web Service Methods
-    func getCategories(responseCallback: @escaping (Bool, [Category]) -> ()) {
+    func getHomeTabCategories(responseCallback: @escaping (Bool, [Category]) -> ()) {
         guard let url = URL(string: AppConstants.categoryBasePath) else {
             print("Invalid URL")
             responseCallback(false, [])
@@ -34,7 +34,7 @@ class NetworkManager {
         }.resume()
     }
 
-    func getPhotosCategories(categoryID: Int, responseCallback: @escaping (Bool, [SubCategory]) -> ()) {
+    func getSubCategoriesFor(categoryID: Int, responseCallback: @escaping (Bool, [SubCategory]) -> ()) {
         let photosPath = AppConstants.categoryBasePath + String(categoryID)
         guard let url = URL(string: photosPath) else {
             print("Invalid URL")
@@ -45,7 +45,7 @@ class NetworkManager {
         session.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
-                    if let decodedResponse = try? JSONDecoder().decode(PhotoCategory.self, from: data) {
+                    if let decodedResponse = try? JSONDecoder().decode(MainCategory.self, from: data) {
                         responseCallback(true, decodedResponse.category.sub_categories)
                         return
                     }
