@@ -13,8 +13,8 @@ class AudioCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
-        contentView.layer.cornerRadius = 8.0
+        imgView.makeRoundCorners(byRadius: 10.0)
+        contentView.applyCornerRadius(10.0)
     }
     func populateCell(sc: SubCategory) {
         nameLbl.text = sc.name
