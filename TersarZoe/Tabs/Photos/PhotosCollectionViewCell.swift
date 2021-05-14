@@ -13,9 +13,9 @@ class PhotosCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        contentView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
-        contentView.layer.cornerRadius = 8.0
+        imgView.makeRoundCorners(byRadius: 10.0)
+        contentView.applyCornerRadius(10.0)
+        layoutIfNeeded()
     }
     func populateCell(sc: SubCategory) {
         nameLbl.text = sc.name
