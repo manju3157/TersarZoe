@@ -10,7 +10,7 @@ import SVProgressHUD
 
 class PhotosViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    var photoCategoryArray:[SubCategory] = []
+    var photoCategoryArray:[MainSubCategory] = []
     var selectedSubCatID = 0
 
     override func viewDidLoad() {

@@ -17,14 +17,14 @@ class CommonCollectionViewCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 8.0
     }
 
-    func populateCell(sc: SubCategory) {
+    func populateCell(sc: MainSubCategory) {
         nameLbl.text = sc.name
         if let url = URL(string: sc.banner_image_url) {
             imgView.sd_setImage(with: url, completed: nil)
         }
     }
 
-    func populateCellWith(photoPost: PhotoPost) {
+    func populateCellWith(photoPost: TZPost) {
         nameLbl.text = photoPost.title
         if let url = URL(string: photoPost.thumbnail_url) {
             imgView.sd_setImage(with: url, completed: nil)

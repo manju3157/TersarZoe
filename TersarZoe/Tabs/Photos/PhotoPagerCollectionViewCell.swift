@@ -15,7 +15,7 @@ class PhotoPagerCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func populateCell(photo: PhotoFile) {
+    func populateCell(photo: TZFile) {
         if let url = URL(string: photo.file_url) {
             imgView.sd_setImage(with: url, completed: nil)
         }

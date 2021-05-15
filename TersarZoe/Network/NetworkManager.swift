@@ -34,7 +34,7 @@ class NetworkManager {
         }.resume()
     }
 
-    func getSubCategoriesFor(categoryID: Int, responseCallback: @escaping (Bool, [SubCategory]) -> ()) {
+    func getSubCategoriesFor(categoryID: Int, responseCallback: @escaping (Bool, [MainSubCategory]) -> ()) {
         let photosPath = AppConstants.categoryBasePath + String(categoryID)
         guard let url = URL(string: photosPath) else {
             print("Invalid URL")
@@ -56,7 +56,7 @@ class NetworkManager {
         }.resume()
     }
 
-    func getPhotosSubCategories(subCategoryID: Int, responseCallback: @escaping (Bool, [PhotoPost]) -> ()) {
+    func getSubCategoryDetail(subCategoryID: Int, responseCallback: @escaping (Bool, [TZPost]) -> ()) {
         let photosPath = AppConstants.subCategoryBasePath + String(subCategoryID)
         guard let url = URL(string: photosPath) else {
             print("Invalid URL")
@@ -67,8 +67,11 @@ class NetworkManager {
         session.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
-                    if let decodedResponse = try? JSONDecoder().decode(PhotoSubCategory.self, from: data) {
-                        responseCallback(true, decodedResponse.sub_category.posts)
+                    if let decodedResponse = try? JSONDecoder().decode(SubCategorySet.self, from: data) {
+                        let orderedPosts = decodedResponse.sub_category.posts.sorted { (item1, item2) -> Bool in
+                            item1.id < item2.id
+                        }
+                        responseCallback(true, orderedPosts)
                         return
                     }
                 }

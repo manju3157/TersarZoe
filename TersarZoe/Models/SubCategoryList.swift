@@ -7,24 +7,24 @@
 
 import Foundation
 
-class PhotoSubCategory: Codable {
-    var sub_category: PhotoSubCategoryDetails
+class SubCategorySet: Codable {
+    var sub_category: SubCategoryListDetails
 }
 
-class PhotoSubCategoryDetails: Codable {
+class SubCategoryListDetails: Codable {
     var id: Int
     var name: String
-    var posts: [PhotoPost]
+    var posts: [TZPost]
 }
 
-class PhotoPost: Codable {
+class TZPost: Codable {
     var id: Int
     var title: String
     var thumbnail_url: String
-    var files: [PhotoFile]
+    var files: [TZFile]
 }
 
-class PhotoFile: Codable {
+class TZFile: Codable {
     var id: Int
     var file_url: String
 }

@@ -44,7 +44,7 @@ public class CoreDataManger: NSObject {
         }
     }
 
-    func savePhotos(subCategories: [SubCategory]) {
+    func savePhotos(subCategories: [MainSubCategory]) {
         let photoTable = "PhotoSubCategoryTable"
         if subCategories.count == 0 {
             return
@@ -92,8 +92,8 @@ public class CoreDataManger: NSObject {
         }
     }
 
-    func fetchPhotoSubCategories() -> [SubCategory] {
-        var photoSubCatgs: [SubCategory] = []
+    func fetchPhotoSubCategories() -> [MainSubCategory] {
+        var photoSubCatgs: [MainSubCategory] = []
         managedContext = self.appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoSubCategoryTable")
         do {
@@ -104,7 +104,7 @@ public class CoreDataManger: NSObject {
                     let name = index.value(forKey: "name") as? String ?? ""
                     let imageUrl = index.value(forKey: "banner_image_url") as? String ?? ""
 
-                    photoSubCatgs.append(SubCategory(id: id, name: name, banner_image_url: imageUrl))
+                    photoSubCatgs.append(MainSubCategory(id: id, name: name, banner_image_url: imageUrl))
                 }
             }
             return photoSubCatgs.sorted { (item1, item2) -> Bool in

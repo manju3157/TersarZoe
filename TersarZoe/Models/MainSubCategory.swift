@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SubCategory: Codable {
+class MainSubCategory: Codable {
     var id: Int
     var name: String
     var banner_image_url: String

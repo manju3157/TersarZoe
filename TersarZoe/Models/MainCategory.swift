@@ -14,7 +14,7 @@ class MainCategory: Codable {
 class SubCategoryList: Codable {
     var id: Int
     var name: String
-    var sub_categories: [SubCategory]
+    var sub_categories: [MainSubCategory]
 }
 
 

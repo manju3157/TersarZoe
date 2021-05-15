@@ -92,6 +92,7 @@
                     <connections>
                         <outlet property="collectionView" destination="ozU-ZR-ZY6" id="yNt-je-KYp"/>
                         <segue destination="dGu-H0-mjR" kind="presentation" identifier="AudioSettings" id="YQE-MR-q2U"/>
+                        <segue destination="nLE-sr-Omk" kind="show" identifier="ShowAudio" id="8ub-Xq-AQi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tj6-p2-3h6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,7 +533,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="57g-Bm-91b"/>
+        <segue reference="8ub-Xq-AQi"/>
+        <segue reference="YQE-MR-q2U"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="folder" catalog="system" width="128" height="97"/>

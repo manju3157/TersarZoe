@@ -11,7 +11,7 @@ class PhotoPagerViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
 
-    var photos:[PhotoFile] = []
+    var photos:[TZFile] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,7 +16,7 @@ class AudioCollectionViewCell: UICollectionViewCell {
         imgView.makeRoundCorners(byRadius: 10.0)
         contentView.applyCornerRadius(10.0)
     }
-    func populateCell(sc: SubCategory) {
+    func populateCell(sc: MainSubCategory) {
         nameLbl.text = sc.name
         if let url = URL(string: sc.banner_image_url) {
             imgView.sd_setImage(with: url, completed: nil)

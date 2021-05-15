@@ -11,7 +11,8 @@ import SVProgressHUD
 class AudioViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var audioCategoryArray:[SubCategory] = []
+    var audioCategoryArray:[MainSubCategory] = []
+    var selectedSubCatID = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,15 @@ class AudioViewController: BaseViewController {
             }
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAudio" {
+            if let nextViewController = segue.destination as? CommonCollectionViewController {
+                nextViewController.contentType = .audio
+                nextViewController.subCategoryId = selectedSubCatID
+            }
+        }
+    }
 }
 
 extension AudioViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -60,6 +70,10 @@ extension AudioViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AudioCell", for: indexPath) as! AudioCollectionViewCell
         cell.populateCell(sc: audioCategoryArray[indexPath.row])
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedSubCatID = audioCategoryArray[indexPath.row].id
+        performSegue(withIdentifier: "ShowAudio", sender: nil)
     }
 }
 
