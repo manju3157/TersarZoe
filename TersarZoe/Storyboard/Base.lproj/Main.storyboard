@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDW-p8-VQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806" y="-1141"/>
+            <point key="canvasLocation" x="-86" y="-2004"/>
         </scene>
         <!--Item-->
         <scene sceneID="iO4-tN-Cvw">
@@ -261,6 +261,7 @@
                     <connections>
                         <outlet property="collectionView" destination="zJX-3b-Fbq" id="nt3-5q-YJD"/>
                         <segue destination="eW6-CH-7nN" kind="show" identifier="ShowPhotoPager" id="AGw-9w-IM6"/>
+                        <segue destination="AUA-cS-S6m" kind="show" identifier="DisplayPDF" id="C15-Yg-1JQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfv-83-erm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -448,7 +449,7 @@
                     <navigationItem key="navigationItem" id="RsV-SA-DU8"/>
                     <connections>
                         <outlet property="collectionView" destination="gL9-8D-h0T" id="Wc3-Z3-qkp"/>
-                        <segue destination="AUA-cS-S6m" kind="push" identifier="showPDF" id="2pi-mK-onT"/>
+                        <segue destination="nLE-sr-Omk" kind="show" identifier="ShowPDFList" id="TrQ-x4-xnB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwP-K9-vnq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -533,7 +534,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8ub-Xq-AQi"/>
+        <segue reference="TrQ-x4-xnB"/>
         <segue reference="YQE-MR-q2U"/>
     </inferredMetricsTieBreakers>
     <resources>

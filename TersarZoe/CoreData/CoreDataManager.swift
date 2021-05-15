@@ -44,7 +44,7 @@ public class CoreDataManger: NSObject {
         }
     }
 
-    func savePhotos(subCategories: [MainSubCategory]) {
+    func saveMainSubCategories(subCategories: [MainSubCategory]) {
         let photoTable = "PhotoSubCategoryTable"
         if subCategories.count == 0 {
             return
@@ -84,7 +84,9 @@ public class CoreDataManger: NSObject {
                     categories.append(Category(id: id, name: name, banner_image_url: imageUrl))
                 }
             }
-            return categories
+            return categories.sorted { (item1, item2) -> Bool in
+                item1.id < item2.id
+            }
         }
         catch let error as NSError {
             print("CoreData - Could not fetch Categories. \(error), \(error.userInfo)")
@@ -92,7 +94,7 @@ public class CoreDataManger: NSObject {
         }
     }
 
-    func fetchPhotoSubCategories() -> [MainSubCategory] {
+    func fetchMainSubCategories() -> [MainSubCategory] {
         var photoSubCatgs: [MainSubCategory] = []
         managedContext = self.appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PhotoSubCategoryTable")

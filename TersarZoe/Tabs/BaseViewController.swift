@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
     }
 
     func showAlert(alertMessage: String) {
-        let alert = UIAlertController(title: "TersarZoe", message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "NamkhaZoe", message: alertMessage, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

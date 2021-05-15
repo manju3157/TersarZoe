@@ -20,11 +20,16 @@ class NetworkManager {
             return
         }
         let request = URLRequest(url: url)
+        let ignoreCategoryNames = ["MP3 Teaching", "Video", "Photo"]
         session.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 do {
                     if let decodedResponse = try? JSONDecoder().decode(CategoryList.self, from: data) {
-                        responseCallback(true, decodedResponse.categories)
+                        let actualCategories = decodedResponse.categories
+                        let filteredCategories = actualCategories.filter { (category) -> Bool in
+                            !ignoreCategoryNames.contains(category.name)
+                        }
+                        responseCallback(true, filteredCategories)
                         return
                     }
                 }
@@ -82,7 +87,8 @@ class NetworkManager {
     }
 
     func getVideos(responseCallback: @escaping (Bool, [Video]) -> ()) {
-        guard let url = URL(string: AppConstants.videosPath) else {
+        let videoPath = AppConstants.subCategoryBasePath + String(AppConstants.videoCategoryID)
+        guard let url = URL(string: videoPath) else {
             print("Invalid URL")
             responseCallback(false, [])
             return

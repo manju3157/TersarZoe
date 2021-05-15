@@ -23,9 +23,11 @@ class CommonCollectionViewController: BaseViewController {
     var tzPosts: [TZPost] = []
     var selectedPost: TZPost?
     public var subCategoryId: Int = 0
+    var pageTitle = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = pageTitle
         collectionView.register(UINib(nibName: "CommonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         fetchSubcategroies()
     }
@@ -53,6 +55,11 @@ class CommonCollectionViewController: BaseViewController {
                let post = selectedPost {
                 nextViewController.photos = post.files
             }
+        } else if segue.identifier == "DisplayPDF" {
+            if let nextViewController = segue.destination as? PDFViewController,
+               let post = selectedPost {
+                nextViewController.pdfFiles = post.files
+            }
         }
     }
 }
@@ -69,13 +76,13 @@ extension CommonCollectionViewController: UICollectionViewDataSource, UICollecti
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedPost = tzPosts[indexPath.row]
         switch contentType {
             case .pdf:
-                print("pdf")
+                performSegue(withIdentifier: "DisplayPDF", sender: nil)
             case .audio:
                 print("audio")
             case .photo:
-                selectedPost = tzPosts[indexPath.row]
                 performSegue(withIdentifier: "ShowPhotoPager", sender: nil)
             case .none:
                 print("none")

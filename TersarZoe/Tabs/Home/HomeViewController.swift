@@ -15,13 +15,15 @@ class HomeViewController: BaseViewController {
     var categories: [Category] = []
 
     private var finishedLoadingInitialTableCells = false
+    var selectedCatID = 0
+    var selectedPageTitle = ""
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
         navigationController?.navigationBar.barTintColor = topColor
-        navigationItem.title = "TersarZoe"
+        navigationItem.title = "NamkhaZoe"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
         if hasNetworkConnection() {
             fetchCategories()
@@ -73,9 +75,34 @@ class HomeViewController: BaseViewController {
         backgroundView.layer.insertSublayer(gradientLayer, at: 0)
         tableView.backgroundView = backgroundView
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPDFItems" {
+            if let nextViewController = segue.destination as? PDFCollectionViewController {
+                nextViewController.selectedCatID = selectedCatID
+                nextViewController.pageTitle = selectedPageTitle
+            }
+        }
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuTableViewCell
+        cell?.populateCell(category: categories[indexPath.row])
+        return cell ?? UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCatID = categories[indexPath.row].id
+        selectedPageTitle = categories[indexPath.row].name
+        performSegue(withIdentifier: "showPDFItems", sender: nil)
+    }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = .clear
@@ -103,21 +130,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.alpha = 1
                 }, completion: nil)
             }
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuTableViewCell
-        cell?.populateCell(category: categories[indexPath.row])
-        return cell ?? UITableViewCell()
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showPDFItems", sender: nil)
     }
 }
 

@@ -12,6 +12,7 @@ class PhotosViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var photoCategoryArray:[MainSubCategory] = []
     var selectedSubCatID = 0
+    var selectedPageTitle = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +45,8 @@ class PhotosViewController: BaseViewController {
             if status && !photos.isEmpty {
                 print("Number of Photos: \(photos.count)")
                 DispatchQueue.main.async {
-                    CoreDataManger.shared.savePhotos(subCategories: photos)
-                    self?.photoCategoryArray = CoreDataManger.shared.fetchPhotoSubCategories()
+                    CoreDataManger.shared.saveMainSubCategories(subCategories: photos)
+                    self?.photoCategoryArray = CoreDataManger.shared.fetchMainSubCategories()
                     self?.collectionView.reloadData()
                 }
             }
@@ -57,6 +58,7 @@ class PhotosViewController: BaseViewController {
             if let nextViewController = segue.destination as? CommonCollectionViewController {
                 nextViewController.contentType = .photo
                 nextViewController.subCategoryId = selectedSubCatID
+                nextViewController.pageTitle = selectedPageTitle
             }
         }
     }
@@ -74,6 +76,7 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedSubCatID = photoCategoryArray[indexPath.row].id
+        selectedPageTitle = photoCategoryArray[indexPath.row].name
         performSegue(withIdentifier: "ShowPhotos", sender: nil)
     }
 }

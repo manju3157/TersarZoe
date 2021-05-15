@@ -43,8 +43,8 @@ class AudioViewController: BaseViewController {
             if status && !audioCategories.isEmpty {
                 print("Number of audio Category: \(audioCategories.count)")
                 DispatchQueue.main.async {
-                    CoreDataManger.shared.savePhotos(subCategories: audioCategories)
-                    self?.audioCategoryArray = CoreDataManger.shared.fetchPhotoSubCategories()
+                    CoreDataManger.shared.saveMainSubCategories(subCategories: audioCategories)
+                    self?.audioCategoryArray = CoreDataManger.shared.fetchMainSubCategories()
                     self?.collectionView.reloadData()
                 }
             }

@@ -270,7 +270,6 @@
 			children = (
 				F90566742647C2D4005B796F /* CoreData */,
 				F9056646264676B6005B796F /* Models */,
-				F9DDF6262599EE1800DCBB4D /* PDF */,
 				F9DDF6202599EDCB00DCBB4D /* Temp */,
 				F9FCE4F42562944400A72446 /* AppDelegate */,
 				F9D91B9D2594B1E6002D3AAC /* Network */,
@@ -382,6 +381,7 @@
 		F9FCE4F0256293C500A72446 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F9DDF6262599EE1800DCBB4D /* PDF */,
 				F9ABC6312561345700676565 /* HomeViewController.swift */,
 				F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */,
 				F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */,
