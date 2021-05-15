@@ -1,4 +1,5 @@
 PODS:
+  - IQKeyboardManagerSwift (6.5.6)
   - SDWebImage (5.9.4):
     - SDWebImage/Core (= 5.9.4)
   - SDWebImage/Core (5.9.4)
@@ -6,21 +7,24 @@ PODS:
   - YoutubePlayerView (1.2.1)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - SDWebImage (~> 5.0)
   - SVProgressHUD
   - YoutubePlayerView
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManagerSwift
     - SDWebImage
     - SVProgressHUD
     - YoutubePlayerView
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YoutubePlayerView: 3870fc10f2db3f54156697757f44d304203bdc7e
 
-PODFILE CHECKSUM: e3a46decc10e466a4c67bdf88a30b97757f2e2a7
+PODFILE CHECKSUM: 9370eb4a849120c4c26e58ca610d073d2fa2f51b
 
 COCOAPODS: 1.10.0

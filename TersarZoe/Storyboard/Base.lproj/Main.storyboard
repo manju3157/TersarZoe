@@ -144,23 +144,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbO-eW-qCJ">
+                                <rect key="frame" x="0.0" y="761" width="414" height="52"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Page" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-lx-fGb">
+                                        <rect key="frame" x="8" y="9" width="56" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="5H1-si-pVl"/>
+                                            <constraint firstAttribute="width" constant="56" id="9Pw-yg-mT3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y7-ka-Nob">
+                                        <rect key="frame" x="70" y="10" width="42" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="OT9-B2-a6t"/>
+                                            <constraint firstAttribute="height" constant="32" id="S18-D0-ihi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-B5-ts8">
+                                        <rect key="frame" x="262" y="8" width="132" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="e0c-gr-vB8"/>
+                                            <constraint firstAttribute="height" constant="36" id="mxm-bP-bTL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Go to page">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="performGoto" destination="AUA-cS-S6m" eventType="touchUpInside" id="KvF-n9-Rkb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Nk6-B5-ts8" secondAttribute="trailing" constant="20" id="7g5-64-eUT"/>
+                                    <constraint firstItem="Nk6-B5-ts8" firstAttribute="centerY" secondItem="AbO-eW-qCJ" secondAttribute="centerY" id="Eol-Ex-fHk"/>
+                                    <constraint firstItem="8y7-ka-Nob" firstAttribute="centerY" secondItem="AbO-eW-qCJ" secondAttribute="centerY" id="eGa-3t-yho"/>
+                                    <constraint firstItem="8y7-ka-Nob" firstAttribute="leading" secondItem="xnW-lx-fGb" secondAttribute="trailing" constant="6" id="eff-n8-opu"/>
+                                    <constraint firstItem="xnW-lx-fGb" firstAttribute="centerY" secondItem="AbO-eW-qCJ" secondAttribute="centerY" id="fIp-h3-pA7"/>
+                                    <constraint firstItem="xnW-lx-fGb" firstAttribute="leading" secondItem="AbO-eW-qCJ" secondAttribute="leading" constant="8" id="hKu-Bv-zcj"/>
+                                    <constraint firstAttribute="height" constant="52" id="ofs-ho-j0L"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-5P-Fd1" customClass="PDFView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kNG-m4-aqU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kNG-m4-aqU" firstAttribute="trailing" secondItem="AbO-eW-qCJ" secondAttribute="trailing" id="1fF-rd-HTO"/>
+                            <constraint firstItem="AbO-eW-qCJ" firstAttribute="leading" secondItem="kNG-m4-aqU" secondAttribute="leading" id="1rx-ob-XDZ"/>
                             <constraint firstItem="WcH-5P-Fd1" firstAttribute="top" secondItem="kNG-m4-aqU" secondAttribute="top" id="2Dh-RO-zQw"/>
                             <constraint firstItem="WcH-5P-Fd1" firstAttribute="leading" secondItem="kNG-m4-aqU" secondAttribute="leading" id="DLx-03-LJ2"/>
-                            <constraint firstItem="kNG-m4-aqU" firstAttribute="bottom" secondItem="WcH-5P-Fd1" secondAttribute="bottom" id="IV7-TM-iAm"/>
+                            <constraint firstItem="AbO-eW-qCJ" firstAttribute="top" secondItem="WcH-5P-Fd1" secondAttribute="bottom" id="G5K-1B-Pnm"/>
                             <constraint firstItem="kNG-m4-aqU" firstAttribute="trailing" secondItem="WcH-5P-Fd1" secondAttribute="trailing" id="YXo-Vq-wAI"/>
+                            <constraint firstItem="kNG-m4-aqU" firstAttribute="bottom" secondItem="AbO-eW-qCJ" secondAttribute="bottom" id="frr-G4-6HJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="URA-NP-TFF"/>
                     <connections>
+                        <outlet property="bottomView" destination="AbO-eW-qCJ" id="RGK-lp-uqN"/>
+                        <outlet property="gotoBtn" destination="Nk6-B5-ts8" id="hME-6K-9yl"/>
+                        <outlet property="gotoPageTxtField" destination="xnW-lx-fGb" id="pE3-Mf-lhO"/>
                         <outlet property="pdfView" destination="WcH-5P-Fd1" id="Pvy-jy-rk1"/>
+                        <outlet property="totalPagesLbl" destination="8y7-ka-Nob" id="Asm-yQ-Upg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDW-p8-VQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
