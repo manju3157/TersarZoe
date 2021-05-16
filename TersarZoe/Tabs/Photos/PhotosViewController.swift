@@ -16,9 +16,7 @@ class PhotosViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor.orange
-        navigationItem.title = "Photos"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
+        configureNavBar()
         collectionView.register(UINib(nibName: "PhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
         if hasNetworkConnection() {
             fetchPhotos()
@@ -32,9 +30,18 @@ class PhotosViewController: BaseViewController {
             fetchPhotos()
         }
     }
-
+    private func configureNavBar() {
+        navigationController?.navigationBar.barTintColor = UIColor.orange
+        navigationItem.title = "Photos"
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "More"), for: .normal)
+        button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        button.addTarget(self, action: #selector(moreBtnTapped), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = barButtonItem
+    }
     @objc
-    func addTapped() {
+    func moreBtnTapped() {
         print("Right Bar button")
         self.performSegue(withIdentifier: "PhotoSettings", sender: self)
     }

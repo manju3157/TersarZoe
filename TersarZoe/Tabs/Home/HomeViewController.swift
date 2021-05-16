@@ -57,8 +57,6 @@ class HomeViewController: BaseViewController {
     private func configureNavigationBar() {
         navigationController?.navigationBar.barTintColor = topColor
         navigationItem.title = "NamkhaZoe"
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
-//        navigationItem.rightBarButtonItem?.image = UIImage(named: "More")
 
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "More"), for: .normal)

@@ -14,9 +14,7 @@ class VideosViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "VideosTableViewCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
-        navigationController?.navigationBar.barTintColor = UIColor.orange
-        navigationItem.title = "Videos"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
+        configureNavBar()
         if hasNetworkConnection() {
             fetchVideos()
         } else {
@@ -30,9 +28,18 @@ class VideosViewController: BaseViewController {
             fetchVideos()
         }
     }
-
+    private func configureNavBar() {
+        navigationController?.navigationBar.barTintColor = UIColor.orange
+        navigationItem.title = "Videos"
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "More"), for: .normal)
+        button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        button.addTarget(self, action: #selector(moreBtnTapped), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = barButtonItem
+    }
     @objc
-    func addTapped() {
+    func moreBtnTapped() {
         print("Right Bar button")
         self.performSegue(withIdentifier: "VideoSettings", sender: self)
     }
