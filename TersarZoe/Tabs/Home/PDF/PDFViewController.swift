@@ -47,7 +47,11 @@ class PDFViewController: BaseViewController {
 
     @objc
     func shareTapped() {
-        print("Right Bar button")
+        if let urlStr = pdfFiles.first?.file_url {
+            let text = "NamkhaZoe: Here is the document link " + urlStr
+            let shareVC = ShareManager.current.getShareController(textToShare: text, view: self.view)
+            present(shareVC, animated: true, completion: nil)
+        }
     }
     private func configurePDFView() {
         pdfView.displayMode = .singlePageContinuous

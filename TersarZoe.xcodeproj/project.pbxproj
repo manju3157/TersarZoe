@@ -18,6 +18,8 @@
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
+		F91D78E626512E1E00F29893 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D78E526512E1E00F29893 /* ShareManager.swift */; };
+		F91D78EB26512E2B00F29893 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D78EA26512E2B00F29893 /* DownloadManager.swift */; };
 		F9225C982594AC8700E8A9F7 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9225C972594AC8700E8A9F7 /* Global.swift */; };
 		F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FFB322572299D000E3C4F /* SettingsViewController.swift */; };
 		F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */; };
@@ -102,6 +104,8 @@
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
+		F91D78E526512E1E00F29893 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
+		F91D78EA26512E2B00F29893 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		F9225C972594AC8700E8A9F7 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F94FFB322572299D000E3C4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 			children = (
 				F9D91B9E2594B200002D3AAC /* NetworkManager.swift */,
 				F9056654264677B2005B796F /* AppConstants.swift */,
+				F91D78E526512E1E00F29893 /* ShareManager.swift */,
+				F91D78EA26512E2B00F29893 /* DownloadManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -722,6 +728,7 @@
 				F9D91BA82594B31B002D3AAC /* UIViewController+Extension.swift in Sources */,
 				F9ABC6322561345700676565 /* HomeViewController.swift in Sources */,
 				F9ABC6382561345700676565 /* TersarZoe.xcdatamodeld in Sources */,
+				F91D78E626512E1E00F29893 /* ShareManager.swift in Sources */,
 				F90566762647C2E7005B796F /* CoreDataManager.swift in Sources */,
 				F9225C982594AC8700E8A9F7 /* Global.swift in Sources */,
 				F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */,
@@ -740,6 +747,7 @@
 				F9FEA870264D138000E4AD49 /* UIColor+Extension.swift in Sources */,
 				F98DB9FF257A2C9200526D16 /* AudioCollectionViewCell.swift in Sources */,
 				F9FEA86A264D010800E4AD49 /* PhotoPagerCollectionViewCell.swift in Sources */,
+				F91D78EB26512E2B00F29893 /* DownloadManager.swift in Sources */,
 				F9FEA8A7264E60AB00E4AD49 /* Audio.swift in Sources */,
 				F905668926484997005B796F /* BaseViewController.swift in Sources */,
 				F9FEA8A2264E605800E4AD49 /* MainCategory.swift in Sources */,

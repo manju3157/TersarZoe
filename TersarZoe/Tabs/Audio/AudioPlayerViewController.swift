@@ -43,7 +43,11 @@ class AudioPlayerViewController: BaseViewController {
 
     @objc
     func shareTapped() {
-        print("Right Bar button")
+        if let urlStr = audioFiles.first?.file_url {
+            let text = "NamkhaZoe: Here is the audio link " + urlStr
+            let shareVC = ShareManager.current.getShareController(textToShare: text, view: self.view)
+            present(shareVC, animated: true, completion: nil)
+        }
     }
     @objc func enteredBackground(notification: Notification) {
         let script = "var vids = document.getElementsByTagName('video'); for( var i = 0; i < vids.length; i++ ){vids.item(i).pause()}"

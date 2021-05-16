@@ -50,7 +50,9 @@ class PhotoPagerViewController: BaseViewController {
 
     @objc
     func shareTapped() {
-        print("Right Bar button")
+        let text = "NamkhaZoe: Here is the photo link " + photos[pageControl.currentPage].file_url
+        let shareVC = ShareManager.current.getShareController(textToShare: text, view: self.view)
+        present(shareVC, animated: true, completion: nil)
     }
 }
 
