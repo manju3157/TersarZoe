@@ -60,6 +60,11 @@ class CommonCollectionViewController: BaseViewController {
                let post = selectedPost {
                 nextViewController.pdfFiles = post.files
             }
+        } else if segue.identifier == "PlayAudio" {
+            if let nextViewController = segue.destination as? AudioPlayerViewController,
+               let post = selectedPost {
+                nextViewController.audioFiles = post.files
+            }
         }
     }
 }
@@ -81,7 +86,7 @@ extension CommonCollectionViewController: UICollectionViewDataSource, UICollecti
             case .pdf:
                 performSegue(withIdentifier: "DisplayPDF", sender: nil)
             case .audio:
-                print("audio")
+                performSegue(withIdentifier: "PlayAudio", sender: nil)
             case .photo:
                 performSegue(withIdentifier: "ShowPhotoPager", sender: nil)
             case .none:

@@ -4,12 +4,14 @@ PODS:
     - SDWebImage/Core (= 5.9.4)
   - SDWebImage/Core (5.9.4)
   - SVProgressHUD (2.2.5)
+  - SwiftyGif (5.4.0)
   - YoutubePlayerView (1.2.1)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
   - SDWebImage (~> 5.0)
   - SVProgressHUD
+  - SwiftyGif
   - YoutubePlayerView
 
 SPEC REPOS:
@@ -17,14 +19,16 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - SDWebImage
     - SVProgressHUD
+    - SwiftyGif
     - YoutubePlayerView
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
   YoutubePlayerView: 3870fc10f2db3f54156697757f44d304203bdc7e
 
-PODFILE CHECKSUM: 9370eb4a849120c4c26e58ca610d073d2fa2f51b
+PODFILE CHECKSUM: 1c40eaf86899da011099a0b1640f3fec67d21f0b
 
 COCOAPODS: 1.10.0

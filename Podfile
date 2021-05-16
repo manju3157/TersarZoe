@@ -8,6 +8,7 @@ target 'TersarZoe' do
     pod 'SDWebImage', '~> 5.0'
     pod 'YoutubePlayerView'
     pod 'SVProgressHUD'
+    pod 'SwiftyGif'
 
   target 'TersarZoeTests' do
     inherit! :search_paths

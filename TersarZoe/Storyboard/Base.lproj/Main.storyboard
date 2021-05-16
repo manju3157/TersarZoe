@@ -271,6 +271,51 @@
             </objects>
             <point key="canvasLocation" x="1041" y="321"/>
         </scene>
+        <!--Audio Player View Controller-->
+        <scene sceneID="zrj-Aq-BiZ">
+            <objects>
+                <viewController id="Bx4-ZW-REG" customClass="AudioPlayerViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JIt-ty-Vwt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-3Q-0yc">
+                                <rect key="frame" x="0.0" y="663" width="414" height="150"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="g8B-Py-tfV"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vso-Is-vnC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="575"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rSI-se-S8f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rSI-se-S8f" firstAttribute="trailing" secondItem="Vso-Is-vnC" secondAttribute="trailing" id="LtA-0W-aOt"/>
+                            <constraint firstItem="rSI-se-S8f" firstAttribute="bottom" secondItem="XL0-3Q-0yc" secondAttribute="bottom" id="UI1-gm-ShB"/>
+                            <constraint firstItem="XL0-3Q-0yc" firstAttribute="top" secondItem="Vso-Is-vnC" secondAttribute="bottom" id="VGb-en-Zlv"/>
+                            <constraint firstItem="Vso-Is-vnC" firstAttribute="top" secondItem="rSI-se-S8f" secondAttribute="top" id="WGf-9N-UwC"/>
+                            <constraint firstItem="XL0-3Q-0yc" firstAttribute="leading" secondItem="rSI-se-S8f" secondAttribute="leading" id="eaR-pY-5qa"/>
+                            <constraint firstItem="rSI-se-S8f" firstAttribute="trailing" secondItem="XL0-3Q-0yc" secondAttribute="trailing" id="lqT-bW-2og"/>
+                            <constraint firstItem="Vso-Is-vnC" firstAttribute="leading" secondItem="rSI-se-S8f" secondAttribute="leading" id="wCo-oN-7vR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KCR-iH-PF8"/>
+                    <connections>
+                        <outlet property="audioWebView" destination="XL0-3Q-0yc" id="EA1-GA-qTs"/>
+                        <outlet property="imgView" destination="Vso-Is-vnC" id="DxU-Mw-8PF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="URD-23-Rxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-976.81159420289862" y="-1237.5"/>
+        </scene>
         <!--Common Collection View Controller-->
         <scene sceneID="Yal-Ab-A2O">
             <objects>
@@ -318,6 +363,7 @@
                         <outlet property="collectionView" destination="zJX-3b-Fbq" id="nt3-5q-YJD"/>
                         <segue destination="eW6-CH-7nN" kind="show" identifier="ShowPhotoPager" id="AGw-9w-IM6"/>
                         <segue destination="AUA-cS-S6m" kind="show" identifier="DisplayPDF" id="C15-Yg-1JQ"/>
+                        <segue destination="Bx4-ZW-REG" kind="show" identifier="PlayAudio" id="aCQ-y6-jdK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfv-83-erm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

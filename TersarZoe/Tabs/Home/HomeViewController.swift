@@ -22,9 +22,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
-        navigationController?.navigationBar.barTintColor = topColor
-        navigationItem.title = "NamkhaZoe"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
+        configureNavigationBar()
         if hasNetworkConnection() {
             fetchCategories()
         } else if CoreDataManger.shared.fetchCategories().isEmpty {
@@ -55,6 +53,11 @@ class HomeViewController: BaseViewController {
                 }
             }
         }
+    }
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.barTintColor = topColor
+        navigationItem.title = "NamkhaZoe"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(addTapped))
     }
     @objc
     func addTapped() {
@@ -125,7 +128,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.transform = CGAffineTransform(translationX: 0, y: rowHeight/2)
                 cell.alpha = 0
 
-                UIView.animate(withDuration: 0.8, delay: 0.1*Double(indexPath.row), options: [.curveEaseInOut], animations: {
+                UIView.animate(withDuration: 1.5, delay: 0.3*Double(indexPath.row), options: [.curveEaseInOut], animations: {
                     cell.transform = CGAffineTransform(translationX: 0, y: 0)
                     cell.alpha = 1
                 }, completion: nil)

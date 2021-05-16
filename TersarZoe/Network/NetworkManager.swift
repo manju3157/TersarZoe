@@ -26,9 +26,11 @@ class NetworkManager {
                 do {
                     if let decodedResponse = try? JSONDecoder().decode(CategoryList.self, from: data) {
                         let actualCategories = decodedResponse.categories
-                        let filteredCategories = actualCategories.filter { (category) -> Bool in
+                        var filteredCategories = actualCategories.filter { (category) -> Bool in
                             !ignoreCategoryNames.contains(category.name)
                         }
+                        let announcementCat = Category(id: 999, name: "Announcements", banner_image_url: "")
+                        filteredCategories.append(announcementCat)
                         responseCallback(true, filteredCategories)
                         return
                     }

@@ -47,6 +47,8 @@
 		F9DDF643259B401700DCBB4D /* PDFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DDF641259B401700DCBB4D /* PDFCollectionViewCell.swift */; };
 		F9DDF644259B401700DCBB4D /* PDFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DDF642259B401700DCBB4D /* PDFCollectionViewCell.xib */; };
 		F9DDF649259B543600DCBB4D /* buddha.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DDF648259B543600DCBB4D /* buddha.png */; };
+		F9E9F93A2650F31600CF0930 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E9F9392650F31600CF0930 /* AudioPlayerViewController.swift */; };
+		F9E9F93F2650F97B00CF0930 /* SoundGIF.gif in Resources */ = {isa = PBXBuildFile; fileRef = F9E9F93E2650F97B00CF0930 /* SoundGIF.gif */; };
 		F9FCE51C25653B2C00A72446 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */; };
 		F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */; };
 		F9FCE53E2565443500A72446 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCE53D2565443500A72446 /* CircularImageView.swift */; };
@@ -137,6 +139,8 @@
 		F9DDF641259B401700DCBB4D /* PDFCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9DDF642259B401700DCBB4D /* PDFCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFCollectionViewCell.xib; sourceTree = "<group>"; };
 		F9DDF648259B543600DCBB4D /* buddha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buddha.png; sourceTree = "<group>"; };
+		F9E9F9392650F31600CF0930 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
+		F9E9F93E2650F97B00CF0930 /* SoundGIF.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SoundGIF.gif; sourceTree = "<group>"; };
 		F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		F9FCE51B25653B2C00A72446 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		F9FCE53D2565443500A72446 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
@@ -395,6 +399,7 @@
 				F9FCE5C0256AD19F00A72446 /* AudioViewController.swift */,
 				F98DB9FD257A2C9200526D16 /* AudioCollectionViewCell.swift */,
 				F98DB9FE257A2C9200526D16 /* AudioCollectionViewCell.xib */,
+				F9E9F9392650F31600CF0930 /* AudioPlayerViewController.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 		F9FCE4F62562947500A72446 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F9E9F93E2650F97B00CF0930 /* SoundGIF.gif */,
 				F9156872257B880C006568AE /* Splash.jpeg */,
 				F9ABC6392561345F00676565 /* Assets.xcassets */,
 			);
@@ -577,6 +583,7 @@
 				F9ABC63A2561345F00676565 /* Assets.xcassets in Resources */,
 				F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */,
 				F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */,
+				F9E9F93F2650F97B00CF0930 /* SoundGIF.gif in Resources */,
 				F9ABC6352561345700676565 /* Main.storyboard in Resources */,
 				F9DDF644259B401700DCBB4D /* PDFCollectionViewCell.xib in Resources */,
 			);
@@ -723,6 +730,7 @@
 				F905668426484584005B796F /* Video.swift in Sources */,
 				F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */,
 				F9056648264676D1005B796F /* Category.swift in Sources */,
+				F9E9F93A2650F31600CF0930 /* AudioPlayerViewController.swift in Sources */,
 				F9FEA864264CF64100E4AD49 /* PhotoPagerViewController.swift in Sources */,
 				F9BC880E264AA8CF006348C8 /* CommonCollectionViewCell.swift in Sources */,
 				F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */,

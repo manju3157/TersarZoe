@@ -13,6 +13,7 @@ class AudioViewController: BaseViewController {
 
     var audioCategoryArray:[MainSubCategory] = []
     var selectedSubCatID = 0
+    var selectedPageTitle = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class AudioViewController: BaseViewController {
             if let nextViewController = segue.destination as? CommonCollectionViewController {
                 nextViewController.contentType = .audio
                 nextViewController.subCategoryId = selectedSubCatID
+                nextViewController.pageTitle = selectedPageTitle
             }
         }
     }
@@ -73,6 +75,7 @@ extension AudioViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedSubCatID = audioCategoryArray[indexPath.row].id
+        selectedPageTitle = audioCategoryArray[indexPath.row].name
         performSegue(withIdentifier: "ShowAudio", sender: nil)
     }
 }
