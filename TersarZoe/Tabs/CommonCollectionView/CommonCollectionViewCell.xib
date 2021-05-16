@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="246"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="buddha.png" translatesAutoresizingMaskIntoConstraints="NO" id="TD6-eC-YyH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="buddha.png" translatesAutoresizingMaskIntoConstraints="NO" id="TD6-eC-YyH">
                         <rect key="frame" x="10" y="-10" width="313" height="218"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUDJOM LINGPA DUDJOM LINGPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eNI-cs-5FQ">

@@ -22,7 +22,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="folder.badge.gear" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lDW-GB-Kv2">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="folder.badge.gear" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lDW-GB-Kv2">
                         <rect key="frame" x="0.0" y="0.5" width="253.5" height="180.5"/>
                     </imageView>
                 </subviews>

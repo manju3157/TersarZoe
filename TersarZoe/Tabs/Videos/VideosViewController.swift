@@ -29,7 +29,7 @@ class VideosViewController: BaseViewController {
         }
     }
     private func configureNavBar() {
-        navigationController?.navigationBar.barTintColor = UIColor.orange
+        //navigationController?.navigationBar.barTintColor = UIColor.orange
         navigationItem.title = "Videos"
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "More"), for: .normal)
