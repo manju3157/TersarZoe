@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 import SwiftyGif
+import SVProgressHUD
 
 class AudioPlayerViewController: BaseViewController {
     
@@ -38,7 +39,20 @@ class AudioPlayerViewController: BaseViewController {
     }
     @objc
     func downloadTapped() {
-        print("Right Bar button")
+        if hasNetworkConnection() {
+            if let urlStr = audioFiles.first?.file_url {
+                SVProgressHUD.show(withStatus: "Downloading...")
+                DownloadManager.current.downloadFile(contentType: .audio, urlString: urlStr) {[weak self] (status, filepath) in
+                    SVProgressHUD.dismiss()
+                    let successMsg = "File downloaded successfully"
+                    let failureMsg = "File download failed"
+                    let alertMsg = status ? successMsg : failureMsg
+                    self?.showAlert(alertMessage: alertMsg)
+                }
+            }
+        } else {
+            showNoInternetConnectionAlert()
+        }
     }
 
     @objc

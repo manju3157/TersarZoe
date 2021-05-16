@@ -7,6 +7,7 @@
 
 import UIKit
 import PDFKit
+import SVProgressHUD
 
 class PDFViewController: BaseViewController {
     @IBOutlet weak var pdfView: PDFView!
@@ -42,7 +43,20 @@ class PDFViewController: BaseViewController {
     }
     @objc
     func downloadTapped() {
-        print("Right Bar button")
+        if hasNetworkConnection() {
+            if let urlStr = pdfFiles.first?.file_url {
+                SVProgressHUD.show(withStatus: "Downloading...")
+                DownloadManager.current.downloadFile(contentType: .pdf, urlString: urlStr) {[weak self] (status, filepath) in
+                    SVProgressHUD.dismiss()
+                    let successMsg = "File downloaded successfully"
+                    let failureMsg = "File download failed"
+                    let alertMsg = status ? successMsg : failureMsg
+                    self?.showAlert(alertMessage: alertMsg)
+                }
+            }
+        } else {
+            showNoInternetConnectionAlert()
+        }
     }
 
     @objc

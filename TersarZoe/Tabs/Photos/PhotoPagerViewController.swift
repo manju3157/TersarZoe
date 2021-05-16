@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class PhotoPagerViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -45,7 +46,18 @@ class PhotoPagerViewController: BaseViewController {
     }
     @objc
     func downloadTapped() {
-        print("Right Bar button")
+        if hasNetworkConnection() {
+            SVProgressHUD.show(withStatus: "Downloading...")
+            DownloadManager.current.downloadFile(contentType: .photo, urlString: photos[pageControl.currentPage].file_url) {[weak self] (status, filepath) in
+                SVProgressHUD.dismiss()
+                let successMsg = "File downloaded successfully"
+                let failureMsg = "File download failed"
+                let alertMsg = status ? successMsg : failureMsg
+                self?.showAlert(alertMessage: alertMsg)
+            }
+        } else {
+            showNoInternetConnectionAlert()
+        }
     }
 
     @objc
