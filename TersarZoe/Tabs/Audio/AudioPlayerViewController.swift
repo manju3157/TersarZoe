@@ -19,7 +19,31 @@ class AudioPlayerViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setGifAndPlayAudio()
+        addShareAndDownloadButtons()
         NotificationCenter.default.addObserver(self, selector: #selector(enteredBackground(notification:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+    private func addShareAndDownloadButtons() {
+        let downloadButton = UIButton(type: .custom)
+        downloadButton.setImage(UIImage (named: "Download"), for: .normal)
+        downloadButton.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        downloadButton.addTarget(self, action: #selector(downloadTapped), for: .touchUpInside)
+        let downloadBarBtnItem = UIBarButtonItem(customView: downloadButton)
+
+        let shareButton = UIButton(type: .custom)
+        shareButton.setImage(UIImage (named: "Share"), for: .normal)
+        shareButton.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        shareButton.addTarget(self, action: #selector(shareTapped), for: .touchUpInside)
+        let shareBarBtnItem = UIBarButtonItem(customView: shareButton)
+        navigationItem.rightBarButtonItems = [downloadBarBtnItem, shareBarBtnItem]
+    }
+    @objc
+    func downloadTapped() {
+        print("Right Bar button")
+    }
+
+    @objc
+    func shareTapped() {
+        print("Right Bar button")
     }
     @objc func enteredBackground(notification: Notification) {
         let script = "var vids = document.getElementsByTagName('video'); for( var i = 0; i < vids.length; i++ ){vids.item(i).pause()}"
