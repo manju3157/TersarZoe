@@ -20,6 +20,7 @@
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
 		F91D78E626512E1E00F29893 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D78E526512E1E00F29893 /* ShareManager.swift */; };
 		F91D78EB26512E2B00F29893 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D78EA26512E2B00F29893 /* DownloadManager.swift */; };
+		F91D793D2652430100F29893 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D793C2652430100F29893 /* AppUtils.swift */; };
 		F9225C982594AC8700E8A9F7 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9225C972594AC8700E8A9F7 /* Global.swift */; };
 		F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FFB322572299D000E3C4F /* SettingsViewController.swift */; };
 		F98DB8202579234100526D16 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */; };
@@ -106,6 +107,7 @@
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
 		F91D78E526512E1E00F29893 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		F91D78EA26512E2B00F29893 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		F91D793C2652430100F29893 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		F9225C972594AC8700E8A9F7 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F94FFB322572299D000E3C4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F98DB81E2579234100526D16 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				F9D91BAF2594B384002D3AAC /* Reachability */,
 				F9225C972594AC8700E8A9F7 /* Global.swift */,
+				F91D793C2652430100F29893 /* AppUtils.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */,
 				F9FEA8B4264E663F00E4AD49 /* UIView+Extension.swift in Sources */,
 				F9FEA8AF264E64A100E4AD49 /* UIImageView+Extension.swift in Sources */,
+				F91D793D2652430100F29893 /* AppUtils.swift in Sources */,
 				F9DDF643259B401700DCBB4D /* PDFCollectionViewCell.swift in Sources */,
 				F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */,
 				F9BC8833264AD9FC006348C8 /* SubCategoryList.swift in Sources */,

@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
@@ -22,8 +23,41 @@ class SettingsViewController: UIViewController {
     @IBAction func cancelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    private func composeMail() {
+        let mailComposeViewController = configureMailComposer()
+        if MFMailComposeViewController.canSendMail(){
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            print("Can't send email")
+        }
+    }
+    private func configureMailComposer() -> MFMailComposeViewController {
+        let mailComposeVC = MFMailComposeViewController()
+        mailComposeVC.mailComposeDelegate = self
+        mailComposeVC.setToRecipients(["kunwangyal05@gmail.com"])
+        mailComposeVC.setSubject("Feedback NamkhaZoe iOS")
+        mailComposeVC.setMessageBody(getDeviceInfo(), isHTML: false)
+        return mailComposeVC
+    }
+    //MARK: - MFMail compose method
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    private func getDeviceInfo() -> String {
+        let os = "OS: " + UIDevice.current.systemVersion
+        let deviceName = "Device: " + UIDevice.current.name
+        let appName = "App: " + (Bundle.main.displayName ?? "")
+        let version = "Version: " + AppUtils.buildAndVersion()
+
+        return os + "\n" + deviceName + "\n" + appName + "\n" + version
+    }
 }
 
+extension Bundle {
+    var displayName: String? {
+        return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+    }
+}
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,10 +82,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             let shareVC = ShareManager.current.getShareController(textToShare: text, view: self.view)
             present(shareVC, animated: true, completion: nil)
         case 2:
-            print("Hello")
+            composeMail()
         default:
             return
         }
     }
-    
 }
