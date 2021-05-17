@@ -13,6 +13,8 @@ class AboutUsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(hexString: "E8DED1")
+        textView.backgroundColor = UIColor(hexString: "E8DED1")
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

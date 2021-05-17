@@ -20,6 +20,7 @@ class PDFCollectionViewController: BaseViewController {
         super.viewDidLoad()
         self.title = pageTitle
         collectionView.register(UINib(nibName: "PDFCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PDFCell")
+        collectionView.backgroundColor = UIColor(hexString: "E8DED1")
         if hasNetworkConnection() {
             fetchPDFCategories()
         } else if CoreDataManger.shared.fetchMainSubCategories().isEmpty {

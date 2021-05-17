@@ -15,6 +15,7 @@ class CommonCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         contentView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         contentView.layer.cornerRadius = 8.0
+        contentView.backgroundColor = UIColor(hexString: "E8DED1")
     }
 
     func populateCell(sc: MainSubCategory) {

@@ -301,10 +301,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-tf-6hG">
-                                <rect key="frame" x="368" y="20" width="26" height="26"/>
+                                <rect key="frame" x="364" y="20" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="26" id="Of2-dg-fm0"/>
-                                    <constraint firstAttribute="height" constant="26" id="rQW-co-Zut"/>
+                                    <constraint firstAttribute="width" constant="30" id="Of2-dg-fm0"/>
+                                    <constraint firstAttribute="height" constant="30" id="rQW-co-Zut"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" image="Close"/>
@@ -378,7 +378,7 @@
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -389,7 +389,7 @@
                                     </fragment>
                                     <fragment content="Mission">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
                                             <real key="NSKern" value="0.0"/>
                                             <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
@@ -407,7 +407,7 @@ Make best use of this, and share with all like minded practitioners.
 
 </string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -418,7 +418,7 @@ Make best use of this, and share with all like minded practitioners.
                                     </fragment>
                                     <fragment content="Founded: 2020">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
                                             <real key="NSKern" value="0.0"/>
                                             <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
@@ -434,7 +434,7 @@ Make best use of this, and share with all like minded practitioners.
 Founder: Lama Sonam Tashi
 Director of Dundul Raptenling Monastery,Odisah</string>
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="NSColor" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -447,10 +447,10 @@ Director of Dundul Raptenling Monastery,Odisah</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf8-M4-hkx">
-                                <rect key="frame" x="368" y="20" width="26" height="26"/>
+                                <rect key="frame" x="364" y="20" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="26" id="0Gv-rh-CAh"/>
-                                    <constraint firstAttribute="height" constant="26" id="SC0-fG-Vmo"/>
+                                    <constraint firstAttribute="width" constant="30" id="0Gv-rh-CAh"/>
+                                    <constraint firstAttribute="height" constant="30" id="SC0-fG-Vmo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" image="Close"/>
@@ -706,6 +706,7 @@ Director of Dundul Raptenling Monastery,Odisah</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.90980392156862744" green="0.87058823529411766" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
@@ -858,7 +859,7 @@ Director of Dundul Raptenling Monastery,Odisah</string>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Announcement" width="512" height="512"/>
-        <image name="Close" width="440" height="474.5"/>
+        <image name="Close" width="100" height="100"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="music.mic" catalog="system" width="128" height="121"/>
         <image name="photo" catalog="system" width="128" height="93"/>
