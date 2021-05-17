@@ -14,7 +14,7 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var ovalView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        ovalView.layer.cornerRadius = 8//28
+        ovalView.layer.cornerRadius = 8
         ovalView.backgroundColor = .lightGray
     }
 
@@ -28,6 +28,12 @@ class MenuTableViewCell: UITableViewCell {
         nameLbl.text = category.name
         if let url = URL(string: category.banner_image_url) {
             imgView.sd_setImage(with: url, completed: nil)
+        }
+    }
+    func fillMenu(name: String, image: UIImage?) {
+        nameLbl.text = name
+        if let img = image {
+            imgView.setImage(img)
         }
     }
 }
