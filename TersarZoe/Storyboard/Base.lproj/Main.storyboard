@@ -279,11 +279,28 @@
                     <connections>
                         <outlet property="cancelButton" destination="ggD-tf-6hG" id="7gt-7o-W79"/>
                         <outlet property="tableView" destination="NMb-0t-xtV" id="9PM-Kg-97C"/>
+                        <segue destination="got-0t-oxd" kind="show" identifier="ShowAboutUs" id="NSV-cB-3Ie"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qtb-MD-PHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041" y="321"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ma5-JX-KQh">
+            <objects>
+                <viewController id="got-0t-oxd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Inq-Dg-EqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="T9N-cc-izS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dwd-L2-MRG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LA8-YY-wVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="1039"/>
         </scene>
         <!--Audio Player View Controller-->
         <scene sceneID="zrj-Aq-BiZ">

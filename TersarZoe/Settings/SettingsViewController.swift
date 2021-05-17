@@ -73,10 +73,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "showPDFItems", sender: nil)
         switch  indexPath.row {
         case 0:
-            print("Hello")
+            performSegue(withIdentifier: "ShowAboutUs", sender: nil)
         case 1:
             let text = "Download Tersar App " + "http://onelink.to/efgf76"
             let shareVC = ShareManager.current.getShareController(textToShare: text, view: self.view)
