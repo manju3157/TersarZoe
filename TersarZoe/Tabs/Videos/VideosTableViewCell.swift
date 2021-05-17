@@ -14,6 +14,7 @@ class VideosTableViewCell: UITableViewCell {
         super.awakeFromNib()
         testView.layer.masksToBounds = true
         testView.layer.cornerRadius = 16.0
+        contentView.backgroundColor = UIColor(hexString: "E8DED1")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

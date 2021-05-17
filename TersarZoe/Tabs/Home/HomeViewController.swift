@@ -23,6 +23,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
         configureNavigationBar()
+        tableView.backgroundColor = UIColor(hexString: "E8DED1")
         if hasNetworkConnection() {
             fetchCategories()
         } else if CoreDataManger.shared.fetchCategories().isEmpty {

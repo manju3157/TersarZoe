@@ -19,7 +19,7 @@ class AudioViewController: BaseViewController {
         super.viewDidLoad()
         configureNavBar()
         collectionView.register(UINib(nibName: "AudioCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AudioCell")
-
+        collectionView.backgroundColor = UIColor(hexString: "E8DED1")
         if hasNetworkConnection() {
             fetchAudioCategories()
         } else {

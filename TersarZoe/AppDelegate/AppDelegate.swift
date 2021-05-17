@@ -16,12 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
-
-        UINavigationBar.appearance().backgroundColor = UIColor.white
-        UINavigationBar.appearance().barTintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UIBarButtonItem.appearance().tintColor = UIColor.white
+        let navItemColor = UIColor(hexString: "E8DED1")
+        UINavigationBar.appearance().backgroundColor = navItemColor
+        UINavigationBar.appearance().barTintColor = navItemColor
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: navItemColor]
+        UINavigationBar.appearance().tintColor = navItemColor
+        UIBarButtonItem.appearance().tintColor = navItemColor
         return true
     }
 

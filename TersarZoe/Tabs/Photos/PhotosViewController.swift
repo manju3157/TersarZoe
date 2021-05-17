@@ -18,6 +18,7 @@ class PhotosViewController: BaseViewController {
         super.viewDidLoad()
         configureNavBar()
         collectionView.register(UINib(nibName: "PhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
+        collectionView.backgroundColor = UIColor(hexString: "E8DED1")
         if hasNetworkConnection() {
             fetchPhotos()
         } else {

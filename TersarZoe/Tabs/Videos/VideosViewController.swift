@@ -14,6 +14,7 @@ class VideosViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "VideosTableViewCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
+        tableView.backgroundColor = UIColor(hexString: "E8DED1")
         configureNavBar()
         if hasNetworkConnection() {
             fetchVideos()

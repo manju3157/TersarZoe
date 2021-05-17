@@ -18,6 +18,8 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
+//        view.backgroundColor = UIColor(hexString: "E8DED1")
+//        tableView.backgroundColor = UIColor(hexString: "E8DED1")
     }
 
     @IBAction func cancelPressed(_ sender: Any) {
@@ -69,6 +71,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuTableViewCell
+        cell?.ovalView.backgroundColor = UIColor(hexString: "E8DED1")
         cell?.fillMenu(name: menuItems[indexPath.row], image: menuImages[indexPath.row])
         return cell ?? UITableViewCell()
     }
