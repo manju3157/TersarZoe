@@ -12,7 +12,9 @@ class AnnouncementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NetworkManager.shared.getAnnouncements { (status, announcementsList) in
+            print("Announcements : \(announcementsList.count)")
+        }
     }
     
 

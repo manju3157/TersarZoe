@@ -10,6 +10,7 @@ import Foundation
 struct AppConstants {
     static let categoryBasePath = "http://13.233.200.105/tersarzoe/api/categories/"
     static let subCategoryBasePath = "http://13.233.200.105/tersarzoe/api/sub-categories/"
+    static let announcementsPath = "http://13.233.200.105/tersarzoe/api/announcements/"
 
     static let photoCategoryID = 1
     static let sungbumCategoryID = 2

@@ -109,4 +109,25 @@ class NetworkManager {
             responseCallback(false, [])
         }.resume()
     }
+
+    func getAnnouncements(responseCallback: @escaping (Bool, [AnnouncementPost]) -> ()) {
+        guard let url = URL(string: AppConstants.announcementsPath) else {
+            print("Invalid URL")
+            responseCallback(false, [])
+            return
+        }
+        let request = URLRequest(url: url)
+        session.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    if let decodedResponse = try? JSONDecoder().decode(Announcement.self, from: data) {
+                        responseCallback(true, decodedResponse.announcements)
+                        return
+                    }
+                }
+            }
+            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+            responseCallback(false, [])
+        }.resume()
+    }
 }
