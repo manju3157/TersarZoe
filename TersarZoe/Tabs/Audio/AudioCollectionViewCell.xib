@@ -22,15 +22,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="folder.badge.gear" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lDW-GB-Kv2">
-                        <rect key="frame" x="0.0" y="0.5" width="253.5" height="180.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Splash.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="lDW-GB-Kv2">
+                        <rect key="frame" x="0.0" y="8" width="252" height="174.5"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="Hg6-CY-kZs" firstAttribute="top" secondItem="lDW-GB-Kv2" secondAttribute="bottom" constant="10" id="3tW-qv-tij"/>
                 <constraint firstAttribute="bottom" secondItem="Hg6-CY-kZs" secondAttribute="bottom" constant="10" id="5Gh-Z7-xlV"/>
-                <constraint firstItem="lDW-GB-Kv2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Xpd-6g-EhL"/>
+                <constraint firstItem="lDW-GB-Kv2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Xpd-6g-EhL"/>
                 <constraint firstItem="Hg6-CY-kZs" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="boH-6t-FCZ"/>
                 <constraint firstItem="Hg6-CY-kZs" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.9" id="d5T-NE-eIV"/>
                 <constraint firstItem="lDW-GB-Kv2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jRZ-Ac-aZ5"/>
@@ -45,6 +45,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="folder.badge.gear" catalog="system" width="128" height="94"/>
+        <image name="Splash.jpeg" width="1080" height="810"/>
     </resources>
 </document>

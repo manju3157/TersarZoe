@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="buddha.png" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-Kr-ZmU">
-                        <rect key="frame" x="0.0" y="0.0" width="297" height="256.5"/>
+                        <rect key="frame" x="0.0" y="8" width="297" height="248.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uF-Ie-ciJ">
                         <rect key="frame" x="7.5" y="266.5" width="282" height="20.5"/>
@@ -28,7 +28,7 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="hqs-Kr-ZmU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0ED-R6-lrh"/>
+                <constraint firstItem="hqs-Kr-ZmU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="0ED-R6-lrh"/>
                 <constraint firstAttribute="trailing" secondItem="hqs-Kr-ZmU" secondAttribute="trailing" id="5c8-Gl-9cq"/>
                 <constraint firstAttribute="bottom" secondItem="2uF-Ie-ciJ" secondAttribute="bottom" constant="10" id="G2l-rw-QnI"/>
                 <constraint firstItem="hqs-Kr-ZmU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="He3-MB-UDG"/>

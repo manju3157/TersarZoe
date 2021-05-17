@@ -38,7 +38,7 @@ class HomeViewController: BaseViewController {
         }
     }
     override func viewDidLayoutSubviews() {
-        setTableViewBackgroundGradient(topColor: topColor, bottomColor: bottomColor)
+        //setTableViewBackgroundGradient(topColor: topColor, bottomColor: bottomColor)
     }
     private func fetchCategories() {
         SVProgressHUD.show()
@@ -55,7 +55,7 @@ class HomeViewController: BaseViewController {
         }
     }
     private func configureNavigationBar() {
-        navigationController?.navigationBar.barTintColor = topColor
+        navigationController?.navigationBar.barTintColor = UIColor(hexString: "900603")
         navigationItem.title = "NamkhaZoe"
 
         let button = UIButton(type: .custom)
@@ -70,20 +70,20 @@ class HomeViewController: BaseViewController {
         print("Right Bar button")
         self.performSegue(withIdentifier: "HomeSettings", sender: self)
     }
-    func setTableViewBackgroundGradient(topColor:UIColor, bottomColor:UIColor) {
-        if gradientLayer.superlayer != nil {
-               gradientLayer.removeFromSuperlayer()
-        }
-        let gradientBackgroundColors = [topColor.cgColor, bottomColor.cgColor]
-        let gradientLocations = [0.0,1.0]
-        gradientLayer.colors = gradientBackgroundColors
-        gradientLayer.locations = gradientLocations as [NSNumber]
-        gradientLayer.frame = tableView.bounds
-
-        let backgroundView = UIView(frame: tableView.bounds)
-        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
-        tableView.backgroundView = backgroundView
-    }
+//    func setTableViewBackgroundGradient(topColor:UIColor, bottomColor:UIColor) {
+//        if gradientLayer.superlayer != nil {
+//               gradientLayer.removeFromSuperlayer()
+//        }
+//        let gradientBackgroundColors = [topColor.cgColor, bottomColor.cgColor]
+//        let gradientLocations = [0.0,1.0]
+//        gradientLayer.colors = gradientBackgroundColors
+//        gradientLayer.locations = gradientLocations as [NSNumber]
+//        gradientLayer.frame = tableView.bounds
+//
+//        let backgroundView = UIView(frame: tableView.bounds)
+//        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
+//        tableView.backgroundView = backgroundView
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPDFItems" {
             if let nextViewController = segue.destination as? PDFCollectionViewController {
@@ -115,7 +115,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             selectedPageTitle = categories[indexPath.row].name
             performSegue(withIdentifier: "showPDFItems", sender: nil)
         }
-
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -139,7 +138,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.transform = CGAffineTransform(translationX: 0, y: rowHeight/2)
                 cell.alpha = 0
 
-                UIView.animate(withDuration: 1.5, delay: 0.3*Double(indexPath.row), options: [.curveEaseInOut], animations: {
+                UIView.animate(withDuration: 1.0, delay: 0.2*Double(indexPath.row), options: [.curveEaseInOut], animations: {
                     cell.transform = CGAffineTransform(translationX: 0, y: 0)
                     cell.alpha = 1
                 }, completion: nil)

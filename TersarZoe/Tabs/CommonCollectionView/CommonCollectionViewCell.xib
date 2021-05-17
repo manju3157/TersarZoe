@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="buddha.png" translatesAutoresizingMaskIntoConstraints="NO" id="TD6-eC-YyH">
-                        <rect key="frame" x="10" y="-10" width="313" height="218"/>
+                        <rect key="frame" x="10" y="10" width="313" height="198"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DUDJOM LINGPA DUDJOM LINGPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eNI-cs-5FQ">
                         <rect key="frame" x="8.5" y="218" width="316" height="18"/>
@@ -33,7 +33,7 @@
                 <constraint firstAttribute="bottom" secondItem="eNI-cs-5FQ" secondAttribute="bottom" constant="10" id="WtF-f6-Lqq"/>
                 <constraint firstItem="eNI-cs-5FQ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="c84-oB-xzW"/>
                 <constraint firstAttribute="trailing" secondItem="TD6-eC-YyH" secondAttribute="trailing" constant="10" id="lbY-jd-5AB"/>
-                <constraint firstAttribute="top" secondItem="TD6-eC-YyH" secondAttribute="top" constant="10" id="tdn-z3-K6O"/>
+                <constraint firstItem="TD6-eC-YyH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="tdn-z3-K6O"/>
                 <constraint firstItem="TD6-eC-YyH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="x7g-hZ-Ssb"/>
             </constraints>
             <size key="customSize" width="333" height="246"/>

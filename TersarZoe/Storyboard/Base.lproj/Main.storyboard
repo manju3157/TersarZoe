@@ -144,11 +144,28 @@
                     <view key="view" contentMode="scaleToFill" id="lGr-y4-1hf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="260" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l7x-wR-axd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SaO-at-YH5" id="6GO-xp-zyp"/>
+                                    <outlet property="delegate" destination="SaO-at-YH5" id="X8l-XJ-jd4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="u2v-9b-mFQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u2v-9b-mFQ" firstAttribute="trailing" secondItem="l7x-wR-axd" secondAttribute="trailing" id="3Nt-bP-mwW"/>
+                            <constraint firstItem="l7x-wR-axd" firstAttribute="leading" secondItem="u2v-9b-mFQ" secondAttribute="leading" id="JVm-EG-tjT"/>
+                            <constraint firstItem="u2v-9b-mFQ" firstAttribute="bottom" secondItem="l7x-wR-axd" secondAttribute="bottom" id="ggV-fg-ISx"/>
+                            <constraint firstItem="l7x-wR-axd" firstAttribute="top" secondItem="u2v-9b-mFQ" secondAttribute="top" id="wez-rs-Pv3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GKX-Bc-eqo"/>
                     <connections>
+                        <outlet property="tableView" destination="l7x-wR-axd" id="zeR-3f-qBC"/>
                         <segue destination="aKY-Pw-Lr0" kind="show" identifier="ShowAnnouncementPhotos" id="Dnp-fJ-UMe"/>
                         <segue destination="Cda-yO-eC2" kind="show" identifier="ShowAnnouncementVideos" id="8gk-3r-GNg"/>
                     </connections>
@@ -690,6 +707,11 @@ Director of Dundul Raptenling Monastery,Odisah</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="19A-ZN-Xm9" kind="relationship" relationship="viewControllers" id="TAY-Cu-9t0"/>
@@ -833,7 +855,7 @@ Director of Dundul Raptenling Monastery,Odisah</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="TrQ-x4-xnB"/>
-        <segue reference="as7-kR-ruD"/>
+        <segue reference="Wzl-V1-HWt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Announcement" width="512" height="512"/>
