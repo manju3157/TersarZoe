@@ -40,6 +40,18 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //performSegue(withIdentifier: "showPDFItems", sender: nil)
+        switch  indexPath.row {
+        case 0:
+            print("Hello")
+        case 1:
+            let text = "Download Tersar App " + "http://onelink.to/efgf76"
+            let shareVC = ShareManager.current.getShareController(textToShare: text, view: self.view)
+            present(shareVC, animated: true, completion: nil)
+        case 2:
+            print("Hello")
+        default:
+            return
+        }
     }
     
 }
