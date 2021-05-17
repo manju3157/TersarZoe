@@ -108,9 +108,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCatID = categories[indexPath.row].id
-        selectedPageTitle = categories[indexPath.row].name
-        performSegue(withIdentifier: "showPDFItems", sender: nil)
+        if categories[indexPath.row].name == "Announcements" {
+            performSegue(withIdentifier: "ShowAnnouncements", sender: nil)
+        } else {
+            selectedCatID = categories[indexPath.row].id
+            selectedPageTitle = categories[indexPath.row].name
+            performSegue(withIdentifier: "showPDFItems", sender: nil)
+        }
+
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

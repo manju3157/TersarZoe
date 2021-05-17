@@ -130,11 +130,64 @@
                         <outlet property="tableView" destination="ccO-4q-XV2" id="psb-uw-Poq"/>
                         <segue destination="dGu-H0-mjR" kind="presentation" identifier="HomeSettings" id="Wzl-V1-HWt"/>
                         <segue destination="9Yr-aY-7P3" kind="push" identifier="showPDFItems" id="dqW-N0-TxE"/>
+                        <segue destination="SaO-at-YH5" kind="show" identifier="ShowAnnouncements" id="50V-p7-chH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnn-wY-ZX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2807.2463768115945" y="-472.09821428571428"/>
+        </scene>
+        <!--Announcement View Controller-->
+        <scene sceneID="qt5-0e-q6s">
+            <objects>
+                <viewController id="SaO-at-YH5" customClass="AnnouncementViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lGr-y4-1hf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="u2v-9b-mFQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GKX-Bc-eqo"/>
+                    <connections>
+                        <segue destination="aKY-Pw-Lr0" kind="show" identifier="ShowAnnouncementPhotos" id="Dnp-fJ-UMe"/>
+                        <segue destination="Cda-yO-eC2" kind="show" identifier="ShowAnnouncementVideos" id="8gk-3r-GNg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qgz-vo-nnM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3743" y="-482"/>
+        </scene>
+        <!--Announcement Video View Controller-->
+        <scene sceneID="LIM-fG-j5M">
+            <objects>
+                <viewController id="Cda-yO-eC2" customClass="AnnouncementVideoViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J2k-PI-jxd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FU3-2v-GVD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rHp-18-xLr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXa-Si-y7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4628" y="-283"/>
+        </scene>
+        <!--Announcement Photo View Controller-->
+        <scene sceneID="LbG-A5-xZT">
+            <objects>
+                <viewController id="aKY-Pw-Lr0" customClass="AnnouncementPhotoViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W3n-Yf-r2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GPa-hs-K7f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v03-WP-Lkd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkv-H9-C8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4628" y="-1030"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n6O-aV-BZh">
@@ -286,10 +339,10 @@
             </objects>
             <point key="canvasLocation" x="1041" y="321"/>
         </scene>
-        <!--View Controller-->
+        <!--About Us View Controller-->
         <scene sceneID="ma5-JX-KQh">
             <objects>
-                <viewController id="got-0t-oxd" sceneMemberID="viewController">
+                <viewController id="got-0t-oxd" customClass="AboutUsViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Inq-Dg-EqZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
