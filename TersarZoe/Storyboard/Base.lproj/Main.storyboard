@@ -285,7 +285,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-tf-6hG">
-                                <rect key="frame" x="368" y="26" width="26" height="26"/>
+                                <rect key="frame" x="368" y="20" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="Of2-dg-fm0"/>
                                     <constraint firstAttribute="height" constant="26" id="rQW-co-Zut"/>
@@ -323,7 +323,7 @@
                             <constraint firstItem="i34-UN-0qX" firstAttribute="bottom" secondItem="NMb-0t-xtV" secondAttribute="bottom" id="BSU-Rz-2jT"/>
                             <constraint firstItem="i34-UN-0qX" firstAttribute="trailing" secondItem="NMb-0t-xtV" secondAttribute="trailing" id="Ehh-e8-Wma"/>
                             <constraint firstItem="i34-UN-0qX" firstAttribute="trailing" secondItem="ggD-tf-6hG" secondAttribute="trailing" constant="20" id="TPB-dS-Un2"/>
-                            <constraint firstItem="ggD-tf-6hG" firstAttribute="top" secondItem="i34-UN-0qX" secondAttribute="top" constant="26" id="pmB-qy-4hQ"/>
+                            <constraint firstItem="ggD-tf-6hG" firstAttribute="top" secondItem="i34-UN-0qX" secondAttribute="top" constant="20" id="pmB-qy-4hQ"/>
                             <constraint firstItem="NMb-0t-xtV" firstAttribute="top" secondItem="fsj-uf-FdL" secondAttribute="bottom" constant="10" id="vdn-fC-oih"/>
                             <constraint firstItem="NMb-0t-xtV" firstAttribute="leading" secondItem="i34-UN-0qX" secondAttribute="leading" id="ywm-2j-oMy"/>
                         </constraints>
@@ -346,10 +346,122 @@
                     <view key="view" contentMode="scaleToFill" id="Inq-Dg-EqZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Announcement" translatesAutoresizingMaskIntoConstraints="NO" id="Ik9-2R-pur" customClass="CircularImageView" customModule="TersarZoe" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ik9-2R-pur" secondAttribute="height" id="UME-lL-crR"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfz-gV-6gv">
+                                <rect key="frame" x="12" y="394" width="390" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">In view of global digitization and need of the hour, this apps intents to as library to bring vast resources to all Tersar followers. It contains Sungbhum, Mandala, Wangtsak, Tor-Pe, Teaching Mp3 section and videos section.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Mission">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+This is to make easily accessible vast resource of Tersar related text, ritual and other various Nyingmapa text, to all digital oriented followers. We will keep on adding resources and update the app. As this is permitted by Kyabje Dudjom Sangay Pema Shedpa Rinpoche, it is not for commercial purpose.
+Make best use of this, and share with all like minded practitioners.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Founded: 2020">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+Founder: Lama Sonam Tashi
+Director of Dundul Raptenling Monastery,Odisah</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf8-M4-hkx">
+                                <rect key="frame" x="368" y="20" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="0Gv-rh-CAh"/>
+                                    <constraint firstAttribute="height" constant="26" id="SC0-fG-Vmo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" image="Close"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="got-0t-oxd" eventType="touchUpInside" id="DQj-Df-qYR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="T9N-cc-izS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ik9-2R-pur" firstAttribute="leading" secondItem="T9N-cc-izS" secondAttribute="leading" constant="20" id="2hD-1k-5Hy"/>
+                            <constraint firstItem="T9N-cc-izS" firstAttribute="trailing" secondItem="qf8-M4-hkx" secondAttribute="trailing" constant="20" id="Mna-1V-x4X"/>
+                            <constraint firstItem="Vfz-gV-6gv" firstAttribute="top" secondItem="Ik9-2R-pur" secondAttribute="bottom" constant="20" id="My3-kV-IjW"/>
+                            <constraint firstItem="T9N-cc-izS" firstAttribute="trailing" secondItem="Ik9-2R-pur" secondAttribute="trailing" constant="20" id="OWW-RU-ygJ"/>
+                            <constraint firstItem="T9N-cc-izS" firstAttribute="bottom" secondItem="Vfz-gV-6gv" secondAttribute="bottom" id="Z0l-HQ-JqI"/>
+                            <constraint firstItem="Ik9-2R-pur" firstAttribute="top" secondItem="T9N-cc-izS" secondAttribute="top" id="ZA0-kr-ZXJ"/>
+                            <constraint firstItem="T9N-cc-izS" firstAttribute="trailing" secondItem="Vfz-gV-6gv" secondAttribute="trailing" constant="12" id="ji4-Wa-8Zu"/>
+                            <constraint firstItem="Vfz-gV-6gv" firstAttribute="leading" secondItem="T9N-cc-izS" secondAttribute="leading" constant="12" id="mAx-bw-l5c"/>
+                            <constraint firstItem="qf8-M4-hkx" firstAttribute="top" secondItem="T9N-cc-izS" secondAttribute="top" constant="20" id="mah-O1-CgT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dwd-L2-MRG"/>
+                    <connections>
+                        <outlet property="imgView" destination="Ik9-2R-pur" id="AGa-MT-Ze7"/>
+                        <outlet property="textView" destination="Vfz-gV-6gv" id="xyE-ap-G6y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LA8-YY-wVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -724,6 +836,7 @@
         <segue reference="Wzl-V1-HWt"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Announcement" width="512" height="512"/>
         <image name="Close" width="440" height="474.5"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="music.mic" catalog="system" width="128" height="121"/>
