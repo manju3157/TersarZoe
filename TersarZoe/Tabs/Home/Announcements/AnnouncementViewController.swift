@@ -43,10 +43,10 @@ class AnnouncementViewController: BaseViewController {
         if segue.identifier == "ShowAnnouncementVideos" {
             if let nextViewController = segue.destination as? AnnouncementVideoViewController {
                 nextViewController.announcementPost = selectedAnnouncement
-            } else if segue.identifier == "ShowAnnouncementPhotos" {
-//                if let nextViewController = segue.destination as? PDFCollectionViewController {
-//                    nextViewController.selectedCatID = selectedCatID
-//                }
+            }
+        } else if segue.identifier == "ShowAnnouncementPhotos" {
+            if let nextViewController = segue.destination as? AnnouncementPhotoViewController {
+                nextViewController.announcementPost = selectedAnnouncement
             }
         }
     }

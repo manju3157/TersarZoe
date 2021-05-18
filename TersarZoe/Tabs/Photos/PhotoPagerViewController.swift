@@ -24,7 +24,7 @@ class PhotoPagerViewController: BaseViewController {
         addShareAndDownloadButtons()
     }
     private func configurePageControl() {
-        let pageTintColor = UIColor.lightGray//UIColor(hexString: "#888888")
+        let pageTintColor = UIColor(hexString: "#E8DED1")
         pageControl.currentPageIndicatorTintColor = pageTintColor
         pageControl.pageIndicatorTintColor = pageTintColor.withAlphaComponent(0.5)
         pageControl.isUserInteractionEnabled = false

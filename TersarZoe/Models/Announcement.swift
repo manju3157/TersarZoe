@@ -17,15 +17,9 @@ class AnnouncementPost: Codable {
     var description: String
     var is_youtube: Int
     var youtube_url: String?
-    var files: [AnnouncementFile]
+    var files: [TZFile]
 
     var isAYouTubeVideo: Bool {
            return is_youtube == 1
        }
-}
-
-
-class AnnouncementFile: Codable {
-    var id: Int
-    var file_url: String
 }

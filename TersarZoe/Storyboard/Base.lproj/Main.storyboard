@@ -230,10 +230,74 @@
                     <view key="view" contentMode="scaleToFill" id="W3n-Yf-r2Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AR5-bv-sKG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="358.5"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.87058823529999996" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fwF-FF-gh4">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jXT-JO-OWa">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BjM-fY-8iB">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="aKY-Pw-Lr0" id="j0C-WJ-pqN"/>
+                                    <outlet property="delegate" destination="aKY-Pw-Lr0" id="Sx7-fK-0Gd"/>
+                                </connections>
+                            </collectionView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4KB-b7-1DV">
+                                <rect key="frame" x="10" y="456.5" width="394" height="356.5"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.87058823529999996" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.56470588235294117" green="0.023529411764705882" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IQD-RN-68H">
+                                <rect key="frame" x="155.5" y="416.5" width="103.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Cqb-hx-eqr"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GPa-hs-K7f"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.87058823529999996" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IQD-RN-68H" firstAttribute="top" secondItem="AR5-bv-sKG" secondAttribute="bottom" constant="-30" id="1g1-Su-KwY"/>
+                            <constraint firstItem="AR5-bv-sKG" firstAttribute="top" secondItem="GPa-hs-K7f" secondAttribute="top" id="9zv-Gt-poH"/>
+                            <constraint firstItem="GPa-hs-K7f" firstAttribute="bottom" secondItem="4KB-b7-1DV" secondAttribute="bottom" id="Hh9-gz-vz3"/>
+                            <constraint firstItem="IQD-RN-68H" firstAttribute="width" secondItem="W3n-Yf-r2Z" secondAttribute="width" multiplier="0.25" id="Jfn-Dv-ex8"/>
+                            <constraint firstItem="GPa-hs-K7f" firstAttribute="trailing" secondItem="4KB-b7-1DV" secondAttribute="trailing" constant="10" id="YxD-Nb-jVN"/>
+                            <constraint firstItem="AR5-bv-sKG" firstAttribute="leading" secondItem="GPa-hs-K7f" secondAttribute="leading" id="fbl-uU-lyH"/>
+                            <constraint firstItem="4KB-b7-1DV" firstAttribute="top" secondItem="AR5-bv-sKG" secondAttribute="bottom" constant="10" id="fob-40-7cU"/>
+                            <constraint firstItem="AR5-bv-sKG" firstAttribute="height" secondItem="W3n-Yf-r2Z" secondAttribute="height" multiplier="0.4" id="kSm-UF-cqs"/>
+                            <constraint firstItem="4KB-b7-1DV" firstAttribute="leading" secondItem="GPa-hs-K7f" secondAttribute="leading" constant="10" id="oay-da-JVe"/>
+                            <constraint firstItem="GPa-hs-K7f" firstAttribute="trailing" secondItem="AR5-bv-sKG" secondAttribute="trailing" id="sCx-f4-q6v"/>
+                            <constraint firstItem="IQD-RN-68H" firstAttribute="centerX" secondItem="GPa-hs-K7f" secondAttribute="centerX" id="vxa-1I-oOa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v03-WP-Lkd"/>
+                    <connections>
+                        <outlet property="collectionView" destination="AR5-bv-sKG" id="RJe-EK-STe"/>
+                        <outlet property="pageControl" destination="IQD-RN-68H" id="cQS-8t-QZL"/>
+                        <outlet property="textView" destination="4KB-b7-1DV" id="hrB-aw-uC0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkv-H9-C8y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -888,8 +952,8 @@ Director of Dundul Raptenling Monastery,Odisah</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TrQ-x4-xnB"/>
-        <segue reference="Wzl-V1-HWt"/>
+        <segue reference="bgp-ym-DAL"/>
+        <segue reference="57g-Bm-91b"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Announcement" width="512" height="512"/>

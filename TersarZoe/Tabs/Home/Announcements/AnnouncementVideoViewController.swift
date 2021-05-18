@@ -8,7 +8,7 @@
 import UIKit
 import YoutubePlayerView
 
-class AnnouncementVideoViewController: UIViewController {
+class AnnouncementVideoViewController: BaseViewController {
     @IBOutlet weak var youtubeView: YoutubePlayerView!
     @IBOutlet weak var textView: UITextView!
 
@@ -17,9 +17,14 @@ class AnnouncementVideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        if let announcement = announcementPost,let videoUrl = announcement.youtube_url {
-            youtubeView.loadWithVideoId(videoUrl)
-            textView.text = announcement.description
+        if hasNetworkConnection() {
+            if let announcement = announcementPost, let videoUrl = announcement.youtube_url {
+                youtubeView.loadWithVideoId(videoUrl)
+                textView.text = announcement.description
+            }
+        } else {
+            textView.text = announcementPost?.description ?? ""
+            showNoInternetConnectionAlert()
         }
     }
     private func configureUI() {
