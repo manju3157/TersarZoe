@@ -17,9 +17,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="buddha.png" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-Kr-ZmU">
-                        <rect key="frame" x="0.0" y="8" width="297" height="248.5"/>
+                        <rect key="frame" x="8" y="8" width="281" height="248.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uF-Ie-ciJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2uF-Ie-ciJ">
                         <rect key="frame" x="7.5" y="266.5" width="282" height="20.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.56470588239999997" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,9 +29,9 @@
             </view>
             <constraints>
                 <constraint firstItem="hqs-Kr-ZmU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="0ED-R6-lrh"/>
-                <constraint firstAttribute="trailing" secondItem="hqs-Kr-ZmU" secondAttribute="trailing" id="5c8-Gl-9cq"/>
+                <constraint firstAttribute="trailing" secondItem="hqs-Kr-ZmU" secondAttribute="trailing" constant="8" id="5c8-Gl-9cq"/>
                 <constraint firstAttribute="bottom" secondItem="2uF-Ie-ciJ" secondAttribute="bottom" constant="10" id="G2l-rw-QnI"/>
-                <constraint firstItem="hqs-Kr-ZmU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="He3-MB-UDG"/>
+                <constraint firstItem="hqs-Kr-ZmU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="He3-MB-UDG"/>
                 <constraint firstItem="2uF-Ie-ciJ" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.95" id="Oa1-g1-iDT"/>
                 <constraint firstItem="2uF-Ie-ciJ" firstAttribute="top" secondItem="hqs-Kr-ZmU" secondAttribute="bottom" constant="10" id="Rgq-Bg-y3d"/>
                 <constraint firstItem="2uF-Ie-ciJ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="qUd-gc-Lpc"/>
