@@ -11,25 +11,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="111" id="KGk-i7-Jjw" customClass="MenuTableViewCell" customModule="TersarZoe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="362" height="111"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="78" id="KGk-i7-Jjw" customClass="MenuTableViewCell" customModule="TersarZoe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="78"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="362" height="111"/>
+                <rect key="frame" x="0.0" y="0.0" width="362" height="78"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2r-AL-DD3">
-                        <rect key="frame" x="10" y="10" width="342" height="91"/>
+                        <rect key="frame" x="10" y="10" width="342" height="58"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Announcement" translatesAutoresizingMaskIntoConstraints="NO" id="bvk-DY-XsW" customClass="CircularImageView" customModule="TersarZoe" customModuleProvider="target">
-                                <rect key="frame" x="10" y="25.5" width="40" height="40"/>
+                                <rect key="frame" x="10" y="9" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dur-Sg-nAz"/>
                                     <constraint firstAttribute="width" constant="40" id="zDK-5L-nKh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wangstak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtd-G6-AkM">
-                                <rect key="frame" x="60" y="33.5" width="272" height="24"/>
+                                <rect key="frame" x="60" y="17" width="272" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Hsw-ox-SVG"/>
                                 </constraints>
@@ -61,7 +61,7 @@
                 <outlet property="nameLbl" destination="Qtd-G6-AkM" id="ezu-iH-YGI"/>
                 <outlet property="ovalView" destination="i2r-AL-DD3" id="Bx7-21-394"/>
             </connections>
-            <point key="canvasLocation" x="7.2463768115942031" y="112.16517857142857"/>
+            <point key="canvasLocation" x="7.2463768115942031" y="95.758928571428569"/>
         </tableViewCell>
     </objects>
     <resources>

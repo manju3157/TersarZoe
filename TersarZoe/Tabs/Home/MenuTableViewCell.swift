@@ -14,13 +14,15 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var ovalView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        ovalView.layer.cornerRadius = 8
+        ovalView.layer.cornerRadius = 30
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    override func layoutSubviews() {
+        //ovalView.layer.cornerRadius = 30
+    }
     func populateCell(category: Category) {
         nameLbl.text = category.name
         if let url = URL(string: category.banner_image_url) {
