@@ -11,6 +11,7 @@ import MessageUI
 class SettingsViewController: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var settingsLbl: UILabel!
 
     var menuItems: [String] = ["About Us", "Share NamkhaZoe App", "Feedback"]
     var menuImages: [UIImage?] = [UIImage(named: "AboutUS"), UIImage(named: "ShareApp"), UIImage(named: "Feedback")]
@@ -18,6 +19,7 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
+        settingsLbl.textColor = ColorConstants.navBarColor
     }
 
     @IBAction func cancelPressed(_ sender: Any) {
@@ -53,12 +55,6 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     }
 }
 
-extension Bundle {
-    var displayName: String? {
-        return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
-    }
-}
-
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
@@ -86,5 +82,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return
         }
+    }
+}
+
+extension Bundle {
+    var displayName: String? {
+        return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
     }
 }

@@ -16,6 +16,7 @@ class PDFCollectionViewCell: UICollectionViewCell {
         imgView.makeRoundCorners(byRadius: 10.0)
         contentView.applyCornerRadius(10.0)
         contentView.backgroundColor = ColorConstants.appBgColor
+        nameLbl.textColor = ColorConstants.navBarColor
     }
     func populateCell(sc: MainSubCategory) {
         nameLbl.text = sc.name

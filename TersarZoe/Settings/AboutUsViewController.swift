@@ -15,6 +15,7 @@ class AboutUsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = ColorConstants.appBgColor
         textView.backgroundColor = ColorConstants.appBgColor
+        textView.textColor = ColorConstants.navBarColor
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

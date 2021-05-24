@@ -15,6 +15,7 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         ovalView.layer.cornerRadius = 30
+        nameLbl.textColor = ColorConstants.navBarColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
