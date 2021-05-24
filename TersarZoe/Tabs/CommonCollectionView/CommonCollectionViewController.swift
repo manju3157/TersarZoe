@@ -29,7 +29,7 @@ class CommonCollectionViewController: BaseViewController {
         super.viewDidLoad()
         self.title = pageTitle
         collectionView.register(UINib(nibName: "CommonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.backgroundColor = UIColor(hexString: "E8DED1")
+        collectionView.backgroundColor = ColorConstants.appBgColor
         fetchSubcategroies()
     }
 

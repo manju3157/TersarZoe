@@ -28,8 +28,9 @@ class AnnouncementVideoViewController: BaseViewController {
         }
     }
     private func configureUI() {
-        view.backgroundColor = UIColor(hexString: "E8DED1")
-        youtubeView.backgroundColor = UIColor(hexString: "E8DED1")
-        textView.backgroundColor = UIColor(hexString: "E8DED1")
+        let bgColor = ColorConstants.appBgColor
+        view.backgroundColor = bgColor
+        youtubeView.backgroundColor = bgColor
+        textView.backgroundColor = bgColor
     }
 }

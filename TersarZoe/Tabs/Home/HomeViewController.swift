@@ -23,7 +23,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
         configureNavigationBar()
-        tableView.backgroundColor = UIColor(hexString: "E8DED1")
+        tableView.backgroundColor = ColorConstants.appBgColor
         if hasNetworkConnection() {
             fetchCategories()
         } else if CoreDataManger.shared.fetchCategories().isEmpty {
@@ -56,7 +56,7 @@ class HomeViewController: BaseViewController {
         }
     }
     private func configureNavigationBar() {
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: "900603")
+        navigationController?.navigationBar.barTintColor = ColorConstants.navBarColor
         navigationItem.title = "NamkhaZoe"
 
         let button = UIButton(type: .custom)

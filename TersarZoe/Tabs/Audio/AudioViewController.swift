@@ -19,7 +19,7 @@ class AudioViewController: BaseViewController {
         super.viewDidLoad()
         configureNavBar()
         collectionView.register(UINib(nibName: "AudioCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AudioCell")
-        collectionView.backgroundColor = UIColor(hexString: "E8DED1")
+        collectionView.backgroundColor = ColorConstants.appBgColor
         if hasNetworkConnection() {
             fetchAudioCategories()
         } else {
@@ -28,7 +28,7 @@ class AudioViewController: BaseViewController {
     }
 
     private func configureNavBar() {
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: "900603")
+        navigationController?.navigationBar.barTintColor = ColorConstants.navBarColor
         navigationItem.title = "MP3 Teaching"
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "More"), for: .normal)

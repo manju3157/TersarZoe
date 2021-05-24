@@ -13,9 +13,10 @@ class CommonCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
-        contentView.layer.cornerRadius = 8.0
-        contentView.backgroundColor = UIColor(hexString: "E8DED1")
+        imgView.makeRoundCorners(byRadius: 10.0)
+        contentView.applyCornerRadius(10.0)
+        contentView.backgroundColor = ColorConstants.appBgColor
+        layoutIfNeeded()
     }
 
     func populateCell(sc: MainSubCategory) {

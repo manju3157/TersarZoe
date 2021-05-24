@@ -15,7 +15,7 @@ class AudioCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         imgView.makeRoundCorners(byRadius: 10.0)
         contentView.applyCornerRadius(10.0)
-        contentView.backgroundColor = UIColor(hexString: "E8DED1")
+        contentView.backgroundColor = ColorConstants.appBgColor
     }
     func populateCell(sc: MainSubCategory) {
         nameLbl.text = sc.name

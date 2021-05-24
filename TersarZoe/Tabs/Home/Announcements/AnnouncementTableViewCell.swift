@@ -17,8 +17,8 @@ class AnnouncementTableViewCell: UITableViewCell {
         super.awakeFromNib()
         imgView.clipsToBounds = true
         imgView.layer.cornerRadius = 14.0
-        contentView.backgroundColor = UIColor(hexString: "E8DED1")
-        containerView.backgroundColor = UIColor(hexString: "E8DED1")
+        contentView.backgroundColor = ColorConstants.appBgColor
+        containerView.backgroundColor = ColorConstants.appBgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

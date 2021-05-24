@@ -15,7 +15,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         imgView.makeRoundCorners(byRadius: 10.0)
         contentView.applyCornerRadius(10.0)
-        contentView.backgroundColor = UIColor(hexString: "E8DED1")
+        contentView.backgroundColor = ColorConstants.appBgColor
         layoutIfNeeded()
     }
     func populateCell(sc: MainSubCategory) {

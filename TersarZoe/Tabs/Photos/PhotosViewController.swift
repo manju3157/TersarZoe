@@ -18,7 +18,7 @@ class PhotosViewController: BaseViewController {
         super.viewDidLoad()
         configureNavBar()
         collectionView.register(UINib(nibName: "PhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotosCell")
-        collectionView.backgroundColor = UIColor(hexString: "E8DED1")
+        collectionView.backgroundColor = ColorConstants.appBgColor
         if hasNetworkConnection() {
             fetchPhotos()
         } else {
@@ -32,7 +32,7 @@ class PhotosViewController: BaseViewController {
         }
     }
     private func configureNavBar() {
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: "900603")
+        navigationController?.navigationBar.barTintColor = ColorConstants.navBarColor
         navigationItem.title = "Photos"
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "More"), for: .normal)

@@ -15,6 +15,7 @@
 		F90566762647C2E7005B796F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90566752647C2E7005B796F /* CoreDataManager.swift */; };
 		F905668426484584005B796F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905668326484584005B796F /* Video.swift */; };
 		F905668926484997005B796F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905668826484997005B796F /* BaseViewController.swift */; };
+		F90E9DB5265BBC1A00B5DCB8 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90E9DB4265BBC1A00B5DCB8 /* ColorConstants.swift */; };
 		F9156873257B880C006568AE /* Splash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F9156872257B880C006568AE /* Splash.jpeg */; };
 		F9156883257BE9BF006568AE /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9156881257BE9BF006568AE /* VideosTableViewCell.swift */; };
 		F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9156882257BE9BF006568AE /* VideosTableViewCell.xib */; };
@@ -109,6 +110,7 @@
 		F90566752647C2E7005B796F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F905668326484584005B796F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		F905668826484997005B796F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F90E9DB4265BBC1A00B5DCB8 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		F9156872257B880C006568AE /* Splash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash.jpeg; sourceTree = "<group>"; };
 		F9156881257BE9BF006568AE /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
 		F9156882257BE9BF006568AE /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
@@ -251,6 +253,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		F90E9DB3265BBBFF00B5DCB8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F90E9DB4265BBC1A00B5DCB8 /* ColorConstants.swift */,
+				F9056654264677B2005B796F /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		F9225C962594AC6D00E8A9F7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +306,7 @@
 		F9ABC62C2561345700676565 /* TersarZoe */ = {
 			isa = PBXGroup;
 			children = (
+				F90E9DB3265BBBFF00B5DCB8 /* Constants */,
 				F90566742647C2D4005B796F /* CoreData */,
 				F9056646264676B6005B796F /* Models */,
 				F9DDF6202599EDCB00DCBB4D /* Temp */,
@@ -359,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				F9D91B9E2594B200002D3AAC /* NetworkManager.swift */,
-				F9056654264677B2005B796F /* AppConstants.swift */,
 				F91D78E526512E1E00F29893 /* ShareManager.swift */,
 				F91D78EA26512E2B00F29893 /* DownloadManager.swift */,
 			);
@@ -778,6 +789,7 @@
 				F9BC880E264AA8CF006348C8 /* CommonCollectionViewCell.swift in Sources */,
 				F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */,
 				F9D7B41826527A5B0015D5CA /* AnnouncementPhotoViewController.swift in Sources */,
+				F90E9DB5265BBC1A00B5DCB8 /* ColorConstants.swift in Sources */,
 				F9BC8808264AA8BA006348C8 /* CommonCollectionViewController.swift in Sources */,
 				F9FCE5CB256AD1C300A72446 /* VideosViewController.swift in Sources */,
 				F9D91B9F2594B200002D3AAC /* NetworkManager.swift in Sources */,

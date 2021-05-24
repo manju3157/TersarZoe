@@ -17,7 +17,7 @@ class AnnouncementViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Announcements"
-        tableView.backgroundColor = UIColor(hexString: "E8DED1")
+        tableView.backgroundColor = ColorConstants.appBgColor
         tableView.register(UINib(nibName: "AnnouncementTableViewCell", bundle: nil), forCellReuseIdentifier: "AnnouncementCell")
         if hasNetworkConnection() {
             fetchAnnouncements()

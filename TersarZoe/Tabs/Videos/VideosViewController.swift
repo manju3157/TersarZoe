@@ -14,7 +14,7 @@ class VideosViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "VideosTableViewCell", bundle: nil), forCellReuseIdentifier: "VideosCell")
-        tableView.backgroundColor = UIColor(hexString: "E8DED1")
+        tableView.backgroundColor = ColorConstants.appBgColor
         configureNavBar()
         if hasNetworkConnection() {
             fetchVideos()
@@ -30,7 +30,7 @@ class VideosViewController: BaseViewController {
         }
     }
     private func configureNavBar() {
-        navigationController?.navigationBar.barTintColor = UIColor(hexString: "900603")
+        navigationController?.navigationBar.barTintColor = ColorConstants.navBarColor
         navigationItem.title = "Videos"
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "More"), for: .normal)
