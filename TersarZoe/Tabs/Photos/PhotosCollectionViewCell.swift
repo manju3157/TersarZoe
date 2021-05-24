@@ -16,6 +16,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
         imgView.makeRoundCorners(byRadius: 10.0)
         contentView.applyCornerRadius(10.0)
         contentView.backgroundColor = ColorConstants.appBgColor
+        nameLbl.textColor = ColorConstants.navBarColor
         layoutIfNeeded()
     }
     func populateCell(sc: MainSubCategory) {

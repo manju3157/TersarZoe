@@ -32,5 +32,6 @@ class AnnouncementVideoViewController: BaseViewController {
         view.backgroundColor = bgColor
         youtubeView.backgroundColor = bgColor
         textView.backgroundColor = bgColor
+        textView.textColor = ColorConstants.navBarColor
     }
 }

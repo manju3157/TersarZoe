@@ -23,6 +23,8 @@ class AnnouncementPhotoViewController: BaseViewController {
         showAlertIfPhotosEmpty()
     }
     private func configurePageControl() {
+        textView.textColor = ColorConstants.navBarColor
+
         let pageTintColor = ColorConstants.appBgColor
         pageControl.currentPageIndicatorTintColor = pageTintColor
         pageControl.pageIndicatorTintColor = pageTintColor.withAlphaComponent(0.5)

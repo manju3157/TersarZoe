@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 struct ColorConstants {
-    static let appBgColor = UIColor.green //UIColor(hexString: "E8DED1")
-    static let navBarColor = UIColor.orange //UIColor(hexString: "900603")
+    static let appBgColor = UIColor(hexString: "E8DED1")
+    static let navBarColor = UIColor(hexString: "900603")
 }
