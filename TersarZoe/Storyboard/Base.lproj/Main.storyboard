@@ -462,19 +462,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Announcement" translatesAutoresizingMaskIntoConstraints="NO" id="Ik9-2R-pur" customClass="CircularImageView" customModule="TersarZoe" customModuleProvider="target">
-                                <rect key="frame" x="20" y="0.0" width="374" height="374"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="About_Sonam" translatesAutoresizingMaskIntoConstraints="NO" id="Ik9-2R-pur" customClass="CircularImageView" customModule="TersarZoe" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ik9-2R-pur" secondAttribute="height" id="UME-lL-crR"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfz-gV-6gv">
-                                <rect key="frame" x="12" y="394" width="390" height="414"/>
+                                <rect key="frame" x="12" y="414" width="390" height="394"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">In view of global digitization and need of the hour, this apps intents to as library to bring vast resources to all Tersar followers. It contains Sungbhum, Mandala, Wangtsak, Tor-Pe, Teaching Mp3 section and videos section.
-
+                                        <mutableString key="content">In view of global digitization and need of the hour, this app intents to serve as library, bringing vast resources of Sungbhum, Mandala, Wangtsak, Tor-Pe, Mandala, collected Teaching in MP3 section and videos section. The materials are formatted in a shareable and downloadable way.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -486,12 +498,25 @@
                                             <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Mission">
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Objective">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
                                             <real key="NSKern" value="0.0"/>
-                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -499,11 +524,50 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-
-This is to make easily accessible vast resource of Tersar related text, ritual and other various Nyingmapa text, to all digital oriented followers. We will keep on adding resources and update the app. As this is permitted by Kyabje Dudjom Sangay Pema Shedpa Rinpoche, it is not for commercial purpose.
-Make best use of this, and share with all like minded practitioners.
-
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">This is to make easily accessible vast resource of Tersar related text, ritual and other various Nyingmapa text, to all digital oriented followers,free of cost.
+It is also aim to benefit touring Lama, khenpo and teachers, providing readily available wangtsak, mandala or text required for empowerments etc.
+We feel going ahead, such modernization of resources aid in many ways, helping preservation and flourishing of dharma. The intend of this app is noble.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -529,11 +593,37 @@ Make best use of this, and share with all like minded practitioners.
                                     </fragment>
                                     <fragment>
                                         <string key="content">
-
-Founder: Lama Sonam Tashi
-Director of Dundul Raptenling Monastery,Odisah</string>
+ 
+</string>
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">About the Founder: 
+Lama Sonam Tashi
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">Director of Dundul Raptenling Monastery, Odisha.
+Lama has studied, taken vow, empowerment, transmission at this monastery and has been working hard in his own capacity to preserve and flourishing of Guru rinpoche tradition. Among other things, he is currently building Zangdogpalri at Odisha and teaches Throema to students across India.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
                                             <real key="NSKern" value="0.0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -566,7 +656,7 @@ Director of Dundul Raptenling Monastery,Odisah</string>
                             <constraint firstItem="Vfz-gV-6gv" firstAttribute="top" secondItem="Ik9-2R-pur" secondAttribute="bottom" constant="20" id="My3-kV-IjW"/>
                             <constraint firstItem="T9N-cc-izS" firstAttribute="trailing" secondItem="Ik9-2R-pur" secondAttribute="trailing" constant="20" id="OWW-RU-ygJ"/>
                             <constraint firstItem="T9N-cc-izS" firstAttribute="bottom" secondItem="Vfz-gV-6gv" secondAttribute="bottom" id="Z0l-HQ-JqI"/>
-                            <constraint firstItem="Ik9-2R-pur" firstAttribute="top" secondItem="T9N-cc-izS" secondAttribute="top" id="ZA0-kr-ZXJ"/>
+                            <constraint firstItem="Ik9-2R-pur" firstAttribute="top" secondItem="T9N-cc-izS" secondAttribute="top" constant="20" id="ZA0-kr-ZXJ"/>
                             <constraint firstItem="T9N-cc-izS" firstAttribute="trailing" secondItem="Vfz-gV-6gv" secondAttribute="trailing" constant="12" id="ji4-Wa-8Zu"/>
                             <constraint firstItem="Vfz-gV-6gv" firstAttribute="leading" secondItem="T9N-cc-izS" secondAttribute="leading" constant="12" id="mAx-bw-l5c"/>
                             <constraint firstItem="qf8-M4-hkx" firstAttribute="top" secondItem="T9N-cc-izS" secondAttribute="top" constant="20" id="mah-O1-CgT"/>
@@ -957,7 +1047,7 @@ Director of Dundul Raptenling Monastery,Odisah</string>
         <segue reference="YQE-MR-q2U"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Announcement" width="512" height="512"/>
+        <image name="About_Sonam" width="426.5" height="426.5"/>
         <image name="Close" width="100" height="100"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="music.mic" catalog="system" width="128" height="121"/>
