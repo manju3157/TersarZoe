@@ -468,7 +468,7 @@
                                     <constraint firstAttribute="width" secondItem="Ik9-2R-pur" secondAttribute="height" id="UME-lL-crR"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfz-gV-6gv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfz-gV-6gv">
                                 <rect key="frame" x="12" y="414" width="390" height="394"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
