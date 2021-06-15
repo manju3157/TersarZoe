@@ -473,21 +473,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">In view of global digitization and need of the hour, this app intents to serve as library, bringing vast resources of Sungbhum, Mandala, Wangtsak, Tor-Pe, Mandala, collected Teaching in MP3 section and videos section. The materials are formatted in a shareable and downloadable way.
-</mutableString>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+                                        <string key="content">In view of global digitization and need of the hour, this app intents to serve as library, bringing vast resources of Sungbhum, Mandala, Wangtsak, Tor-Pe, Mandala, collected Teaching in MP3 section and videos section. The materials are formatted in a shareable and downloadable way.
+
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -511,37 +498,12 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <mutableString key="content">This is to make easily accessible vast resource of Tersar related text, ritual and other various Nyingmapa text, to all digital oriented followers,free of cost.
+                                        <string key="content">
+
+This is to make easily accessible vast resource of Tersar related text, ritual and other various Nyingmapa text, to all digital oriented followers,free of cost.
 It is also aim to benefit touring Lama, khenpo and teachers, providing readily available wangtsak, mandala or text required for empowerments etc.
 We feel going ahead, such modernization of resources aid in many ways, helping preservation and flourishing of dharma. The intend of this app is noble.
-</mutableString>
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+
 </string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -605,8 +567,8 @@ Lama Sonam Tashi
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Director of Dundul Raptenling Monastery, Odisha.
-Lama has studied, taken vow, empowerment, transmission at this monastery and has been working hard in his own capacity to preserve and flourishing of Guru rinpoche tradition. Among other things, he is currently building Zangdogpalri at Odisha and teaches Throema to students across India.</mutableString>
+                                        <string key="content">Director of Dundul Raptenling Monastery, Odisha.
+Lama has studied, taken vow, empowerment, transmission at this monastery and has been working hard in his own capacity to preserve and flourishing of Guru rinpoche tradition. Among other things, he is currently building Zangdogpalri at Odisha and teaches Throema to students across India.</string>
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="14" name="HelveticaNeue"/>
