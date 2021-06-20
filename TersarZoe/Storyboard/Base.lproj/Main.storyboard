@@ -231,7 +231,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AR5-bv-sKG">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AR5-bv-sKG">
                                 <rect key="frame" x="0.0" y="88" width="414" height="358.5"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.87058823529999996" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fwF-FF-gh4">
@@ -316,21 +316,23 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Page" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnW-lx-fGb">
                                         <rect key="frame" x="8" y="9" width="56" height="34"/>
+                                        <color key="backgroundColor" red="0.90980392160000001" green="0.87058823529999996" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="5H1-si-pVl"/>
                                             <constraint firstAttribute="width" constant="56" id="9Pw-yg-mT3"/>
                                         </constraints>
+                                        <color key="textColor" red="0.56470588239999997" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y7-ka-Nob">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" / 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y7-ka-Nob">
                                         <rect key="frame" x="70" y="10" width="42" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="OT9-B2-a6t"/>
                                             <constraint firstAttribute="height" constant="32" id="S18-D0-ihi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.56470588239999997" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-B5-ts8">
@@ -349,7 +351,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Nk6-B5-ts8" secondAttribute="trailing" constant="20" id="7g5-64-eUT"/>
                                     <constraint firstItem="Nk6-B5-ts8" firstAttribute="centerY" secondItem="AbO-eW-qCJ" secondAttribute="centerY" id="Eol-Ex-fHk"/>
@@ -362,7 +364,13 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-5P-Fd1" customClass="PDFView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="673"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4jJ-98-f0P">
+                                        <rect key="frame" x="188.5" y="344" width="37" height="37"/>
+                                        <color key="color" red="0.56470588239999997" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kNG-m4-aqU"/>
@@ -371,14 +379,17 @@
                             <constraint firstItem="kNG-m4-aqU" firstAttribute="trailing" secondItem="AbO-eW-qCJ" secondAttribute="trailing" id="1fF-rd-HTO"/>
                             <constraint firstItem="AbO-eW-qCJ" firstAttribute="leading" secondItem="kNG-m4-aqU" secondAttribute="leading" id="1rx-ob-XDZ"/>
                             <constraint firstItem="WcH-5P-Fd1" firstAttribute="top" secondItem="kNG-m4-aqU" secondAttribute="top" id="2Dh-RO-zQw"/>
+                            <constraint firstItem="4jJ-98-f0P" firstAttribute="centerY" secondItem="kNG-m4-aqU" secondAttribute="centerY" id="3H3-01-euL"/>
                             <constraint firstItem="WcH-5P-Fd1" firstAttribute="leading" secondItem="kNG-m4-aqU" secondAttribute="leading" id="DLx-03-LJ2"/>
                             <constraint firstItem="AbO-eW-qCJ" firstAttribute="top" secondItem="WcH-5P-Fd1" secondAttribute="bottom" id="G5K-1B-Pnm"/>
                             <constraint firstItem="kNG-m4-aqU" firstAttribute="trailing" secondItem="WcH-5P-Fd1" secondAttribute="trailing" id="YXo-Vq-wAI"/>
                             <constraint firstItem="kNG-m4-aqU" firstAttribute="bottom" secondItem="AbO-eW-qCJ" secondAttribute="bottom" id="frr-G4-6HJ"/>
+                            <constraint firstItem="4jJ-98-f0P" firstAttribute="centerX" secondItem="kNG-m4-aqU" secondAttribute="centerX" id="l8V-Rd-afM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="URA-NP-TFF"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="4jJ-98-f0P" id="Qhs-Lp-oeE"/>
                         <outlet property="bottomView" destination="AbO-eW-qCJ" id="RGK-lp-uqN"/>
                         <outlet property="gotoBtn" destination="Nk6-B5-ts8" id="hME-6K-9yl"/>
                         <outlet property="gotoPageTxtField" destination="xnW-lx-fGb" id="pE3-Mf-lhO"/>
@@ -991,7 +1002,7 @@ Lama has studied, taken vow, empowerment, transmission at this monastery and has
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="TrQ-x4-xnB"/>
-        <segue reference="YQE-MR-q2U"/>
+        <segue reference="Wzl-V1-HWt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="About_Sonam" width="426.5" height="426.5"/>

@@ -15,17 +15,40 @@ class PDFViewController: BaseViewController {
     @IBOutlet weak var totalPagesLbl: UILabel!
     @IBOutlet weak var gotoBtn: UIButton!
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var pdfFiles:[TZFile] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurePDFView()
-        if pdfFiles.isEmpty {
-            return
-        }
-        configureBottomBar()
         addShareAndDownloadButtons()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if !pdfFiles.isEmpty {
+            self.activityIndicator.startAnimating()
+            Global.delay(3.0) {
+                self.activityIndicator.stopAnimating()
+            }
+            configurePDFView()
+            configureBottomBar()
+        }
+    }
+    private func configurePDFView() {
+        pdfView.displayMode = .singlePageContinuous
+        pdfView.autoScales = true
+        pdfView.translatesAutoresizingMaskIntoConstraints = false
+        pdfView.setValue(true, forKey: "forcesTopAlignment")
+
+        if let fileURLString = pdfFiles.first?.file_url, let fileURL = URL(string: fileURLString),
+           let document = PDFDocument(url: fileURL ) {
+            pdfView.document = document
+        }
+    }
+    private func configureBottomBar() {
+        bottomView.layer.borderWidth = 1.0
+        bottomView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
+        gotoBtn.layer.cornerRadius = 18.0
+        totalPagesLbl.text = "/ " + String(pdfView.document?.pageCount ?? 0)
     }
     private func addShareAndDownloadButtons() {
         let downloadButton = UIButton(type: .custom)
@@ -66,23 +89,6 @@ class PDFViewController: BaseViewController {
             let shareVC = ShareManager.current.getShareController(textToShare: text, view: self.view)
             present(shareVC, animated: true, completion: nil)
         }
-    }
-    private func configurePDFView() {
-        pdfView.displayMode = .singlePageContinuous
-        pdfView.autoScales = true
-        pdfView.translatesAutoresizingMaskIntoConstraints = false
-        pdfView.setValue(true, forKey: "forcesTopAlignment")
-
-        if let fileURLString = pdfFiles.first?.file_url, let fileURL = URL(string: fileURLString),
-           let document = PDFDocument(url: fileURL ) {
-            pdfView.document = document
-        }
-    }
-    private func configureBottomBar() {
-        bottomView.layer.borderWidth = 1.0
-        bottomView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
-        gotoBtn.layer.cornerRadius = 18.0
-        totalPagesLbl.text = "/ " + String(pdfView.document?.pageCount ?? 0)
     }
     @IBAction func performGoto() {
         let destPageNum = Int(gotoPageTxtField.text ?? "0") ?? 0

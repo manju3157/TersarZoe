@@ -24,6 +24,7 @@ class AnnouncementPhotoViewController: BaseViewController {
     }
     private func configurePageControl() {
         textView.textColor = ColorConstants.navBarColor
+        textView.text = announcementPost?.description ?? ""
 
         let pageTintColor = ColorConstants.appBgColor
         pageControl.currentPageIndicatorTintColor = pageTintColor

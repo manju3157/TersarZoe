@@ -15,14 +15,12 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         ovalView.layer.cornerRadius = 30
+        ovalView.backgroundColor = .white
         nameLbl.textColor = ColorConstants.navBarColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    override func layoutSubviews() {
-        //ovalView.layer.cornerRadius = 30
     }
     func populateCell(category: Category) {
         nameLbl.text = category.name
