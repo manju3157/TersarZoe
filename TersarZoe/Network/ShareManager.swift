@@ -17,8 +17,17 @@ class ShareManager {
                                         applicationActivities: nil
                                     )
         activityViewController.setValue("NamkhaZoe", forKey: "subject")
-        activityViewController.popoverPresentationController?.permittedArrowDirections = .any
-        activityViewController.popoverPresentationController?.sourceView = view
-        return activityViewController
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            activityViewController.popoverPresentationController?.permittedArrowDirections = .any
+            activityViewController.popoverPresentationController?.sourceView = view
+            return activityViewController
+        } else {
+            if let popoverController = activityViewController.popoverPresentationController {
+                   popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2, width: 0, height: 0)
+                   popoverController.sourceView = view
+                popoverController.permittedArrowDirections = UIPopoverArrowDirection.down
+               }
+            return activityViewController
+        }
     }
 }
