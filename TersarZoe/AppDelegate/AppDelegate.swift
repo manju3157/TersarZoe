@@ -15,12 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
+        //Fix Nav Bar tint issue in iOS 15.0 or later - is transparent w/o code below
         let navItemColor = ColorConstants.appBgColor
-        UINavigationBar.appearance().backgroundColor = navItemColor
-        UINavigationBar.appearance().barTintColor = navItemColor
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: navItemColor]
-        UINavigationBar.appearance().tintColor = navItemColor
-        UIBarButtonItem.appearance().tintColor = navItemColor
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: navItemColor]
+            appearance.backgroundColor = ColorConstants.navBarColor
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            self.window?.tintColor = navItemColor
+        } else {
+            UINavigationBar.appearance().backgroundColor = navItemColor
+            UINavigationBar.appearance().barTintColor = navItemColor
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: navItemColor]
+            UINavigationBar.appearance().tintColor = navItemColor
+            UIBarButtonItem.appearance().tintColor = navItemColor
+        }
+        
         return true
     }
 
