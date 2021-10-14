@@ -459,6 +459,8 @@
                         <outlet property="settingsLbl" destination="fsj-uf-FdL" id="E8W-g5-khC"/>
                         <outlet property="tableView" destination="NMb-0t-xtV" id="9PM-Kg-97C"/>
                         <segue destination="got-0t-oxd" kind="show" identifier="ShowAboutUs" id="NSV-cB-3Ie"/>
+                        <segue destination="alg-6s-FSs" kind="show" identifier="ShowDonation" id="48d-iG-5ix"/>
+                        <segue destination="JRZ-BK-BH2" kind="show" identifier="ShowRelatedWebsite" id="eS6-gi-YW3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qtb-MD-PHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -628,7 +630,129 @@ Lama has studied, taken vow, empowerment, transmission at this monastery and has
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LA8-YY-wVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="1039"/>
+            <point key="canvasLocation" x="264" y="1038"/>
+        </scene>
+        <!--Donation View Controller-->
+        <scene sceneID="t3e-7u-Mz4">
+            <objects>
+                <viewController id="alg-6s-FSs" customClass="DonationViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d1l-5X-eAW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSt-rj-zwU">
+                                <rect key="frame" x="364" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5RI-Ig-1Om"/>
+                                    <constraint firstAttribute="width" constant="30" id="PVB-iL-P8s"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="Close"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="alg-6s-FSs" eventType="touchUpInside" id="kL9-jA-PYR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGM-0L-b5M">
+                                <rect key="frame" x="20" y="20" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AOd-MV-NVD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Eau-HT-6e1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TiL-AU-8UM">
+                                <rect key="frame" x="20" y="80" width="374" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rq3-VX-uh7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rq3-VX-uh7" firstAttribute="trailing" secondItem="TiL-AU-8UM" secondAttribute="trailing" constant="20" id="1Dl-gu-29h"/>
+                            <constraint firstItem="OGM-0L-b5M" firstAttribute="top" secondItem="rq3-VX-uh7" secondAttribute="top" constant="20" id="5Au-6K-Ovi"/>
+                            <constraint firstItem="TiL-AU-8UM" firstAttribute="top" secondItem="OGM-0L-b5M" secondAttribute="bottom" constant="30" id="6A3-RH-YXM"/>
+                            <constraint firstItem="sSt-rj-zwU" firstAttribute="top" secondItem="rq3-VX-uh7" secondAttribute="top" constant="20" id="JRc-dX-qz8"/>
+                            <constraint firstItem="rq3-VX-uh7" firstAttribute="trailing" secondItem="sSt-rj-zwU" secondAttribute="trailing" constant="20" id="RbM-uH-eyJ"/>
+                            <constraint firstItem="rq3-VX-uh7" firstAttribute="bottom" secondItem="TiL-AU-8UM" secondAttribute="bottom" constant="20" id="UVd-3l-MkX"/>
+                            <constraint firstItem="OGM-0L-b5M" firstAttribute="leading" secondItem="rq3-VX-uh7" secondAttribute="leading" constant="20" id="iuw-Zf-9uC"/>
+                            <constraint firstItem="TiL-AU-8UM" firstAttribute="leading" secondItem="rq3-VX-uh7" secondAttribute="leading" constant="20" id="t6G-h4-zhF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="42Z-Wg-zZ2"/>
+                    <connections>
+                        <outlet property="textView" destination="TiL-AU-8UM" id="KaD-Fa-7YL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8k-U0-jR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="1053"/>
+        </scene>
+        <!--Related Website View Controller-->
+        <scene sceneID="JX1-OC-1gU">
+            <objects>
+                <viewController id="JRZ-BK-BH2" customClass="RelatedWebsiteViewController" customModule="TersarZoe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hX2-qL-9qQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4di-G0-eM4">
+                                <rect key="frame" x="364" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZsL-d3-ddv"/>
+                                    <constraint firstAttribute="width" constant="30" id="x6a-Ri-4OT"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="Close"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="JRZ-BK-BH2" eventType="touchUpInside" id="3mc-lN-Q3Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Related Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q68-BJ-WkY">
+                                <rect key="frame" x="20" y="20" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="CPx-Kk-MAe"/>
+                                    <constraint firstAttribute="height" constant="30" id="iYe-gi-d9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4tW-LY-q3O">
+                                <rect key="frame" x="20" y="80" width="374" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rlD-0s-MZC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rlD-0s-MZC" firstAttribute="bottom" secondItem="4tW-LY-q3O" secondAttribute="bottom" constant="20" id="5wP-RC-Oai"/>
+                            <constraint firstItem="rlD-0s-MZC" firstAttribute="trailing" secondItem="4di-G0-eM4" secondAttribute="trailing" constant="20" id="BUC-aU-I5C"/>
+                            <constraint firstItem="4tW-LY-q3O" firstAttribute="top" secondItem="q68-BJ-WkY" secondAttribute="bottom" constant="30" id="EUs-J2-qsE"/>
+                            <constraint firstItem="4di-G0-eM4" firstAttribute="top" secondItem="rlD-0s-MZC" secondAttribute="top" constant="20" id="NS2-xO-Zke"/>
+                            <constraint firstItem="4tW-LY-q3O" firstAttribute="leading" secondItem="rlD-0s-MZC" secondAttribute="leading" constant="20" id="PJ7-Xb-R5S"/>
+                            <constraint firstItem="q68-BJ-WkY" firstAttribute="leading" secondItem="rlD-0s-MZC" secondAttribute="leading" constant="20" id="Sql-1F-Yzk"/>
+                            <constraint firstItem="q68-BJ-WkY" firstAttribute="top" secondItem="rlD-0s-MZC" secondAttribute="top" constant="20" id="bV3-FH-4Ar"/>
+                            <constraint firstItem="rlD-0s-MZC" firstAttribute="trailing" secondItem="4tW-LY-q3O" secondAttribute="trailing" constant="20" id="eSH-I2-CVn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4nM-Rb-jhN"/>
+                    <connections>
+                        <outlet property="textView" destination="4tW-LY-q3O" id="1xp-BT-kkO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xab-77-1yc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872" y="1062"/>
         </scene>
         <!--Audio Player View Controller-->
         <scene sceneID="zrj-Aq-BiZ">
@@ -1011,6 +1135,9 @@ Lama has studied, taken vow, empowerment, transmission at this monastery and has
         <image name="music.mic" catalog="system" width="128" height="121"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="video.badge.plus" catalog="system" width="128" height="92"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

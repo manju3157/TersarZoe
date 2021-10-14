@@ -13,8 +13,12 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var settingsLbl: UILabel!
 
-    var menuItems: [String] = ["About Us", "Share NamkhaZoe App", "Feedback"]
-    var menuImages: [UIImage?] = [UIImage(named: "AboutUS"), UIImage(named: "ShareApp"), UIImage(named: "Feedback")]
+    var menuItems: [String] = ["About Us", "Share NamkhaZoe App",
+                               "Feedback", "Donation",
+                               "Related Website"]
+    var menuImages: [UIImage?] = [UIImage(named: "AboutUS"), UIImage(named: "ShareApp"),
+                                  UIImage(named: "Feedback"), UIImage(named: "Feedback"),
+                                  UIImage(named: "Feedback")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +40,7 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
     private func configureMailComposer() -> MFMailComposeViewController {
         let mailComposeVC = MFMailComposeViewController()
         mailComposeVC.mailComposeDelegate = self
-        mailComposeVC.setToRecipients(["kunwangyal05@gmail.com"])
+        mailComposeVC.setToRecipients(["dundul.rapten@gmail.com"])
         mailComposeVC.setSubject("Feedback NamkhaZoe iOS")
         mailComposeVC.setMessageBody(getDeviceInfo(), isHTML: false)
         return mailComposeVC
@@ -79,6 +83,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             present(shareVC, animated: true, completion: nil)
         case 2:
             composeMail()
+        case 3:
+            performSegue(withIdentifier: "ShowDonation", sender: nil)
+        case 4:
+            performSegue(withIdentifier: "ShowRelatedWebsite", sender: nil)
         default:
             return
         }

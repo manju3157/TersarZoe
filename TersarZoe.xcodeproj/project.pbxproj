@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABE845822718047C0009D4DE /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845812718047C0009D4DE /* DonationViewController.swift */; };
+		ABE845842718048C0009D4DE /* RelatedWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */; };
 		B524F562C9DB7B70CBAD5E10 /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */; };
 		EDD2E2FEAE89DA708DE06537 /* Pods_TersarZoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */; };
 		F9056648264676D1005B796F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056647264676D1005B796F /* Category.swift */; };
@@ -97,6 +99,8 @@
 		1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		212A91DBE60984CD608F9A42 /* Pods-TersarZoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe_TersarZoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE845812718047C0009D4DE /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedWebsiteViewController.swift; sourceTree = "<group>"; };
 		BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9F4EFB4730008B84DEFCF9 /* Pods-TersarZoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.release.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC2385A551D21F5BE546FB9B /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 			children = (
 				F94FFB322572299D000E3C4F /* SettingsViewController.swift */,
 				F9D7B40C265279570015D5CA /* AboutUsViewController.swift */,
+				ABE845812718047C0009D4DE /* DonationViewController.swift */,
+				ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -773,6 +779,7 @@
 				F9FCE5C6256AD1B000A72446 /* PhotosViewController.swift in Sources */,
 				F9DDF6282599EE3F00DCBB4D /* PDFViewController.swift in Sources */,
 				F9D7B430265285390015D5CA /* Announcement.swift in Sources */,
+				ABE845822718047C0009D4DE /* DonationViewController.swift in Sources */,
 				F905668426484584005B796F /* Video.swift in Sources */,
 				F9D7B40D265279570015D5CA /* AboutUsViewController.swift in Sources */,
 				F9ABC62E2561345700676565 /* AppDelegate.swift in Sources */,
@@ -780,6 +787,7 @@
 				F9E9F93A2650F31600CF0930 /* AudioPlayerViewController.swift in Sources */,
 				F9FEA864264CF64100E4AD49 /* PhotoPagerViewController.swift in Sources */,
 				F9BC880E264AA8CF006348C8 /* CommonCollectionViewCell.swift in Sources */,
+				ABE845842718048C0009D4DE /* RelatedWebsiteViewController.swift in Sources */,
 				F9D91BB32594B3AF002D3AAC /* Reachability.m in Sources */,
 				F9D7B41826527A5B0015D5CA /* AnnouncementPhotoViewController.swift in Sources */,
 				F90E9DB5265BBC1A00B5DCB8 /* ColorConstants.swift in Sources */,
