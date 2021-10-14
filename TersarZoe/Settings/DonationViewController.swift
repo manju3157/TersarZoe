@@ -8,6 +8,7 @@
 import UIKit
 
 class DonationViewController: UIViewController {
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var textView: UITextView!
 
     override func viewDidLoad() {
@@ -15,6 +16,7 @@ class DonationViewController: UIViewController {
         view.backgroundColor = ColorConstants.appBgColor
         textView.backgroundColor = ColorConstants.appBgColor
         textView.textColor = ColorConstants.navBarColor
+        titleLbl.textColor = ColorConstants.navBarColor
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
