@@ -17,8 +17,8 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
                                "Feedback", "Donation",
                                "Related Website"]
     var menuImages: [UIImage?] = [UIImage(named: "AboutUS"), UIImage(named: "ShareApp"),
-                                  UIImage(named: "Feedback"), UIImage(named: "Feedback"),
-                                  UIImage(named: "Feedback")]
+                                  UIImage(named: "Feedback"), UIImage(named: "Donation"),
+                                  UIImage(named: "Announcement")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
