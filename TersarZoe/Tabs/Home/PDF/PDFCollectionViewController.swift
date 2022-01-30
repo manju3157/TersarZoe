@@ -18,6 +18,7 @@ class PDFCollectionViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSearchBtnToNavBar()
         self.title = pageTitle
         collectionView.register(UINib(nibName: "PDFCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PDFCell")
         collectionView.backgroundColor = ColorConstants.appBgColor
@@ -43,6 +44,23 @@ class PDFCollectionViewController: BaseViewController {
                 }
             }
         }
+    }
+    
+    private func addSearchBtnToNavBar() {
+        navigationController?.navigationBar.barTintColor = ColorConstants.navBarColor
+
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage (named: "Search"), for: .normal)
+        button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        button.addTarget(self, action: #selector(searchBtnTapped), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = barButtonItem
+    }
+    
+    @objc
+    func searchBtnTapped() {
+        print("PDF Search Btn tapped")
+        self.performSegue(withIdentifier: "ShowPDFSearch", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

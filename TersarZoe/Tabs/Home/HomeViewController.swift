@@ -71,20 +71,7 @@ class HomeViewController: BaseViewController {
         print("Right Bar button")
         self.performSegue(withIdentifier: "HomeSettings", sender: self)
     }
-//    func setTableViewBackgroundGradient(topColor:UIColor, bottomColor:UIColor) {
-//        if gradientLayer.superlayer != nil {
-//               gradientLayer.removeFromSuperlayer()
-//        }
-//        let gradientBackgroundColors = [topColor.cgColor, bottomColor.cgColor]
-//        let gradientLocations = [0.0,1.0]
-//        gradientLayer.colors = gradientBackgroundColors
-//        gradientLayer.locations = gradientLocations as [NSNumber]
-//        gradientLayer.frame = tableView.bounds
-//
-//        let backgroundView = UIView(frame: tableView.bounds)
-//        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
-//        tableView.backgroundView = backgroundView
-//    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPDFItems" {
             if let nextViewController = segue.destination as? PDFCollectionViewController {
