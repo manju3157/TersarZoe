@@ -9,6 +9,8 @@ import UIKit
 import SVProgressHUD
 
 class HomeViewController: BaseViewController {
+    @IBOutlet weak var tableView: UITableView!
+
     private var gradientLayer = CAGradientLayer()
     let topColor = UIColor(red: 192.0/255.0, green: 38.0/255.0, blue: 42.0/255.0, alpha: 1.0)
     let bottomColor = UIColor(red: 35.0/255.0, green: 2.0/255.0, blue: 2.0/255.0, alpha: 1.0)
@@ -18,7 +20,7 @@ class HomeViewController: BaseViewController {
     var selectedCatID = 0
     var selectedPageTitle = ""
 
-    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")

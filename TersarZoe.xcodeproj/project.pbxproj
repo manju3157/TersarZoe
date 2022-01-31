@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB68FD8327A7EBE60050674F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68FD8227A7EBE60050674F /* SearchViewController.swift */; };
 		ABE845822718047C0009D4DE /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845812718047C0009D4DE /* DonationViewController.swift */; };
 		ABE845842718048C0009D4DE /* RelatedWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */; };
 		B524F562C9DB7B70CBAD5E10 /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */; };
@@ -99,6 +100,7 @@
 		1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		212A91DBE60984CD608F9A42 /* Pods-TersarZoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe_TersarZoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB68FD8227A7EBE60050674F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		ABE845812718047C0009D4DE /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedWebsiteViewController.swift; sourceTree = "<group>"; };
 		BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +219,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB68FD8127A7EBC70050674F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AB68FD8227A7EBE60050674F /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		B009FC52F188B2A7AD30A9C1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +318,7 @@
 		F9ABC62C2561345700676565 /* TersarZoe */ = {
 			isa = PBXGroup;
 			children = (
+				AB68FD8127A7EBC70050674F /* Search */,
 				F90E9DB3265BBBFF00B5DCB8 /* Constants */,
 				F90566742647C2D4005B796F /* CoreData */,
 				F9056646264676B6005B796F /* Models */,
@@ -801,6 +812,7 @@
 				F9FEA8A7264E60AB00E4AD49 /* Audio.swift in Sources */,
 				F905668926484997005B796F /* BaseViewController.swift in Sources */,
 				F9FEA8A2264E605800E4AD49 /* MainCategory.swift in Sources */,
+				AB68FD8327A7EBE60050674F /* SearchViewController.swift in Sources */,
 				F9FCE5C1256AD19F00A72446 /* AudioViewController.swift in Sources */,
 				F9FEA8B4264E663F00E4AD49 /* UIView+Extension.swift in Sources */,
 				F9D7B42326527A9E0015D5CA /* AnnouncementTableViewCell.swift in Sources */,
