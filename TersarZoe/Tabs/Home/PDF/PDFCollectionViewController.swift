@@ -70,6 +70,12 @@ class PDFCollectionViewController: BaseViewController {
                 nextViewController.subCategoryId = selectedSubCatID
                 nextViewController.pageTitle = pageTitle
             }
+        } else if segue.identifier == "ShowPDFSearch" {
+            if let nextViewController = segue.destination as? SearchViewController {
+                nextViewController.categoryName = pageTitle
+                nextViewController.contentType = .pdf
+                nextViewController.subCategoryList = pdfCategoryArray
+            }
         }
     }
 }

@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-class SearchViewController: UIViewController {
+class SearchViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
+    var contentType: CommonContentType = .none
+    var categoryName: String = ""
+    var subCategoryList: [MainSubCategory] = []
+    var tzPosts: [TZPost] = []
     
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
@@ -30,14 +35,34 @@ class SearchViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search " + categoryName
         searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
     }
     
     fileprivate func buildDataSource() {
-        
+        if hasNetworkConnection() {
+            let dispatchGroup = DispatchGroup()
+            SVProgressHUD.show()
+            for subCategory in subCategoryList {
+                dispatchGroup.enter()
+                NetworkManager.shared.getSubCategoryDetail(subCategoryID: subCategory.id) {[weak self] (status, postArray) in
+                    dispatchGroup.leave()
+                    print("Completed \(subCategory.id)")
+                    if status && !postArray.isEmpty {
+                        self?.tzPosts.append(contentsOf: postArray)
+                    }
+                }
+            }
+            dispatchGroup.notify(queue: .main) {
+                SVProgressHUD.dismiss()
+                // Load tableview
+                print("All Compelted")
+            }
+        } else {
+            showNoInternetConnectionAlert()
+        }
     }
 }
 
@@ -57,6 +82,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(tzPosts.count)
     }
 }
 

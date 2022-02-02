@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AB68FD8327A7EBE60050674F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68FD8227A7EBE60050674F /* SearchViewController.swift */; };
+		AB68FD8627AA8A370050674F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68FD8427AA8A370050674F /* SearchTableViewCell.swift */; };
+		AB68FD8727AA8A370050674F /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB68FD8527AA8A370050674F /* SearchTableViewCell.xib */; };
 		ABE845822718047C0009D4DE /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845812718047C0009D4DE /* DonationViewController.swift */; };
 		ABE845842718048C0009D4DE /* RelatedWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */; };
 		B524F562C9DB7B70CBAD5E10 /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */; };
@@ -101,6 +103,8 @@
 		212A91DBE60984CD608F9A42 /* Pods-TersarZoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe_TersarZoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB68FD8227A7EBE60050674F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AB68FD8427AA8A370050674F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		AB68FD8527AA8A370050674F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		ABE845812718047C0009D4DE /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedWebsiteViewController.swift; sourceTree = "<group>"; };
 		BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				AB68FD8227A7EBE60050674F /* SearchViewController.swift */,
+				AB68FD8427AA8A370050674F /* SearchTableViewCell.swift */,
+				AB68FD8527AA8A370050674F /* SearchTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				F9E9F93F2650F97B00CF0930 /* SoundGIF.gif in Resources */,
 				F9ABC6352561345700676565 /* Main.storyboard in Resources */,
 				F9DDF644259B401700DCBB4D /* PDFCollectionViewCell.xib in Resources */,
+				AB68FD8727AA8A370050674F /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,6 +824,7 @@
 				F9FEA8B4264E663F00E4AD49 /* UIView+Extension.swift in Sources */,
 				F9D7B42326527A9E0015D5CA /* AnnouncementTableViewCell.swift in Sources */,
 				F9FEA8AF264E64A100E4AD49 /* UIImageView+Extension.swift in Sources */,
+				AB68FD8627AA8A370050674F /* SearchTableViewCell.swift in Sources */,
 				F91D793D2652430100F29893 /* AppUtils.swift in Sources */,
 				F9DDF643259B401700DCBB4D /* PDFCollectionViewCell.swift in Sources */,
 				F94FFB332572299E000E3C4F /* SettingsViewController.swift in Sources */,
