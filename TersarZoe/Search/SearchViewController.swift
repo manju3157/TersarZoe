@@ -16,6 +16,7 @@ class SearchViewController: BaseViewController {
     var categoryName: String = ""
     var subCategoryList: [MainSubCategory] = []
     var tzPosts: [TZPost] = []
+    var subCatAndPostsMap: [String: [TZPost]] = [:]
     
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
@@ -26,6 +27,7 @@ class SearchViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
         print("Search view opened")
         configureSearchBar()
         buildDataSource()
@@ -48,6 +50,7 @@ class SearchViewController: BaseViewController {
             for subCategory in subCategoryList {
                 dispatchGroup.enter()
                 NetworkManager.shared.getSubCategoryDetail(subCategoryID: subCategory.id) {[weak self] (status, postArray) in
+                    self?.subCatAndPostsMap[subCategory.name] = postArray
                     dispatchGroup.leave()
                     print("Completed \(subCategory.id)")
                     if status && !postArray.isEmpty {
@@ -76,9 +79,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as? SearchTableViewCell
         let category = Category(id: 1, name: "Test", banner_image_url: "")
-        cell?.populateCell(category: category)
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

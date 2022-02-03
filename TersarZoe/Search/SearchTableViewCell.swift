@@ -8,16 +8,27 @@
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var imgView: CircularImageView!
+    @IBOutlet weak var ovalView: UIView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var subTitleLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        ovalView.layer.cornerRadius = 30
+        ovalView.backgroundColor = .white
+        titleLbl.textColor = ColorConstants.navBarColor
+        subTitleLbl.textColor = ColorConstants.navBarColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func populateCell(post: TZPost) {
+        titleLbl.text = post.title
+        subTitleLbl.text = post.title
+        imgView.setImage(UIImage(named: "Announcement")!)
     }
     
 }
