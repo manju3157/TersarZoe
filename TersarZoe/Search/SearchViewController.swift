@@ -16,7 +16,8 @@ class SearchViewController: BaseViewController {
     var categoryName: String = ""
     var subCategoryList: [MainSubCategory] = []
     var tzPosts: [TZPost] = []
-    var subCatAndPostsMap: [String: [TZPost]] = [:]
+    var filteredPosts: [TZPost] = []
+    var subCatAndPostsMap: [String: [String]] = [:]
     
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
@@ -27,6 +28,7 @@ class SearchViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = ColorConstants.appBgColor
         tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchCell")
         print("Search view opened")
         configureSearchBar()
@@ -39,6 +41,8 @@ class SearchViewController: BaseViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search " + categoryName
         searchController.searchBar.sizeToFit()
+        searchController.searchBar.barTintColor = ColorConstants.appBgColor
+        searchController.searchBar.tintColor = ColorConstants.navBarColor
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
     }
@@ -50,7 +54,9 @@ class SearchViewController: BaseViewController {
             for subCategory in subCategoryList {
                 dispatchGroup.enter()
                 NetworkManager.shared.getSubCategoryDetail(subCategoryID: subCategory.id) {[weak self] (status, postArray) in
-                    self?.subCatAndPostsMap[subCategory.name] = postArray
+                    self?.subCatAndPostsMap[subCategory.name] = postArray.map({ (post) in
+                        return post.title
+                    })
                     dispatchGroup.leave()
                     print("Completed \(subCategory.id)")
                     if status && !postArray.isEmpty {
@@ -60,7 +66,7 @@ class SearchViewController: BaseViewController {
             }
             dispatchGroup.notify(queue: .main) {
                 SVProgressHUD.dismiss()
-                // Load tableview
+                self.tableView.reloadData()
                 print("All Compelted")
             }
         } else {
@@ -72,7 +78,7 @@ class SearchViewController: BaseViewController {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return tzPosts.count
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -80,14 +86,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as? SearchTableViewCell
-        let category = Category(id: 1, name: "Test", banner_image_url: "")
+        cell?.populateCell(post: tzPosts[indexPath.row])
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(tzPosts.count)
     }
 }
-
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {

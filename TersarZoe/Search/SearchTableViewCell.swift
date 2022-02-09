@@ -19,6 +19,7 @@ class SearchTableViewCell: UITableViewCell {
         ovalView.backgroundColor = .white
         titleLbl.textColor = ColorConstants.navBarColor
         subTitleLbl.textColor = ColorConstants.navBarColor
+        contentView.backgroundColor = ColorConstants.appBgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
