@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pi-Rl-2NW">
-                        <rect key="frame" x="10" y="10" width="450" height="58"/>
+                        <rect key="frame" x="10" y="8" width="450" height="62"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Announcement" translatesAutoresizingMaskIntoConstraints="NO" id="c1V-LF-LYn" customClass="CircularImageView" customModule="TersarZoe" customModuleProvider="target">
-                                <rect key="frame" x="10" y="9" width="40" height="40"/>
+                                <rect key="frame" x="10" y="11" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ZK1-gF-eeT"/>
                                     <constraint firstAttribute="height" constant="40" id="fuz-LA-VtN"/>
@@ -57,8 +57,8 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="3pi-Rl-2NW" secondAttribute="trailing" constant="10" id="99e-Iv-6vM"/>
                     <constraint firstItem="3pi-Rl-2NW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="UKc-Og-yQz"/>
-                    <constraint firstAttribute="bottom" secondItem="3pi-Rl-2NW" secondAttribute="bottom" constant="10" id="WoV-pp-MJ0"/>
-                    <constraint firstItem="3pi-Rl-2NW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xKl-1U-2Ft"/>
+                    <constraint firstAttribute="bottom" secondItem="3pi-Rl-2NW" secondAttribute="bottom" constant="8" id="WoV-pp-MJ0"/>
+                    <constraint firstItem="3pi-Rl-2NW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xKl-1U-2Ft"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

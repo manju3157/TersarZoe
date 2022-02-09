@@ -50,7 +50,7 @@ class SearchViewController: BaseViewController {
     fileprivate func buildDataSource() {
         if hasNetworkConnection() {
             let dispatchGroup = DispatchGroup()
-            SVProgressHUD.show()
+            SVProgressHUD.show(withStatus: "Fetching Files...")
             for subCategory in subCategoryList {
                 dispatchGroup.enter()
                 NetworkManager.shared.getSubCategoryDetail(subCategoryID: subCategory.id) {[weak self] (status, postArray) in
@@ -74,7 +74,6 @@ class SearchViewController: BaseViewController {
         }
     }
 }
-
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
