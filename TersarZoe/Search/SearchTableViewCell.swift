@@ -26,9 +26,9 @@ class SearchTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func populateCell(post: TZPost) {
+    func populateCell(post: TZPost, subTitle: String) {
         titleLbl.text = post.title
-        subTitleLbl.text = post.title
+        subTitleLbl.text = subTitle
         imgView.setImage(UIImage(named: "Announcement")!)
     }
     

@@ -7,6 +7,7 @@
 
 import UIKit
 import SVProgressHUD
+import CloudKit
 
 class SearchViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -73,11 +74,22 @@ class SearchViewController: BaseViewController {
             showNoInternetConnectionAlert()
         }
     }
+    
+    fileprivate func getSubTitleForPost(title: String) -> String {
+        for key in subCatAndPostsMap.keys {
+            let postsArray = subCatAndPostsMap[key] ?? []
+            if postsArray.contains(title) {
+                return key
+            }
+        }
+        return ""
+    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tzPosts.count
+        let rowCount = isFiltering ? filteredPosts.count : tzPosts.count
+        return rowCount
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -85,7 +97,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as? SearchTableViewCell
-        cell?.populateCell(post: tzPosts[indexPath.row])
+        let cellPost = isFiltering ? filteredPosts[indexPath.row] : tzPosts[indexPath.row]
+        cell?.populateCell(post: cellPost, subTitle: getSubTitleForPost(title: cellPost.title))
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -95,6 +108,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text!)
+        if let searchText = self.searchController.searchBar.text, !searchText.isEmpty {
+            self.filteredPosts.removeAll()
+            for post in tzPosts {
+                let title = post.title
+                let subTitle = getSubTitleForPost(title: post.title)
+                if title.contains(searchText) || subTitle.contains(searchText) {
+                    filteredPosts.append(post)
+                }
+            }
+            self.tableView.reloadData()
+        } else {
+            self.tableView.reloadData()
+        }
     }
 }

@@ -29,13 +29,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frZ-Dc-jYp">
-                                <rect key="frame" x="70" y="6" width="380" height="24"/>
+                                <rect key="frame" x="66" y="6" width="376" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiF-yU-eeX">
-                                <rect key="frame" x="70" y="36" width="380" height="18"/>
+                                <rect key="frame" x="66" y="36" width="378" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,13 +43,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HiF-yU-eeX" firstAttribute="leading" secondItem="c1V-LF-LYn" secondAttribute="trailing" constant="20" id="02X-eK-gEH"/>
+                            <constraint firstItem="HiF-yU-eeX" firstAttribute="leading" secondItem="c1V-LF-LYn" secondAttribute="trailing" constant="16" id="02X-eK-gEH"/>
                             <constraint firstItem="c1V-LF-LYn" firstAttribute="leading" secondItem="3pi-Rl-2NW" secondAttribute="leading" constant="10" id="MGZ-n3-kMe"/>
-                            <constraint firstItem="frZ-Dc-jYp" firstAttribute="leading" secondItem="c1V-LF-LYn" secondAttribute="trailing" constant="20" id="OG9-sB-0AW"/>
+                            <constraint firstItem="frZ-Dc-jYp" firstAttribute="leading" secondItem="c1V-LF-LYn" secondAttribute="trailing" constant="16" id="OG9-sB-0AW"/>
                             <constraint firstItem="HiF-yU-eeX" firstAttribute="top" secondItem="frZ-Dc-jYp" secondAttribute="bottom" constant="6" id="OyN-Bv-AGh"/>
                             <constraint firstItem="c1V-LF-LYn" firstAttribute="centerY" secondItem="3pi-Rl-2NW" secondAttribute="centerY" id="Wd6-gy-Qq0"/>
-                            <constraint firstAttribute="trailing" secondItem="HiF-yU-eeX" secondAttribute="trailing" id="hrY-J0-Xbv"/>
-                            <constraint firstAttribute="trailing" secondItem="frZ-Dc-jYp" secondAttribute="trailing" id="oLl-w4-n6d"/>
+                            <constraint firstAttribute="trailing" secondItem="HiF-yU-eeX" secondAttribute="trailing" constant="6" id="hrY-J0-Xbv"/>
+                            <constraint firstAttribute="trailing" secondItem="frZ-Dc-jYp" secondAttribute="trailing" constant="8" id="oLl-w4-n6d"/>
                             <constraint firstItem="frZ-Dc-jYp" firstAttribute="top" secondItem="3pi-Rl-2NW" secondAttribute="top" constant="6" id="wO8-GV-FaI"/>
                         </constraints>
                     </view>
@@ -68,7 +68,7 @@
                 <outlet property="subTitleLbl" destination="HiF-yU-eeX" id="V7A-M5-23C"/>
                 <outlet property="titleLbl" destination="frZ-Dc-jYp" id="GVR-ee-awl"/>
             </connections>
-            <point key="canvasLocation" x="184.05797101449278" y="124.88839285714285"/>
+            <point key="canvasLocation" x="184.05797101449278" y="124.55357142857142"/>
         </tableViewCell>
     </objects>
     <resources>
