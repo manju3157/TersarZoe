@@ -35,14 +35,16 @@ class AudioViewController: BaseViewController {
         button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
         button.addTarget(self, action: #selector(moreBtnTapped), for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
-        navigationItem.rightBarButtonItem = barButtonItem
+        //navigationItem.rightBarButtonItem = barButtonItem
+        
+        let searchButton = UIButton(type: .custom)
+        searchButton.setImage(UIImage (named: "Search"), for: .normal)
+        searchButton.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        searchButton.addTarget(self, action: #selector(searchBtnTapped), for: .touchUpInside)
+        let searchbarButtonItem = UIBarButtonItem(customView: searchButton)
+        navigationItem.rightBarButtonItems = [barButtonItem, searchbarButtonItem]
     }
-    @objc
-    func moreBtnTapped() {
-        print("Right Bar button")
-        self.performSegue(withIdentifier: "AudioSettings", sender: self)
-
-    }
+    
 
     private func fetchAudioCategories() {
         SVProgressHUD.showInfo(withStatus: "Fetching...")
@@ -58,6 +60,16 @@ class AudioViewController: BaseViewController {
             }
         }
     }
+    
+    @objc
+    func moreBtnTapped() {
+        self.performSegue(withIdentifier: "AudioSettings", sender: self)
+    }
+    
+    @objc
+    func searchBtnTapped() {
+        self.performSegue(withIdentifier: "ShowAudioSearch", sender: self)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowAudio" {
@@ -65,6 +77,12 @@ class AudioViewController: BaseViewController {
                 nextViewController.contentType = .audio
                 nextViewController.subCategoryId = selectedSubCatID
                 nextViewController.pageTitle = selectedPageTitle
+            }
+        } else if segue.identifier == "ShowAudioSearch" {
+            if let nextViewController = segue.destination as? SearchViewController {
+                nextViewController.categoryName = "Audio"
+                nextViewController.contentType = .audio
+                nextViewController.subCategoryList = audioCategoryArray
             }
         }
     }

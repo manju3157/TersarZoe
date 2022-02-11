@@ -59,7 +59,6 @@ class PDFCollectionViewController: BaseViewController {
     
     @objc
     func searchBtnTapped() {
-        print("PDF Search Btn tapped")
         self.performSegue(withIdentifier: "ShowPDFSearch", sender: self)
     }
 

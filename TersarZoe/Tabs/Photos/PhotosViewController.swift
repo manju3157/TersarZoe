@@ -39,12 +39,22 @@ class PhotosViewController: BaseViewController {
         button.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
         button.addTarget(self, action: #selector(moreBtnTapped), for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
-        navigationItem.rightBarButtonItem = barButtonItem
+        //navigationItem.rightBarButtonItem = barButtonItem
+        
+        let searchButton = UIButton(type: .custom)
+        searchButton.setImage(UIImage (named: "Search"), for: .normal)
+        searchButton.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
+        searchButton.addTarget(self, action: #selector(searchBtnTapped), for: .touchUpInside)
+        let searchbarButtonItem = UIBarButtonItem(customView: searchButton)
+        navigationItem.rightBarButtonItems = [barButtonItem, searchbarButtonItem]
     }
     @objc
     func moreBtnTapped() {
-        print("Right Bar button")
         self.performSegue(withIdentifier: "PhotoSettings", sender: self)
+    }
+    @objc
+    func searchBtnTapped() {
+        self.performSegue(withIdentifier: "ShowPhotoSearch", sender: self)
     }
     private func fetchPhotos() {
         SVProgressHUD.showInfo(withStatus: "Fetching...")
@@ -67,6 +77,12 @@ class PhotosViewController: BaseViewController {
                 nextViewController.contentType = .photo
                 nextViewController.subCategoryId = selectedSubCatID
                 nextViewController.pageTitle = selectedPageTitle
+            }
+        } else if segue.identifier == "ShowPhotoSearch" {
+            if let nextViewController = segue.destination as? SearchViewController {
+                nextViewController.categoryName = "Photos"
+                nextViewController.contentType = .photo
+                nextViewController.subCategoryList = photoCategoryArray
             }
         }
     }

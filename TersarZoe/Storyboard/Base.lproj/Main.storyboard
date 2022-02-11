@@ -93,6 +93,7 @@
                         <outlet property="collectionView" destination="ozU-ZR-ZY6" id="yNt-je-KYp"/>
                         <segue destination="dGu-H0-mjR" kind="presentation" identifier="AudioSettings" id="YQE-MR-q2U"/>
                         <segue destination="nLE-sr-Omk" kind="show" identifier="ShowAudio" id="8ub-Xq-AQi"/>
+                        <segue destination="9YT-UW-r4d" kind="show" identifier="ShowAudioSearch" id="LGA-Xr-GAx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tj6-p2-3h6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1175,6 +1176,7 @@ Cgo
                         <outlet property="collectionView" destination="f9E-d1-X41" id="DT1-27-Nuu"/>
                         <segue destination="dGu-H0-mjR" kind="presentation" identifier="PhotoSettings" id="57g-Bm-91b"/>
                         <segue destination="nLE-sr-Omk" kind="show" identifier="ShowPhotos" id="bgp-ym-DAL"/>
+                        <segue destination="9YT-UW-r4d" kind="show" identifier="ShowPhotoSearch" id="Lv6-jU-Yu3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoE-fd-oVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1338,8 +1340,9 @@ Cgo
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TrQ-x4-xnB"/>
-        <segue reference="Wzl-V1-HWt"/>
+        <segue reference="Lv6-jU-Yu3"/>
+        <segue reference="bgp-ym-DAL"/>
+        <segue reference="57g-Bm-91b"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="About_Sonam" width="426.5" height="426.5"/>
