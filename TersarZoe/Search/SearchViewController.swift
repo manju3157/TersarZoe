@@ -98,7 +98,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as? SearchTableViewCell
         let cellPost = isFiltering ? filteredPosts[indexPath.row] : tzPosts[indexPath.row]
-        cell?.populateCell(post: cellPost, subTitle: getSubTitleForPost(title: cellPost.title))
+        cell?.populateCell(post: cellPost, subTitle: getSubTitleForPost(title: cellPost.title), fileType: contentType)
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

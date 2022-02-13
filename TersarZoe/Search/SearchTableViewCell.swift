@@ -26,10 +26,19 @@ class SearchTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func populateCell(post: TZPost, subTitle: String) {
+    func populateCell(post: TZPost, subTitle: String, fileType: CommonContentType) {
         titleLbl.text = post.title
         subTitleLbl.text = subTitle
-        imgView.setImage(UIImage(named: "Announcement")!)
+        switch fileType {
+        case .pdf:
+            imgView.setImage(UIImage(named: "PDF")!)
+        case .audio:
+            imgView.setImage(UIImage(named: "Audio")!)
+        case .photo:
+            imgView.setImage(UIImage(named: "Image")!)
+        case .none:
+            imgView.setImage(UIImage(named: "Announcement")!)
+        }
     }
     
 }
