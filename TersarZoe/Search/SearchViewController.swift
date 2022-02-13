@@ -19,6 +19,7 @@ class SearchViewController: BaseViewController {
     var tzPosts: [TZPost] = []
     var filteredPosts: [TZPost] = []
     var subCatAndPostsMap: [String: [String]] = [:]
+    var selectedPost: TZPost?
     
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
@@ -84,6 +85,25 @@ class SearchViewController: BaseViewController {
         }
         return ""
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "displaySearchPDF" {
+            if let nextViewController = segue.destination as? PDFViewController,
+               let post = selectedPost {
+                nextViewController.pdfFiles = post.files
+            }
+        } else if segue.identifier == "displaySearchAudio" {
+            if let nextViewController = segue.destination as? AudioPlayerViewController,
+               let post = selectedPost {
+                nextViewController.audioFiles = post.files
+            }
+        } else if segue.identifier == "displaySearchPhoto" {
+            if let nextViewController = segue.destination as? PhotoPagerViewController,
+               let post = selectedPost {
+                nextViewController.photos = post.files
+            }
+        }
+    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -102,7 +122,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(tzPosts.count)
+        selectedPost = isFiltering ? filteredPosts[indexPath.row] : tzPosts[indexPath.row]
+        switch contentType {
+        case .pdf:
+            performSegue(withIdentifier: "displaySearchPDF", sender: nil)
+        case .audio:
+            performSegue(withIdentifier: "displaySearchAudio", sender: nil)
+        case .photo:
+            performSegue(withIdentifier: "displaySearchPhoto", sender: nil)
+        case .none:
+            break
+        }
     }
 }
 
@@ -113,7 +143,7 @@ extension SearchViewController: UISearchResultsUpdating {
             for post in tzPosts {
                 let title = post.title
                 let subTitle = getSubTitleForPost(title: post.title)
-                if title.contains(searchText) || subTitle.contains(searchText) {
+                if title.localizedCaseInsensitiveContains(searchText) || subTitle.localizedCaseInsensitiveContains(searchText) {
                     filteredPosts.append(post)
                 }
             }

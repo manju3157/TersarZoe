@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D18520DF-D57C-4AC1-AD32-E72CBC5C80CA"
+            uuid = "D951D197-630A-4723-91D3-DD61E99377A7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TersarZoe/Search/SearchViewController.swift"
+            filePath = "TersarZoe/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "getAnnouncements(responseCallback:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

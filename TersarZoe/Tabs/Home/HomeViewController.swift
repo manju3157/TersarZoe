@@ -98,7 +98,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if categories[indexPath.row].name == "Announcements" {
+        if categories[indexPath.row].name == "News and updates" {
             performSegue(withIdentifier: "ShowAnnouncements", sender: nil)
         } else {
             selectedCatID = categories[indexPath.row].id

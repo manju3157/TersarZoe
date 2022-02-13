@@ -1123,6 +1123,9 @@ Cgo
                     <navigationItem key="navigationItem" id="oVb-om-lmd"/>
                     <connections>
                         <outlet property="tableView" destination="U3Z-wI-1j8" id="Djs-wR-Jdf"/>
+                        <segue destination="AUA-cS-S6m" kind="show" identifier="displaySearchPDF" id="Yug-bp-sbt"/>
+                        <segue destination="Bx4-ZW-REG" kind="show" identifier="displaySearchAudio" id="tEy-0t-Wnu"/>
+                        <segue destination="eW6-CH-7nN" kind="show" identifier="displaySearchPhoto" id="njn-VU-WJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hr-It-ZWY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1340,9 +1343,12 @@ Cgo
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lv6-jU-Yu3"/>
-        <segue reference="bgp-ym-DAL"/>
+        <segue reference="23c-sL-VeX"/>
+        <segue reference="njn-VU-WJQ"/>
+        <segue reference="TrQ-x4-xnB"/>
+        <segue reference="tEy-0t-Wnu"/>
         <segue reference="57g-Bm-91b"/>
+        <segue reference="Yug-bp-sbt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="About_Sonam" width="426.5" height="426.5"/>

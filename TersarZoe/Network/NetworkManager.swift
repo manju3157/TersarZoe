@@ -29,7 +29,7 @@ class NetworkManager {
                         var filteredCategories = actualCategories.filter { (category) -> Bool in
                             !ignoreCategoryNames.contains(category.name)
                         }
-                        let announcementCat = Category(id: 999, name: "Announcements", banner_image_url: "")
+                        let announcementCat = Category(id: 999, name: "News and updates", banner_image_url: "")
                         filteredCategories.append(announcementCat)
                         responseCallback(true, filteredCategories)
                         return
