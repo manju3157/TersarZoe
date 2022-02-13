@@ -9,6 +9,7 @@ import UIKit
 
 class AnnouncementTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var youTubeImgView: UIImageView!
     @IBOutlet weak var containerView: UIView!
@@ -26,6 +27,7 @@ class AnnouncementTableViewCell: UITableViewCell {
     }
     func populateCell(post: AnnouncementPost) {
         nameLbl.text = post.title
+        dateLbl.text = getDateString(dateStr: post.created_at ?? "")
         youTubeImgView.isHidden = !post.isAYouTubeVideo
         if post.isAYouTubeVideo {
             if let youtubeThumbnailURL = URL(string: getYoutubeThumbnailURL(videoID: post.youtube_url ?? "")) {
@@ -40,5 +42,18 @@ class AnnouncementTableViewCell: UITableViewCell {
     private func getYoutubeThumbnailURL(videoID: String) -> String {
         let thumbnailURLString = "https://img.youtube.com/vi/" + videoID  + "/hqdefault.jpg"
         return thumbnailURLString
+    }
+    
+    private func getDateString(dateStr: String) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MMM-yyyy"
+
+        if let date = dateFormatterGet.date(from: dateStr) {
+            return dateFormatter.string(from: date)
+        }
+        return ""
     }
 }

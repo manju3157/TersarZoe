@@ -17,6 +17,7 @@ class AnnouncementPost: Codable {
     var description: String
     var is_youtube: Int
     var youtube_url: String?
+    var created_at: String?
     var files: [TZFile]
 
     var isAYouTubeVideo: Bool {

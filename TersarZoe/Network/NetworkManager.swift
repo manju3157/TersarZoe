@@ -122,7 +122,7 @@ class NetworkManager {
                 do {
                     if let decodedResponse = try? JSONDecoder().decode(Announcement.self, from: data) {
                         let announcements = decodedResponse.announcements.sorted { (item1, item2) -> Bool in
-                            item1.id < item2.id
+                            item1.id > item2.id
                         }
                         responseCallback(true, announcements)
                         return

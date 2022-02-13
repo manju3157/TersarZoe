@@ -372,7 +372,7 @@
 			path = CommonCollectionView;
 			sourceTree = "<group>";
 		};
-		F9D7B41126527A1D0015D5CA /* Announcements */ = {
+		F9D7B41126527A1D0015D5CA /* NewsAndUpdates */ = {
 			isa = PBXGroup;
 			children = (
 				F9D7B41226527A450015D5CA /* AnnouncementViewController.swift */,
@@ -381,7 +381,7 @@
 				F9D7B42126527A9E0015D5CA /* AnnouncementTableViewCell.swift */,
 				F9D7B42226527A9E0015D5CA /* AnnouncementTableViewCell.xib */,
 			);
-			path = Announcements;
+			path = NewsAndUpdates;
 			sourceTree = "<group>";
 		};
 		F9D91B9D2594B1E6002D3AAC /* Network */ = {
@@ -450,7 +450,7 @@
 		F9FCE4F0256293C500A72446 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F9D7B41126527A1D0015D5CA /* Announcements */,
+				F9D7B41126527A1D0015D5CA /* NewsAndUpdates */,
 				F9DDF6262599EE1800DCBB4D /* PDF */,
 				F9ABC6312561345700676565 /* HomeViewController.swift */,
 				F9FCE51A25653B2C00A72446 /* MenuTableViewCell.swift */,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,8 +24,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="N0f-44-kj2">
                                 <rect key="frame" x="0.0" y="0.0" width="435" height="265"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NamkhaZoe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBL-9B-d7G">
-                                <rect key="frame" x="20" y="224" width="391.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NamkhaZoe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBL-9B-d7G">
+                                <rect key="frame" x="20" y="224.5" width="391.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -37,17 +37,26 @@
                                     <constraint firstAttribute="width" constant="100" id="7Df-ff-OjP"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVw-Kj-jGc">
+                                <rect key="frame" x="20" y="12" width="174" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="N0f-44-kj2" secondAttribute="bottom" id="26m-dv-4XD"/>
+                            <constraint firstItem="vVw-Kj-jGc" firstAttribute="width" secondItem="BMh-j4-MN2" secondAttribute="width" multiplier="0.4" id="6Bv-qp-8lw"/>
                             <constraint firstItem="WeR-VC-r6t" firstAttribute="centerY" secondItem="BMh-j4-MN2" secondAttribute="centerY" id="87t-m7-7We"/>
+                            <constraint firstItem="vVw-Kj-jGc" firstAttribute="top" secondItem="BMh-j4-MN2" secondAttribute="top" constant="12" id="H4y-9y-snL"/>
                             <constraint firstItem="kBL-9B-d7G" firstAttribute="leading" secondItem="BMh-j4-MN2" secondAttribute="leading" constant="20" id="LER-dv-hbW"/>
                             <constraint firstAttribute="bottom" secondItem="kBL-9B-d7G" secondAttribute="bottom" constant="20" id="MAm-7Y-Tiy"/>
                             <constraint firstItem="N0f-44-kj2" firstAttribute="top" secondItem="BMh-j4-MN2" secondAttribute="top" id="MSS-vP-mMU"/>
                             <constraint firstAttribute="trailing" secondItem="N0f-44-kj2" secondAttribute="trailing" id="OYn-9I-bop"/>
                             <constraint firstItem="kBL-9B-d7G" firstAttribute="width" secondItem="BMh-j4-MN2" secondAttribute="width" multiplier="0.9" id="dZE-Gf-eMw"/>
                             <constraint firstItem="N0f-44-kj2" firstAttribute="leading" secondItem="BMh-j4-MN2" secondAttribute="leading" id="jsE-VB-Wek"/>
+                            <constraint firstItem="vVw-Kj-jGc" firstAttribute="leading" secondItem="BMh-j4-MN2" secondAttribute="leading" constant="20" id="sqg-sB-YNE"/>
                             <constraint firstItem="WeR-VC-r6t" firstAttribute="centerX" secondItem="BMh-j4-MN2" secondAttribute="centerX" id="zYi-CM-DaG"/>
                         </constraints>
                     </view>
@@ -62,6 +71,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="BMh-j4-MN2" id="Dmq-io-Ijt"/>
+                <outlet property="dateLbl" destination="vVw-Kj-jGc" id="8uE-7G-T9F"/>
                 <outlet property="imgView" destination="N0f-44-kj2" id="fKw-Tf-5Hb"/>
                 <outlet property="nameLbl" destination="kBL-9B-d7G" id="UfA-JN-ZPb"/>
                 <outlet property="youTubeImgView" destination="WeR-VC-r6t" id="OfC-2Q-mtE"/>
