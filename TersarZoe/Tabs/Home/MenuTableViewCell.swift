@@ -27,6 +27,11 @@ class MenuTableViewCell: UITableViewCell {
         if let url = URL(string: category.banner_image_url) {
             imgView.sd_setImage(with: url, completed: nil)
         }
+        if category.banner_image_url.isEmpty,
+           let image = UIImage(named: "Announcement"),
+           category.name == "News and updates" {
+            imgView.setImage(image)
+        }
     }
     func fillMenu(name: String, image: UIImage?) {
         nameLbl.text = name
