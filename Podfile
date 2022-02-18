@@ -9,6 +9,10 @@ target 'TersarZoe' do
     pod 'YoutubePlayerView'
     pod 'SVProgressHUD'
     pod 'SwiftyGif'
+    
+    # Pods for Firebase-FCM
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
 
   target 'TersarZoeTests' do
     inherit! :search_paths
