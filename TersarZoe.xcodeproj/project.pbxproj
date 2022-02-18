@@ -10,6 +10,7 @@
 		AB68FD8327A7EBE60050674F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68FD8227A7EBE60050674F /* SearchViewController.swift */; };
 		AB68FD8627AA8A370050674F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68FD8427AA8A370050674F /* SearchTableViewCell.swift */; };
 		AB68FD8727AA8A370050674F /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB68FD8527AA8A370050674F /* SearchTableViewCell.xib */; };
+		AB8956DC27BF89EA006F8981 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8956DB27BF89EA006F8981 /* GoogleService-Info.plist */; };
 		ABE845822718047C0009D4DE /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845812718047C0009D4DE /* DonationViewController.swift */; };
 		ABE845842718048C0009D4DE /* RelatedWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */; };
 		B524F562C9DB7B70CBAD5E10 /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */; };
@@ -105,6 +106,7 @@
 		AB68FD8227A7EBE60050674F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AB68FD8427AA8A370050674F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		AB68FD8527AA8A370050674F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		AB8956DB27BF89EA006F8981 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABE845812718047C0009D4DE /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedWebsiteViewController.swift; sourceTree = "<group>"; };
 		BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,6 +341,7 @@
 				F9FCE4F62562947500A72446 /* Assets */,
 				F9FCE4F52562945600A72446 /* Storyboard */,
 				F9ABC63E2561345F00676565 /* Info.plist */,
+				AB8956DB27BF89EA006F8981 /* GoogleService-Info.plist */,
 				F9ABC6362561345700676565 /* TersarZoe.xcdatamodeld */,
 			);
 			path = TersarZoe;
@@ -646,6 +649,7 @@
 				F9FEA86B264D010800E4AD49 /* PhotoPagerCollectionViewCell.xib in Resources */,
 				F9ABC63A2561345F00676565 /* Assets.xcassets in Resources */,
 				F9156884257BE9BF006568AE /* VideosTableViewCell.xib in Resources */,
+				AB8956DC27BF89EA006F8981 /* GoogleService-Info.plist in Resources */,
 				F9FCE51D25653B2C00A72446 /* MenuTableViewCell.xib in Resources */,
 				F9D7B42426527A9E0015D5CA /* AnnouncementTableViewCell.xib in Resources */,
 				F9E9F93F2650F97B00CF0930 /* SoundGIF.gif in Resources */,
