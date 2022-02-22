@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import Firebase
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
+        configureNavBar()
+        FirebaseApp.configure()
+        UNUserNotificationCenter.current().delegate = self
+        Messaging.messaging().delegate = self
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+                 
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { (_, error) in
+            guard error == nil else{
+            print(error!.localizedDescription)
+            return
+            }
+        }
+        application.registerForRemoteNotifications()
+        return true
+    }
+
+    private func configureNavBar() {
         //Fix Nav Bar tint issue in iOS 15.0 or later - is transparent w/o code below
         let navItemColor = ColorConstants.appBgColor
         if #available(iOS 15, *) {
@@ -33,10 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().tintColor = navItemColor
             UIBarButtonItem.appearance().tintColor = navItemColor
         }
-        FirebaseApp.configure()
-        return true
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -106,3 +121,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+
+            // With swizzling disabled you must let Messaging know about the message, for Analytics
+            // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+            // ...
+
+            // Print full message.
+            print(userInfo)
+
+            // Change this to your preferred presentation option
+            completionHandler([[.alert, .sound]])
+    }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+
+            // ...
+
+            // With swizzling disabled you must let Messaging know about the message, for Analytics
+            // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+            // Print full message.
+            print(userInfo)
+
+            completionHandler()
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Unable to register for remote notifications: \(error.localizedDescription)")
+    }
+    
+    
+}
+
+extension AppDelegate: MessagingDelegate {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        
+    }
+}

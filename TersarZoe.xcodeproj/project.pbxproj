@@ -106,6 +106,7 @@
 		AB68FD8227A7EBE60050674F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AB68FD8427AA8A370050674F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		AB68FD8527AA8A370050674F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		AB7297EF27C54A91002D760A /* TersarZoeRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TersarZoeRelease.entitlements; sourceTree = "<group>"; };
 		AB8956DB27BF89EA006F8981 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABE845812718047C0009D4DE /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedWebsiteViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +327,7 @@
 		F9ABC62C2561345700676565 /* TersarZoe */ = {
 			isa = PBXGroup;
 			children = (
+				AB7297EF27C54A91002D760A /* TersarZoeRelease.entitlements */,
 				AB68FD8127A7EBC70050674F /* Search */,
 				F90E9DB3265BBBFF00B5DCB8 /* Constants */,
 				F90566742647C2D4005B796F /* CoreData */,
@@ -1039,6 +1041,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TersarZoe/TersarZoeRelease.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 0;
