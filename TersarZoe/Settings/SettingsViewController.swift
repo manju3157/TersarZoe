@@ -24,6 +24,8 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuCell")
         settingsLbl.textColor = ColorConstants.navBarColor
+        self.view.backgroundColor = ColorConstants.appBgColor
+        tableView.backgroundColor = ColorConstants.appBgColor
     }
 
     @IBAction func cancelPressed(_ sender: Any) {
@@ -69,7 +71,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuTableViewCell
-        cell?.ovalView.backgroundColor = ColorConstants.appBgColor
+        cell?.contentView.backgroundColor = ColorConstants.appBgColor
         cell?.fillMenu(name: menuItems[indexPath.row], image: menuImages[indexPath.row])
         return cell ?? UITableViewCell()
     }
