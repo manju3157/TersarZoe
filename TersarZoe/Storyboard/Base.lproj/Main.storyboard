@@ -715,7 +715,7 @@ We feel going ahead, such modernization of resources aid in many ways, helping p
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="About the Founder: Lama Sonam Tashi">
+                                    <fragment content="About the Founder:Lama Sonam Tashi">
                                         <attributes>
                                             <font key="NSFont" size="16" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="451.29999999999995" defaultTabInterval="28" tighteningFactorForTruncation="0.0">
@@ -736,7 +736,6 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <mutableString key="content">
-
 Director of Dundul Raptenling Monastery, Odisha.
 Lama has studied, taken vow, empowerment, transmission at this monastery and has been working hard in his own capacity to preserve and flourishing of Guru rinpoche tradition. Among other things, he is currently building Zangdogpalri at Odisha and teaches Throema to students across India.
 </mutableString>
