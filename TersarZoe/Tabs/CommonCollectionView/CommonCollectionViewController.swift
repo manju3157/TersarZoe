@@ -55,16 +55,19 @@ class CommonCollectionViewController: BaseViewController {
             if let nextViewController = segue.destination as? PhotoPagerViewController,
                let post = selectedPost {
                 nextViewController.photos = post.files
+                nextViewController.photoTitle = post.title
             }
         } else if segue.identifier == "DisplayPDF" {
             if let nextViewController = segue.destination as? PDFViewController,
                let post = selectedPost {
                 nextViewController.pdfFiles = post.files
+                nextViewController.pdfTitle = post.title
             }
         } else if segue.identifier == "PlayAudio" {
             if let nextViewController = segue.destination as? AudioPlayerViewController,
                let post = selectedPost {
                 nextViewController.audioFiles = post.files
+                nextViewController.audioTitle = post.title
             }
         }
     }

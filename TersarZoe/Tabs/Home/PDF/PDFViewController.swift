@@ -18,6 +18,7 @@ class PDFViewController: BaseViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var pdfFiles:[TZFile] = []
+    var pdfTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +70,7 @@ class PDFViewController: BaseViewController {
         if hasNetworkConnection() {
             if let urlStr = pdfFiles.first?.file_url {
                 SVProgressHUD.show(withStatus: "Downloading...")
-                DownloadManager.current.downloadFile(contentType: .pdf, urlString: urlStr) {[weak self] (status, filepath) in
+                DownloadManager.current.downloadFile(contentType: .pdf, urlString: urlStr, fileTitle: pdfTitle) {[weak self] (status, filepath) in
                     SVProgressHUD.dismiss()
                     let successMsg = "File downloaded successfully"
                     let failureMsg = "File download failed"

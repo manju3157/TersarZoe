@@ -16,6 +16,7 @@ class AudioPlayerViewController: BaseViewController {
     @IBOutlet weak var imgView: UIImageView!
     
     var audioFiles:[TZFile] = []
+    var audioTitle: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class AudioPlayerViewController: BaseViewController {
         if hasNetworkConnection() {
             if let urlStr = audioFiles.first?.file_url {
                 SVProgressHUD.show(withStatus: "Downloading...")
-                DownloadManager.current.downloadFile(contentType: .audio, urlString: urlStr) {[weak self] (status, filepath) in
+                DownloadManager.current.downloadFile(contentType: .audio, urlString: urlStr, fileTitle: audioTitle) {[weak self] (status, filepath) in
                     SVProgressHUD.dismiss()
                     let successMsg = "File downloaded successfully"
                     let failureMsg = "File download failed"

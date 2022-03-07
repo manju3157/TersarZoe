@@ -11,15 +11,16 @@ import UIKit
 class DownloadManager {
     static let current = DownloadManager()
 
-    func downloadFile(contentType: CommonContentType, urlString: String, responseCallback: @escaping (Bool, String) -> ()) {
+    func downloadFile(contentType: CommonContentType, urlString: String, fileTitle: String, responseCallback: @escaping (Bool, String) -> ()) {
         do {
             if let url = URL(string: urlString) {
                 let fileContentData = try Data(contentsOf: url)
                 let folderName = getFolderName(contentType: contentType)
                 let folderPath = getDocumentsDirectory().appendingPathComponent(folderName)
                 createDirectoryIfNeeded(docURL: folderPath)
-                let subPath = folderName + "/" + url.lastPathComponent
+                let subPath = folderName + "/" + fileTitle + "." + url.pathExtension
                 let destURl = getDocumentsDirectory().appendingPathComponent(subPath)
+                print("Download Path: \(destURl.path)")
                 try? fileContentData.write(to: destURl, options: .atomic)
                 responseCallback(true, destURl.absoluteString)
             }

@@ -13,6 +13,7 @@ class PhotoPagerViewController: BaseViewController {
     @IBOutlet weak var pageControl: UIPageControl!
 
     var photos:[TZFile] = []
+    var photoTitle: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class PhotoPagerViewController: BaseViewController {
     func downloadTapped() {
         if hasNetworkConnection() {
             SVProgressHUD.show(withStatus: "Downloading...")
-            DownloadManager.current.downloadFile(contentType: .photo, urlString: photos[pageControl.currentPage].file_url) {[weak self] (status, filepath) in
+            DownloadManager.current.downloadFile(contentType: .photo, urlString: photos[pageControl.currentPage].file_url, fileTitle: photoTitle) {[weak self] (status, filepath) in
                 SVProgressHUD.dismiss()
                 let successMsg = "File downloaded successfully"
                 let failureMsg = "File download failed"

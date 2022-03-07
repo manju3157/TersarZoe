@@ -54,7 +54,7 @@ class AnnouncementPhotoViewController: BaseViewController {
             if let announcement = announcementPost, !announcement.files.isEmpty {
                 SVProgressHUD.show(withStatus: "Downloading...")
                 DownloadManager.current.downloadFile(contentType: .photo,
-                                                     urlString: announcement.files[pageControl.currentPage].file_url) {
+                                                     urlString: announcement.files[pageControl.currentPage].file_url, fileTitle: announcement.title) {
                     [weak self] (status, filepath) in
                     SVProgressHUD.dismiss()
                     let successMsg = "File downloaded successfully"
