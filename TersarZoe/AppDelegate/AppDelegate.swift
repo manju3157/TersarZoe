@@ -125,6 +125,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        
+       // this also works
+        //let deviceTokenString = deviceToken.map { String(format: "%02x", $0) }.joined()
+        print(tokenString)
+        NetworkManager.shared.registerForServerNotifications(deviceToken: tokenString)
         Messaging.messaging().apnsToken = deviceToken
     }
     

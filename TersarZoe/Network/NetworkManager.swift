@@ -133,4 +133,27 @@ class NetworkManager {
             responseCallback(false, [])
         }.resume()
     }
+    
+    func registerForServerNotifications(deviceToken: String) {
+        let httpBodyDict = ["device_id": deviceToken]
+        let jsonData = try? JSONSerialization.data(withJSONObject: httpBodyDict, options: .prettyPrinted)
+        guard let url = URL(string: AppConstants.notificationRegistryPath) else {
+            print("Invalid URL")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        request.httpMethod = "POST"
+        session.dataTask(with: request) { (data, response, error) in
+            if let data = data, error == nil {
+                do {
+                    if let decodedResponse = try? JSONDecoder().decode(NotificationRegistration.self, from: data), !decodedResponse.error {
+                        print("Notifications registered successfully")
+                    }
+                }
+            }
+            print("Notification Registration Failed: \(error?.localizedDescription ?? "Unknown error")")
+        }.resume()
+    }
 }

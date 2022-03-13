@@ -11,6 +11,7 @@ struct AppConstants {
     static let categoryBasePath = "http://65.1.4.153/tersarzoe/api/categories/"
     static let subCategoryBasePath = "http://65.1.4.153/tersarzoe/api/sub-categories/"
     static let announcementsPath = "http://65.1.4.153/tersarzoe/api/announcements/"
+    static let notificationRegistryPath = "http://65.1.4.153/tersarzoe/api/update-device-id"
 
     static let photoCategoryID = 1
     static let sungbumCategoryID = 2
