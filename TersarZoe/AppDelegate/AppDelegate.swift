@@ -122,6 +122,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("Message Received: \(userInfo)")
+        let state = UIApplication.shared.applicationState
+        if state == .inactive || state == .background {
+            print("app is in BACKGROUND - userInfo: ", userInfo)
+        } else {
+            print("app is in FOREGROUND - userInfo: ", userInfo)
+        }
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {

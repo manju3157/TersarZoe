@@ -152,8 +152,9 @@ class NetworkManager {
                         print("Notifications registered successfully")
                     }
                 }
+            } else {
+                print("Notification Registration Failed: \(error?.localizedDescription ?? "Unknown error")")
             }
-            print("Notification Registration Failed: \(error?.localizedDescription ?? "Unknown error")")
         }.resume()
     }
 }
