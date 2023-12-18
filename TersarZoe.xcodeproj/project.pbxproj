@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1020,10 +1020,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TersarZoe/TersarZoeDebug.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sonam Tashi (2WF28LYAKF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sonam Tashi (2WF28LYAKF)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = J89HDBZ868;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVS572L6L;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1031,9 +1033,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.namkhaZoe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonam.namkhaZoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NamkhaZoe_Dev_23Feb2022;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = NamkhaZoe_Dev_18Dec23;
 				SWIFT_OBJC_BRIDGING_HEADER = "TersarZoe/Common/Reachability/TersarZoe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1049,10 +1052,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TersarZoe/TersarZoeRelease.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sonam Tashi (2GVS572L6L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sonam Tashi (2GVS572L6L)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = J89HDBZ868;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVS572L6L;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1060,9 +1065,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.namkhaZoe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonam.namkhaZoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NamkhaZoe_Dev_23Feb2022;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = NamkhaZoe_Adhoc_18Dec23;
 				SWIFT_OBJC_BRIDGING_HEADER = "TersarZoe/Common/Reachability/TersarZoe-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
