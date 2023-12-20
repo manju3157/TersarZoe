@@ -14,8 +14,9 @@
 		AB8956DC27BF89EA006F8981 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8956DB27BF89EA006F8981 /* GoogleService-Info.plist */; };
 		ABE845822718047C0009D4DE /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845812718047C0009D4DE /* DonationViewController.swift */; };
 		ABE845842718048C0009D4DE /* RelatedWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */; };
-		B524F562C9DB7B70CBAD5E10 /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */; };
-		EDD2E2FEAE89DA708DE06537 /* Pods_TersarZoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */; };
+		B321DE9559BB443D99D70F7A /* Pods_TersarZoeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F041EF2EA02C0DA55F0C0 /* Pods_TersarZoeTests.framework */; };
+		B47310265781D8F3B8205C58 /* Pods_TersarZoe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F45FA51FD63643489AF1C45 /* Pods_TersarZoe.framework */; };
+		CC4A613E77DBAD7CB798E2DF /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5482A68B1AE04AA6C2789B1 /* Pods_TersarZoe_TersarZoeUITests.framework */; };
 		F9056648264676D1005B796F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056647264676D1005B796F /* Category.swift */; };
 		F90566502646770A005B796F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905664F2646770A005B796F /* Photo.swift */; };
 		F9056655264677B2005B796F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9056654264677B2005B796F /* AppConstants.swift */; };
@@ -79,7 +80,6 @@
 		F9FEA8A7264E60AB00E4AD49 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEA8A6264E60AB00E4AD49 /* Audio.swift */; };
 		F9FEA8AF264E64A100E4AD49 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEA8AE264E64A100E4AD49 /* UIImageView+Extension.swift */; };
 		F9FEA8B4264E663F00E4AD49 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FEA8B3264E663F00E4AD49 /* UIView+Extension.swift */; };
-		FB9BEBF0EEA1A8A06C43490C /* Pods_TersarZoeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +100,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		140AEFD55AB2FBB09E777B58 /* Pods-TersarZoe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoe/Pods-TersarZoe.debug.xcconfig"; sourceTree = "<group>"; };
-		1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		212A91DBE60984CD608F9A42 /* Pods-TersarZoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe_TersarZoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0109B2F4CF0463059B69C3 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E7F041EF2EA02C0DA55F0C0 /* Pods_TersarZoeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F45FA51FD63643489AF1C45 /* Pods_TersarZoe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6388D4ABA8721A4F0225CF47 /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		73C31375FB8698E574CE1A4B /* Pods-TersarZoe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoe/Pods-TersarZoe.debug.xcconfig"; sourceTree = "<group>"; };
+		94A668EBBA57692451DC787D /* Pods-TersarZoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.release.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB68FD8227A7EBE60050674F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AB68FD8427AA8A370050674F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		AB68FD8527AA8A370050674F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -113,11 +115,9 @@
 		AB8956DB27BF89EA006F8981 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABE845812718047C0009D4DE /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		ABE845832718048C0009D4DE /* RelatedWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedWebsiteViewController.swift; sourceTree = "<group>"; };
-		BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB9F4EFB4730008B84DEFCF9 /* Pods-TersarZoeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.release.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.release.xcconfig"; sourceTree = "<group>"; };
-		DC2385A551D21F5BE546FB9B /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F197689CCBAB44596314B37F /* Pods-TersarZoe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe.release.xcconfig"; path = "Target Support Files/Pods-TersarZoe/Pods-TersarZoe.release.xcconfig"; sourceTree = "<group>"; };
-		F81ABB82F8FC21556E2FF5F5 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoe-TersarZoeUITests/Pods-TersarZoe-TersarZoeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8D5B41883D8ECDB3BB4DBB1 /* Pods-TersarZoe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoe.release.xcconfig"; path = "Target Support Files/Pods-TersarZoe/Pods-TersarZoe.release.xcconfig"; sourceTree = "<group>"; };
+		DD3A448A85F6D42E14C533CF /* Pods-TersarZoeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersarZoeTests.debug.xcconfig"; path = "Target Support Files/Pods-TersarZoeTests/Pods-TersarZoeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5482A68B1AE04AA6C2789B1 /* Pods_TersarZoe_TersarZoeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TersarZoe_TersarZoeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9056647264676D1005B796F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F905664F2646770A005B796F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F9056654264677B2005B796F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD2E2FEAE89DA708DE06537 /* Pods_TersarZoe.framework in Frameworks */,
+				B47310265781D8F3B8205C58 /* Pods_TersarZoe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB9BEBF0EEA1A8A06C43490C /* Pods_TersarZoeTests.framework in Frameworks */,
+				B321DE9559BB443D99D70F7A /* Pods_TersarZoeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,23 +212,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B524F562C9DB7B70CBAD5E10 /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */,
+				CC4A613E77DBAD7CB798E2DF /* Pods_TersarZoe_TersarZoeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D9755383525A9F24C7351AB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A97D0DFCD0096A0CDB6F885 /* Pods_TersarZoe.framework */,
-				56463D1C58823BC8BE3B7D22 /* Pods_TersarZoe_TersarZoeUITests.framework */,
-				BAFFDC5E0CB379F310CBE8E5 /* Pods_TersarZoeTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AB68FD8127A7EBC70050674F /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,14 +232,24 @@
 		B009FC52F188B2A7AD30A9C1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				140AEFD55AB2FBB09E777B58 /* Pods-TersarZoe.debug.xcconfig */,
-				F197689CCBAB44596314B37F /* Pods-TersarZoe.release.xcconfig */,
-				F81ABB82F8FC21556E2FF5F5 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */,
-				DC2385A551D21F5BE546FB9B /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */,
-				212A91DBE60984CD608F9A42 /* Pods-TersarZoeTests.debug.xcconfig */,
-				BB9F4EFB4730008B84DEFCF9 /* Pods-TersarZoeTests.release.xcconfig */,
+				73C31375FB8698E574CE1A4B /* Pods-TersarZoe.debug.xcconfig */,
+				B8D5B41883D8ECDB3BB4DBB1 /* Pods-TersarZoe.release.xcconfig */,
+				1A0109B2F4CF0463059B69C3 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */,
+				6388D4ABA8721A4F0225CF47 /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */,
+				DD3A448A85F6D42E14C533CF /* Pods-TersarZoeTests.debug.xcconfig */,
+				94A668EBBA57692451DC787D /* Pods-TersarZoeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD2248E303B332C390F6C010 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F45FA51FD63643489AF1C45 /* Pods_TersarZoe.framework */,
+				F5482A68B1AE04AA6C2789B1 /* Pods_TersarZoe_TersarZoeUITests.framework */,
+				3E7F041EF2EA02C0DA55F0C0 /* Pods_TersarZoeTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F9056646264676B6005B796F /* Models */ = {
@@ -314,7 +314,7 @@
 				F9ABC6512561345F00676565 /* TersarZoeUITests */,
 				F9ABC62B2561345700676565 /* Products */,
 				B009FC52F188B2A7AD30A9C1 /* Pods */,
-				4D9755383525A9F24C7351AB /* Frameworks */,
+				BD2248E303B332C390F6C010 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -545,11 +545,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9ABC6572561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoe" */;
 			buildPhases = (
-				302CEA58AFF6B3257D189079 /* [CP] Check Pods Manifest.lock */,
+				28048131987555297A86B7AC /* [CP] Check Pods Manifest.lock */,
 				F9ABC6262561345700676565 /* Sources */,
 				F9ABC6272561345700676565 /* Frameworks */,
 				F9ABC6282561345700676565 /* Resources */,
-				466391CB98112CE199B47AFE /* [CP] Embed Pods Frameworks */,
+				4FA950B96B18A380CE527361 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -564,7 +564,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9ABC65A2561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoeTests" */;
 			buildPhases = (
-				19928DA7409DB48735892E2E /* [CP] Check Pods Manifest.lock */,
+				88FEB77AA178C72A124FB6B4 /* [CP] Check Pods Manifest.lock */,
 				F9ABC63F2561345F00676565 /* Sources */,
 				F9ABC6402561345F00676565 /* Frameworks */,
 				F9ABC6412561345F00676565 /* Resources */,
@@ -583,11 +583,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9ABC65D2561345F00676565 /* Build configuration list for PBXNativeTarget "TersarZoeUITests" */;
 			buildPhases = (
-				42E29FD821031DAD236ACA92 /* [CP] Check Pods Manifest.lock */,
+				4FEE9EDAEE82440292CF3F9F /* [CP] Check Pods Manifest.lock */,
 				F9ABC64A2561345F00676565 /* Sources */,
 				F9ABC64B2561345F00676565 /* Frameworks */,
 				F9ABC64C2561345F00676565 /* Resources */,
-				CB6AF761D6F021A182F3490A /* [CP] Embed Pods Frameworks */,
+				D1598DAAD9B9BE2B9817D82F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -683,29 +683,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19928DA7409DB48735892E2E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TersarZoeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		302CEA58AFF6B3257D189079 /* [CP] Check Pods Manifest.lock */ = {
+		28048131987555297A86B7AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -727,7 +705,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		42E29FD821031DAD236ACA92 /* [CP] Check Pods Manifest.lock */ = {
+		4FA950B96B18A380CE527361 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TersarZoe/Pods-TersarZoe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TersarZoe/Pods-TersarZoe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TersarZoe/Pods-TersarZoe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FEE9EDAEE82440292CF3F9F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -749,24 +744,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		466391CB98112CE199B47AFE /* [CP] Embed Pods Frameworks */ = {
+		88FEB77AA178C72A124FB6B4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TersarZoe/Pods-TersarZoe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TersarZoe/Pods-TersarZoe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TersarZoeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TersarZoe/Pods-TersarZoe-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CB6AF761D6F021A182F3490A /* [CP] Embed Pods Frameworks */ = {
+		D1598DAAD9B9BE2B9817D82F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1014,7 +1014,7 @@
 		};
 		F9ABC6582561345F00676565 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 140AEFD55AB2FBB09E777B58 /* Pods-TersarZoe.debug.xcconfig */;
+			baseConfigurationReference = 73C31375FB8698E574CE1A4B /* Pods-TersarZoe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1027,12 +1027,13 @@
 				DEVELOPMENT_TEAM = J89HDBZ868;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVS572L6L;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NamkhaZoe;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonam.namkhaZoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NamkhaZoe_Dev_23Feb2022;
@@ -1046,7 +1047,7 @@
 		};
 		F9ABC6592561345F00676565 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F197689CCBAB44596314B37F /* Pods-TersarZoe.release.xcconfig */;
+			baseConfigurationReference = B8D5B41883D8ECDB3BB4DBB1 /* Pods-TersarZoe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1059,16 +1060,17 @@
 				DEVELOPMENT_TEAM = J89HDBZ868;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVS572L6L;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NamkhaZoe;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonam.namkhaZoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NamkhaZoe_Dev_23Feb2022;
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = NamkhaZoe_Adhoc_18Dec23;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = NamkhaZoe_AppStore_18Dec23;
 				SWIFT_OBJC_BRIDGING_HEADER = "TersarZoe/Common/Reachability/TersarZoe-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1077,7 +1079,7 @@
 		};
 		F9ABC65B2561345F00676565 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 212A91DBE60984CD608F9A42 /* Pods-TersarZoeTests.debug.xcconfig */;
+			baseConfigurationReference = DD3A448A85F6D42E14C533CF /* Pods-TersarZoeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1100,7 +1102,7 @@
 		};
 		F9ABC65C2561345F00676565 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB9F4EFB4730008B84DEFCF9 /* Pods-TersarZoeTests.release.xcconfig */;
+			baseConfigurationReference = 94A668EBBA57692451DC787D /* Pods-TersarZoeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1123,7 +1125,7 @@
 		};
 		F9ABC65E2561345F00676565 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F81ABB82F8FC21556E2FF5F5 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */;
+			baseConfigurationReference = 1A0109B2F4CF0463059B69C3 /* Pods-TersarZoe-TersarZoeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1144,7 +1146,7 @@
 		};
 		F9ABC65F2561345F00676565 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC2385A551D21F5BE546FB9B /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */;
+			baseConfigurationReference = 6388D4ABA8721A4F0225CF47 /* Pods-TersarZoe-TersarZoeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
