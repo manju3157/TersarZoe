@@ -1023,7 +1023,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Sonam Tashi (2WF28LYAKF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sonam Tashi (2WF28LYAKF)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J89HDBZ868;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVS572L6L;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
@@ -1056,7 +1056,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sonam Tashi (2GVS572L6L)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sonam Tashi (2GVS572L6L)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J89HDBZ868;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2GVS572L6L;
 				INFOPLIST_FILE = TersarZoe/Info.plist;
