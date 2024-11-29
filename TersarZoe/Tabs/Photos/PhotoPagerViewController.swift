@@ -30,6 +30,7 @@ class PhotoPagerViewController: BaseViewController {
         pageControl.pageIndicatorTintColor = pageTintColor.withAlphaComponent(0.5)
         pageControl.isUserInteractionEnabled = false
         pageControl.numberOfPages = photos.count
+
     }
     private func addShareAndDownloadButtons() {
         let downloadButton = UIButton(type: .custom)
